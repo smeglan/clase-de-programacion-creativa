@@ -5,8 +5,8 @@ Material de trabajo para planificar e impartir la asignatura de Programación Cr
 ## Documentos
 
 - [Programa de la asignatura](curso-programacion-creativa.md): versión breve e institucional.
-- [Guía docente](guia-programacion-creativa.md): objetivos, resultados, unidades, actividades, evidencias y evaluación.
-- [Planificación de clases](clases/README.md): estructura común, sesiones y entregables.
+- [Guía docente](guia-programacion-creativa.md): objetivos, resultados, unidades, actividades, orientaciones y evaluación.
+- [Planificación de clases](clases/README.md): estructura común, sesiones y acompañamiento.
 - [Material para estudiantes](material-estudiantes/README.md): tutoriales, comandos, talleres y recursos compartibles.
 
 ## Estructura del curso

@@ -8,7 +8,7 @@ El proyecto enseña abstracción, objetos, arreglos, estado en React y el compor
 
 > **FIFO** significa *First In, First Out*: la primera persona que entra a la fila es la primera que se atiende.
 
-## Producto final esperado
+## Resultado esperado
 
 Una página React publicada que tenga:
 

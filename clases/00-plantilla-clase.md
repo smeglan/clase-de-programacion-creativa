@@ -3,10 +3,10 @@
 ## Datos generales
 
 - Duración presencial: 2 horas.
-- Trabajo no presencial asociado: [horas y entregable].
+- Trabajo no presencial asociado: [horas y propuesta de práctica].
 - Unidad: [unidad].
 - Resultado de aprendizaje: [resultado observable].
-- Producto de la clase: [producto verificable].
+- Meta de la clase: [aprendizaje o avance esperado].
 
 ## Núcleo común
 
@@ -28,7 +28,7 @@
 - restricción, mejora o estrategia más exigente;
 - criterio de logro.
 
-## Evidencia y evaluación
+## Observación y retroalimentación
 
 ## Trabajo no presencial
 

@@ -40,7 +40,7 @@ Al finalizar la asignatura, el estudiante podrá:
 - Pedir que el estudiante explique su solución, no solo que entregue código.
 - Tratar los errores como parte normal del proceso de prueba y depuración.
 - Relacionar cada tema con el proyecto final desde el inicio.
-- Evaluar tanto el proceso como el producto.
+- Valorar el proceso, la comprensión y los resultados alcanzados, sin exigir que todos los proyectos adopten la misma forma.
 - Usar la inteligencia artificial como asistente para explorar y prototipar, no como sustituto de la comprensión.
 
 ## 4. Distribución de la dedicación
@@ -51,7 +51,7 @@ Al finalizar la asignatura, el estudiante podrá:
 | No presencial | 120 | Lecturas, prácticas, mini proyectos, portafolio, proyecto final y estudio para el examen |
 | **Total** | **144** | **Dedicación total de la asignatura** |
 
-Las 120 horas no presenciales equivalen aproximadamente a 10 horas por cada clase. Para que sean realistas, deben organizarse mediante entregables y no presentarse como una cantidad indefinida de trabajo autónomo.
+Las 120 horas no presenciales equivalen aproximadamente a 10 horas por cada clase. Para que sean realistas, conviene proponer metas, opciones de práctica y momentos de revisión, en vez de presentarlas como una cantidad indefinida de trabajo autónomo o como una lista rígida de entregas.
 
 ### Distribución sugerida del trabajo no presencial
 
@@ -81,7 +81,7 @@ Estas horas incluyen estudio, lectura de documentación, práctica deliberada, r
 2. **Ejercicio - 30 minutos:** práctica guiada o reto corto para comprobar el concepto.
 3. **Laboratorio - 60 minutos:** resolución de dudas, trabajo en proyectos, revisión de código y checkpoint de avance.
 
-La última hora no debe ser únicamente tiempo libre. Cada clase debe cerrar con un producto observable: un commit, una función, una pantalla, una prueba, una decisión documentada o una entrega parcial. El docente puede reservar los últimos 5 minutos de esa hora para registrar avances y bloqueos.
+La última hora no debe ser únicamente tiempo libre. Conviene cerrar con una conversación breve sobre avances, decisiones, bloqueos o próximos pasos; según la clase, esto puede incluir un commit, una función, una pantalla, una prueba o una nota de trabajo. El docente puede reservar los últimos 5 minutos de esa hora para ese registro, sin convertirlo necesariamente en una entrega.
 
 ## 6. Stack técnico y publicación
 
@@ -146,7 +146,7 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Actividades:** aplicar un diagnóstico breve; revisar ejemplos de portafolios; configurar el proyecto base; generar y seleccionar ideas; elaborar una ficha con problema, usuario, objetivo, entradas, salidas y alcance.
 
-**Evidencia:** diagnóstico, repositorio o carpeta de trabajo, estructura inicial del portafolio y ficha del proyecto final.
+**Posibles manifestaciones de aprendizaje:** diagnóstico, repositorio o carpeta de trabajo, estructura inicial del portafolio, conversación sobre una idea o una nota de planificación.
 
 **Criterios:** el problema está delimitado, el objetivo es comprensible y la propuesta puede abordarse con los contenidos del curso.
 
@@ -160,7 +160,7 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Actividades:** describir una tarea como instrucciones; leer y modificar un componente; crear una tarjeta o página de bienvenida; pedir a una herramienta de IA una explicación o alternativa; revisar, ejecutar y corregir el resultado.
 
-**Evidencia:** primer componente React ejecutable, con tipos básicos y explicación de cualquier asistencia de IA utilizada.
+**Posibles manifestaciones de aprendizaje:** componente React sencillo, explicación oral o escrita del flujo de ejecución, y revisión de cualquier asistencia de IA utilizada.
 
 **Criterios:** el programa se ejecuta, las instrucciones están ordenadas y el estudiante explica cada paso.
 
@@ -174,7 +174,7 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Actividades:** ejercicios de cálculo y conversión; contador; formulario con validación; lista renderizada; reto interactivo con eventos y estado.
 
-**Evidencia:** mini proyecto de aprendizaje: calculadora tipada o conversor interactivo, publicado en el portafolio con datos de prueba.
+**Posibles manifestaciones de aprendizaje:** ejercicio o mini proyecto —por ejemplo, una calculadora tipada, un conversor o una interacción equivalente— acompañado de casos de prueba.
 
 **Criterios:** selecciona estructuras adecuadas, usa nombres comprensibles, prueba casos normales y límite, y obtiene resultados correctos.
 
@@ -188,7 +188,7 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Actividades:** convertir repeticiones en funciones; separar una interfaz en componentes; refactorizar código generado o sugerido por IA; revisión entre pares; documentar decisiones.
 
-**Evidencia:** mini proyecto modular, como una tarjeta de productos o perfil, con componentes reutilizables y explicación de su estructura.
+**Posibles manifestaciones de aprendizaje:** interfaz modular, como una tarjeta, un perfil o un catálogo pequeño, y explicación de cómo se separaron las responsabilidades.
 
 **Criterios:** cada función tiene una responsabilidad, recibe y devuelve datos coherentes, evita repeticiones y mantiene una estructura legible.
 
@@ -200,9 +200,9 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Contenidos:** arreglos y objetos en TypeScript; interfaces; índices; map, filter y find; búsqueda y actualización; datos relacionados; estado de colecciones.
 
-**Actividades:** crear una colección de productos; mostrar tarjetas; filtrar y buscar; modificar cantidades; construir una primera versión de la tiendita.
+**Actividades:** modelar una colección de información; mostrar tarjetas; filtrar y buscar; modificar cantidades; construir una interfaz de catálogo, lista, biblioteca o tiendita según el contexto del grupo.
 
-**Evidencia:** mini proyecto de aprendizaje: tiendita o catálogo interactivo, con datos tipados, búsqueda o filtro y sección publicada en el portafolio.
+**Posibles manifestaciones de aprendizaje:** colección interactiva —por ejemplo, una tiendita, un catálogo o una lista de tareas— con datos tipados y operaciones de búsqueda, filtro o actualización.
 
 **Criterios:** los datos están organizados, el acceso es correcto y las operaciones principales están separadas en funciones cuando corresponda.
 
@@ -216,25 +216,25 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Actividades:** resolver un problema sin computador; convertirlo en pseudocódigo o diagrama; escribir un prompt con contexto y restricciones; comparar la sugerencia de IA con una solución propia; preparar el algoritmo definitivo del proyecto.
 
-**Evidencia:** documento de diseño con problema, algoritmo, datos, funciones, casos de prueba, plan de implementación y bitácora de prompts, cambios y verificaciones.
+**Posibles manifestaciones de aprendizaje:** esquema de solución, pseudocódigo, casos de prueba, conversación técnica, anotaciones de diseño o bitácora de prompts, cambios y verificaciones.
 
 **Criterios:** la solución es comprensible, está dividida en pasos, contempla casos relevantes y se relaciona con el código que se implementará.
 
 ### Unidad 6. Implementación del proyecto
 
-**Propósito:** integrar los aprendizajes en un producto creativo funcional y comunicar el proceso.
+**Propósito:** integrar los aprendizajes en una propuesta creativa funcional y comunicar el proceso.
 
 **Resultado de aprendizaje:** el estudiante implementa, prueba, mejora y presenta un proyecto que responde al objetivo planteado, integrándolo en su portafolio.
 
 **Fases:** prototipo mínimo; implementación; pruebas; depuración; mejora; presentación.
 
-**Evidencias:** prototipo; versión final; código organizado; documentación; demostración; reflexión individual; página de proyecto en el portafolio.
+**Posibles manifestaciones de aprendizaje:** prototipo, demostración, versión publicada, código organizado, documentación ligera, reflexión individual o página de proyecto en el portafolio. No todas son obligatorias en la misma forma; se seleccionan según el alcance acordado.
 
 **Criterios:** cumplimiento del objetivo, funcionamiento, integración de contenidos, creatividad, calidad del proceso, documentación y capacidad de explicar decisiones.
 
 ## 8. Portafolio y proyectos de aprendizaje
 
-El portafolio se construye desde la primera clase y reúne evidencias del proceso. No debe ser únicamente una galería: cada proyecto debe explicar qué problema resuelve, qué se aprendió y qué se mejoró.
+El portafolio se construye desde la primera clase y reúne muestras significativas del proceso. No debe ser únicamente una galería: cuando corresponda, los proyectos pueden explicar qué problema abordan, qué se aprendió y qué se mejoraría.
 
 ### Proyectos pequeños sugeridos
 
@@ -243,13 +243,13 @@ El portafolio se construye desde la primera clase y reúne evidencias del proces
 3. **Tiendita:** arreglos, objetos, filtros, cantidades y estado de colecciones.
 4. **Proyecto integrador:** aplicación elegida por el estudiante, con alcance acotado.
 
-Cada proyecto debe incluir una demostración, código, breve explicación, aprendizajes, errores corregidos y asistencia de IA utilizada, si la hubo.
+Según el alcance, cada proyecto puede acompañarse de una demostración, código, explicación breve, aprendizajes, errores corregidos y una nota sobre la asistencia de IA utilizada, si la hubo.
 
-## 9. Proyecto final
+## 9. Proyecto integrador
 
-Puede ser un generador visual, juego pequeño, simulación, visualización de datos, experiencia audiovisual o herramienta interactiva.
+Puede ser un generador visual, juego pequeño, simulación, visualización de datos, experiencia audiovisual o herramienta interactiva. El formato y alcance se acuerdan con el estudiante o el grupo según el tiempo disponible y los contenidos que se hayan consolidado.
 
-Debe incluir:
+Como referencia, puede incluir:
 
 - problema, pregunta o intención creativa;
 - entradas y salidas identificables;
@@ -264,7 +264,7 @@ El lenguaje y el entorno base serán TypeScript y React. La guía mantiene los c
 
 ### Protocolo de vibecoding
 
-En cada actividad asistida por IA, el estudiante debe:
+En cada actividad asistida por IA, se espera que el estudiante:
 
 1. describir el problema y las restricciones antes de pedir código;
 2. revisar la propuesta y señalar qué partes entiende y cuáles debe investigar;
@@ -275,13 +275,13 @@ En cada actividad asistida por IA, el estudiante debe:
 ## 10. Evaluación
 
 
-| Componente | Porcentaje | Evidencias principales |
+| Componente | Porcentaje | Formas posibles de valoración |
 |---|---:|---|
-| Proyectos pequeños y ejercicios | 25 % | Calculadora, catálogo, tiendita y prácticas de fundamentos |
-| Portafolio y documentación | 15 % | Organización, explicaciones, bitácora, pruebas y mejoras |
-| Proyecto integrador final | 30 % | Producto funcional, código, presentación y sección final del portafolio |
+| Proyectos pequeños y ejercicios | 25 % | Prácticas de fundamentos y aplicaciones breves elegidas o adaptadas al grupo |
+| Portafolio y documentación | 15 % | Organización, explicaciones, bitácora, pruebas y mejoras relevantes |
+| Proyecto integrador | 30 % | Funcionamiento, decisiones técnicas, presentación y proceso de desarrollo |
 | Examen individual | 20 % | Conceptos, lectura de código, depuración y resolución de problemas |
-| Vibecoding responsable | 5 % | Prompts, revisión, verificación, atribución y explicación del código asistido |
+| Vibecoding responsable | 5 % | Revisión, verificación, atribución y explicación del código asistido |
 | Participación y revisión entre pares | 5 % | Trabajo de aula, retroalimentación y colaboración |
 
 ### Examen individual
@@ -304,7 +304,7 @@ Se recomienda realizarlo en la clase 9, sin asistencia de IA, durante la última
 - uso pertinente de los conceptos;
 - prueba, depuración y mejora;
 - creatividad y relación con el propósito;
-- responsabilidad en las entregas.
+- responsabilidad en el proceso de trabajo.
 - comprensión y verificación del código asistido por IA;
 - transparencia sobre el uso de herramientas de IA.
 
@@ -321,20 +321,20 @@ Se recomienda realizarlo en la clase 9, sin asistencia de IA, durante la última
 
 ## 12. Plan de 12 clases
 
-| Clase | Enfoque | Producto de la sesión |
+| Clase | Enfoque | Posible avance o práctica |
 |---:|---|---|
-| 1 | Diagnóstico, entorno, repositorio y portafolio | Diagnóstico, repositorio y primera publicación |
-| 2 | Introducción a React, JSX y TypeScript | Componente de bienvenida |
+| 1 | Diagnóstico, entorno, repositorio y portafolio | Primera exploración del entorno y una idea de trabajo |
+| 2 | Introducción a React, JSX y TypeScript | Componente o pantalla sencilla |
 | 3 | Variables, tipos, operadores y eventos | Interacción simple |
-| 4 | Condicionales, ciclos, estado y formularios | Calculadora publicada |
-| 5 | Funciones, props y componentes | Tarjeta o catálogo |
-| 6 | Modularidad, refactorización y revisión de IA | Mini proyecto modular |
-| 7 | Arreglos, objetos y renderizado de listas | Lista de productos |
-| 8 | Búsqueda, filtros y estado de colecciones | Tiendita publicada |
-| 9 | Algoritmos, pseudocódigo y casos de prueba | Examen individual y diseño del proyecto final |
-| 10 | Vibecoding aplicado y prototipo | Prototipo funcional |
-| 11 | Integración, pruebas, depuración y portafolio | Versión candidata a entrega |
-| 12 | Publicación final, presentaciones, retroalimentación y reflexión | URL final, proyecto y portafolio |
+| 4 | Condicionales, ciclos, estado y formularios | Aplicación breve de cálculo, conversión o decisión |
+| 5 | Funciones, props y componentes | Interfaz compuesta por piezas reutilizables |
+| 6 | Modularidad, refactorización y revisión de IA | Mejora de estructura o práctica modular |
+| 7 | Arreglos, objetos y renderizado de listas | Colección de datos modelada y mostrada en pantalla |
+| 8 | Búsqueda, filtros y estado de colecciones | Interacción con una colección: catálogo, lista o tiendita |
+| 9 | Algoritmos, pseudocódigo y casos de prueba | Examen individual y planificación de una solución |
+| 10 | Vibecoding aplicado y prototipo | Primera versión de una idea integradora |
+| 11 | Integración, pruebas, depuración y portafolio | Revisión y mejora de los avances seleccionados |
+| 12 | Publicación, presentaciones, retroalimentación y reflexión | Socialización del proceso y de una versión compartible |
 
 Cada clase de 2 horas sigue la estructura de 30 minutos de explicación, 30 minutos de ejercicio y 60 minutos de laboratorio. El cierre se integra en los últimos minutos del laboratorio mediante el checkpoint de avance.
 

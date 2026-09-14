@@ -9,7 +9,7 @@ Cada clase tendrá:
 1. un **núcleo común** que todo el grupo debe completar;
 2. un **apoyo o refuerzo puntual** para superar bloqueos de instalación, lógica o sintaxis;
 3. una **extensión opcional** para profundizar si alguien termina antes;
-4. un **entregable común**, con criterios claros de logro;
+4. una **meta común de aprendizaje**, con criterios claros de logro;
 5. una guía docente para observar avances y ajustar el acompañamiento.
 
 No hay rutas separadas. Todos construyen el mismo portafolio y proyecto; el diagnóstico solo permite al docente ofrecer el apoyo necesario o un reto adicional en el momento adecuado.
@@ -35,7 +35,7 @@ Incluye instrucciones paso a paso, ejemplos mínimos, parejas de trabajo, vocabu
 
 ### Profundización opcional
 
-Incluye restricciones adicionales, problemas abiertos, análisis de estrategias, visualización de algoritmos, investigación autónoma y revisión de código. Nunca reemplaza el entregable común ni se convierte en requisito para continuar.
+Incluye restricciones adicionales, problemas abiertos, análisis de estrategias, visualización de algoritmos, investigación autónoma y revisión de código. Nunca reemplaza la meta común de aprendizaje ni se convierte en requisito para continuar.
 
 ## Regla de acompañamiento
 

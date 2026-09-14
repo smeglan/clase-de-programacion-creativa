@@ -27,19 +27,19 @@ La algoritmia aplicada se ofrece como profundización opcional una vez que las b
 
 ## Estructura
 
-| Unidad | Tema | Producto o evidencia |
+| Unidad | Tema | Foco de trabajo |
 |---:|---|---|
-| 0 | Diagnóstico y planteamiento del proyecto | Ficha de proyecto |
-| 1 | Introducción a la programación | Primer programa ejecutable |
-| 2 | Fundamentos de programación | Calculadora o conversor |
-| 3 | Funciones y modularidad | Tarjeta o catálogo modular |
-| 4 | Estructuras de datos simples | Tiendita o catálogo con filtros |
-| 5 | Resolución de problemas y algoritmos | Diseño algorítmico del proyecto |
-| 6 | Implementación del proyecto | Proyecto final y portafolio |
+| 0 | Diagnóstico y planteamiento del proyecto | Conocer el punto de partida, configurar el entorno y delimitar una idea. |
+| 1 | Introducción a la programación | Relacionar problemas, algoritmos, código, componentes e interfaces. |
+| 2 | Fundamentos de programación | Trabajar con datos, decisiones, repeticiones e interacciones simples. |
+| 3 | Funciones y modularidad | Separar responsabilidades y construir piezas reutilizables. |
+| 4 | Estructuras de datos simples | Modelar y transformar colecciones de información. |
+| 5 | Resolución de problemas y algoritmos | Diseñar, probar, depurar y explicar soluciones. |
+| 6 | Implementación del proyecto | Integrar aprendizajes en una aplicación y comunicar el proceso. |
 
 ## Metodología
 
-Cada sesión combina activación, explicación breve, demostración, práctica guiada, reto aplicado y cierre reflexivo. El estudiante construye un portafolio desde la primera clase y registra cómo utiliza, revisa y verifica la asistencia de herramientas de IA.
+Cada sesión combina explicación breve, demostración, práctica guiada, trabajo aplicado y cierre reflexivo. El estudiante construye progresivamente un portafolio y registra cómo utiliza, revisa y verifica la asistencia de herramientas de IA. Los ejemplos de proyectos orientan el aprendizaje, pero pueden adaptarse a los intereses, ritmo y contexto del grupo.
 
 ## Evaluación sugerida
 
@@ -50,19 +50,21 @@ Cada sesión combina activación, explicación breve, demostración, práctica g
 - vibecoding responsable: 5 %;
 - participación y revisión entre pares: 5 %.
 
-## Producto final
+## Cierre del curso
 
-Un portafolio con calculadora o conversor, catálogo o tarjeta, tiendita y un proyecto integrador. Cada entrega debe incluir objetivo, código, pruebas, documentación y una reflexión breve sobre el proceso.
+El cierre esperado es un portafolio público o compartible que reúna avances significativos y una aplicación integradora de alcance realista. Puede incluir, entre otros, una calculadora, un conversor, un catálogo, una tiendita, una visualización o una herramienta interactiva.
+
+La selección exacta de actividades y la forma de documentar el proceso puede adaptarse al grupo. Se valorará que el estudiante pueda explicar sus decisiones, mostrar cómo probó su trabajo y reconocer qué aprendió o mejoraría.
 
 ## Dedicación por clase
 
-Cada clase presencial sigue una estructura de 30 minutos de explicación, 30 minutos de ejercicio y 60 minutos de laboratorio para dudas, proyectos y revisión. El trabajo no presencial se organiza en entregables semanales y suma 120 horas en total.
+Cada clase presencial propone 30 minutos de explicación, 30 minutos de ejercicio y 60 minutos de laboratorio para dudas, proyectos y revisión. Es una estructura de referencia, no una división rígida: el docente puede redistribuir el tiempo ante dificultades técnicas, necesidades del grupo o un debate especialmente valioso. El trabajo no presencial suma 120 horas y combina práctica, lectura, desarrollo, revisión y preparación del examen.
 
 ## Stack técnico
 
 El stack base será TypeScript, React, Vite, CSS nativo, GitHub y Vercel. Se utilizará la plantilla `react-ts` de Vite para crear una aplicación ligera, mantener una cantidad reducida de dependencias y publicar el trabajo mediante un repositorio conectado a Vercel.
 
-Cada estudiante construirá un único repositorio de portafolio con una página inicial, una calculadora o conversor, un catálogo o tarjeta, una tiendita y un proyecto integrador. La meta es que cada clase produzca un avance visible y que el estudiante termine con una URL pública.
+Se recomienda que cada estudiante mantenga un único repositorio de portafolio para reunir avances, ejercicios seleccionados y proyectos. La organización concreta puede variar: los ejemplos de calculadora, catálogo y tiendita son puntos de partida, no una lista obligatoria. La meta es terminar con trabajo funcional, explicable y compartible, idealmente mediante una URL pública.
 
 Para la planificación detallada, consultar la [guía docente](guia-programacion-creativa.md).
 

@@ -10,12 +10,12 @@
 
 ## Durante la clase
 
-- [ ] Todos conocen el producto final del curso.
+- [ ] Todos conocen el propósito y las posibilidades de cierre del curso.
 - [ ] Todos respondieron el diagnóstico.
 - [ ] Todos lograron ejecutar la aplicación localmente o tienen un plan alternativo.
 - [ ] Todos modificaron el componente principal.
 - [ ] Todos crearon o recibieron un repositorio.
-- [ ] Todos tienen una primera publicación o una evidencia equivalente.
+- [ ] Todos tienen una primera publicación, una versión local o un plan alternativo de continuidad.
 - [ ] Registré necesidades de apoyo y posibles extensiones por estudiante.
 
 ## Señales de apoyo adicional

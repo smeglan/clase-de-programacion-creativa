@@ -6,7 +6,7 @@
 - Trabajo no presencial asociado: 10 horas.
 - Unidad: 0. Diagnóstico y planteamiento del proyecto.
 - Resultado de aprendizaje: el estudiante identifica su punto de partida, configura el entorno de trabajo y define una primera idea para su portafolio y proyecto integrador.
-- Producto de la clase: diagnóstico inicial, repositorio creado y primera publicación de una página React.
+- Meta de la clase: reconocer el punto de partida, explorar el entorno de trabajo y definir un primer avance para el portafolio.
 
 ## Objetivos de la sesión
 
@@ -83,20 +83,15 @@ Cada estudiante debe:
 
 El docente recorre el aula usando el checklist de `checklist-docente.md`, registra bloqueos frecuentes y propone apoyos o extensiones puntuales según sea necesario.
 
-## Evidencias
+## Observación y retroalimentación
 
-- diagnóstico respondido;
-- repositorio accesible;
-- aplicación ejecutándose localmente;
-- primera URL publicada;
-- ficha inicial del portafolio;
-- idea preliminar del proyecto integrador.
+Durante la sesión, observar si el estudiante puede explorar el diagnóstico, ejecutar o reconocer un proyecto React, localizar el componente principal y explicar qué desea construir. Según las condiciones técnicas, puede registrar un repositorio, una aplicación local, una primera URL o una nota de planificación; ninguna de estas opciones debe impedir el avance de quien tenga dificultades de instalación.
 
 ## Trabajo no presencial - 10 horas
 
-### Entregable obligatorio
+### Propuesta de continuidad
 
-Completar la página inicial del portafolio con:
+Como práctica sugerida, mejorar la página inicial del portafolio con algunos de estos elementos:
 
 - presentación breve;
 - objetivos personales;
