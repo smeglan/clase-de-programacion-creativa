@@ -40,12 +40,28 @@ Puedes usar Visual Studio Code u otro editor. Debes poder abrir una carpeta comp
 
 ```bash
 npm create vite@latest portafolio-programacion -- --template react-ts
+```
+
+Recomiendo usar el linter llamado **ESLint**, es ya un clasico y se usa bastante en empresas, pero eres libre de usar el que quieras, lo realmente importante es su funcionalidad, la cual es la de un software que analiza tu código fuente de forma automática para detectar errores, fallos potenciales y problemas de estilo antes de ejecutarlo.
+
+```bash
 cd portafolio-programacion
+```
+
+Lo normal seria que al crear la carpeta de tu proyecto este tambien te instale todas las dependencias en una carpeta que se llama **node_modules**, pero en caso de que te falte esta carpeta, ya sea porque clonaste el proyecto de un repositorio o cometiste algun error, el siguiente comando te puede ayudar a recuperarla
+
+```bash
 npm install
+```
+
+Por ultimo, puedes correr el proyecto con este comando
+```bash
 npm run dev
 ```
 
 Abre la dirección local que muestra la terminal. Para detener el servidor, presiona `Ctrl + C`.
+
+Algunas veces este comando puede cambiar segun la herramienta, el framework, criterio o deseo egoista de alguna demente, pero no te asustes, generalmente esta especificado dentro del archivo package.json, ahi encontraras un apartado que dice "scripts" y podras checkar que cosas se corren con el run. Por defecto `npm run dev` es casi lo mismo que correr `npm run vite`.
 
 ## Comandos npm esenciales
 

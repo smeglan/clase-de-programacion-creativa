@@ -2,9 +2,9 @@
 
 ## Datos generales
 
-- Duración presencial: 2 horas.
-- Trabajo no presencial asociado: 10 horas.
-- Unidad: 0. Diagnóstico y planteamiento del proyecto.
+- Duración presencial: 3 horas.
+- Trabajo no presencial asociado: 9 horas.
+- Momento: diagnóstico y planteamiento transversal del proyecto de curso.
 - Resultado de aprendizaje: el estudiante identifica su punto de partida, configura el entorno de trabajo y define una primera idea para su portafolio y proyecto integrador.
 - Meta de la clase: reconocer el punto de partida, explorar el entorno de trabajo y definir un primer avance para el portafolio.
 
@@ -32,7 +32,7 @@ Antes de la clase, comprobar:
 
 La plantilla base debe ser mínima: React, TypeScript, Vite y CSS nativo. No se deben añadir librerías adicionales en esta primera sesión.
 
-## Núcleo común - 2 horas
+## Núcleo común - primeras 2 horas
 
 ### 1. Explicación y demostración - 30 minutos
 
@@ -83,11 +83,15 @@ Cada estudiante debe:
 
 El docente recorre el aula usando el checklist de `checklist-docente.md`, registra bloqueos frecuentes y propone apoyos o extensiones puntuales según sea necesario.
 
+### 4. Taller de acompañamiento y proyección - 60 minutos
+
+Usar esta hora para que cada estudiante continúe el flujo con el que tenga más sentido trabajar: resolver una instalación pendiente, crear el repositorio, publicar una primera versión, mejorar su página inicial o delimitar una idea de proyecto. El docente puede alternar acompañamiento técnico, revisión breve entre pares y conversación individual sobre el punto de partida.
+
 ## Observación y retroalimentación
 
 Durante la sesión, observar si el estudiante puede explorar el diagnóstico, ejecutar o reconocer un proyecto React, localizar el componente principal y explicar qué desea construir. Según las condiciones técnicas, puede registrar un repositorio, una aplicación local, una primera URL o una nota de planificación; ninguna de estas opciones debe impedir el avance de quien tenga dificultades de instalación.
 
-## Trabajo no presencial - 10 horas
+## Trabajo no presencial - 9 horas
 
 ### Propuesta de continuidad
 
@@ -106,8 +110,7 @@ Como práctica sugerida, mejorar la página inicial del portafolio con algunos d
 - 2 h: practicar edición de JSX y estilos CSS básicos;
 - 2 h: revisar Git, commits y repositorios;
 - 2 h: mejorar la página inicial;
-- 1 h: escribir la idea del proyecto integrador;
-- 1 h: documentar bloqueos y preguntas para la siguiente clase.
+- 1 h: escribir la idea del proyecto integrador o documentar bloqueos y preguntas para la siguiente clase.
 
 ## Criterios de logro
 

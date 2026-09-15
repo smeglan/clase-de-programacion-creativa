@@ -2,7 +2,7 @@
 
 ## Datos generales
 
-- Duración presencial: 2 horas.
+- Duración presencial: 3 horas.
 - Trabajo no presencial asociado: [horas y propuesta de práctica].
 - Unidad: [unidad].
 - Resultado de aprendizaje: [resultado observable].
@@ -10,11 +10,13 @@
 
 ## Núcleo común
 
-### Explicación - 30 minutos
+### Explicación - 45 minutos
 
-### Ejercicio - 30 minutos
+### Ejercicio - 45 minutos
 
-### Laboratorio - 60 minutos
+### Laboratorio - 90 minutos
+
+### Taller, acompañamiento o evaluación - 60 minutos
 
 ## Refuerzo sugerido
 

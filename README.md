@@ -11,14 +11,13 @@ Material de trabajo para planificar e impartir la asignatura de Programación Cr
 
 ## Estructura del curso
 
-0. Diagnóstico y planteamiento del proyecto  
 1. Introducción a la programación  
 2. Fundamentos de programación  
 3. Funciones y modularidad  
-4. Estructuras de datos simples  
-5. Resolución de problemas y algoritmos  
-6. Implementación del proyecto
+4. Arreglos y estructuras de datos simples  
+5. Resolución de problemas con programación  
+Proyecto de curso
 
 ## Enfoque
 
-La materia se desarrolla en 12 clases de 2 horas, más 120 horas de trabajo no presencial. Integra pensamiento computacional, resolución de problemas, creatividad aplicada a la tecnología, vibecoding responsable y un portafolio progresivo con proyectos como una calculadora, un catálogo y una tiendita. El stack base es TypeScript, React, Vite, CSS nativo, GitHub y Vercel.
+La materia se desarrolla durante 21 semanas, con 36 horas presenciales y 108 horas de trabajo no presencial. Esta guía propone organizar las horas presenciales en 12 encuentros de 3 horas. Integra pensamiento computacional, resolución de problemas, creatividad aplicada a la tecnología, vibecoding responsable y un portafolio progresivo con proyectos como una calculadora, un catálogo y una tiendita. El stack base es TypeScript, React, Vite, CSS nativo, GitHub y Vercel.

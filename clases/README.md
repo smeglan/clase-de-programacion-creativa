@@ -1,6 +1,6 @@
 # Clases del curso
 
-Esta carpeta contiene la planificación operativa de las 12 clases.
+Esta carpeta contiene la planificación operativa de 12 encuentros de 3 horas, propuesta para cubrir las 36 horas presenciales definidas en el PIA.
 
 ## Principio de una sola ruta con apoyo y extensión
 

@@ -2,7 +2,7 @@
 
 ## 1. Propósito de la guía
 
-Esta guía convierte el programa de la asignatura en una ruta de trabajo para el docente. La materia se desarrolla en 12 clases de 2 horas, distribuidas aproximadamente en cuatro semanas de tres clases. El curso contempla 24 horas presenciales y 120 horas de trabajo no presencial, para un total de 144 horas. TypeScript y React funcionan como herramientas principales, mientras que el portafolio y el vibecoding acompañan todo el proceso.
+Esta guía convierte el programa de la asignatura en una ruta de trabajo para el docente. La materia se desarrolla durante 21 semanas y contempla 36 horas presenciales —16 teóricas y 20 prácticas—, 108 horas de trabajo no presencial y 144 horas en total. Para organizar las 36 horas, esta guía propone 12 encuentros de 3 horas. TypeScript y React funcionan como herramientas principales, mientras que el portafolio y el vibecoding acompañan todo el proceso.
 
 La programación se presenta como una herramienta para analizar problemas, construir soluciones y expresar ideas mediante interfaces y aplicaciones web. Cada estudiante construye un portafolio con pequeños proyectos de aprendizaje y un proyecto integrador final.
 
@@ -10,18 +10,15 @@ La programación se presenta como una herramienta para analizar problemas, const
 
 ### Objetivo general
 
-Diseñar, implementar y probar interfaces web interactivas con TypeScript y React, aplicando fundamentos de programación, pensamiento algorítmico, buenas prácticas de desarrollo y uso crítico de herramientas de inteligencia artificial.
+Desarrollar habilidades de programación y pensamiento computacional para resolver problemas algorítmicos básicos de manera estructurada, lógica y creativa, utilizando lenguajes y herramientas de programación apropiados.
 
 ### Resultados de aprendizaje
 
 Al finalizar la asignatura, el estudiante podrá:
 
-1. Analizar un problema y representarlo mediante pasos, pseudocódigo o diagramas de flujo.
-2. Implementar programas básicos usando variables, tipos de datos, operadores, entradas, salidas, condicionales y ciclos.
-3. Diseñar funciones y módulos para organizar, reutilizar y mantener el código.
-4. Organizar y manipular información mediante estructuras de datos simples.
-5. Probar, depurar y mejorar soluciones considerando claridad, funcionamiento y eficiencia.
-6. Desarrollar y presentar un portafolio con proyectos pequeños y un proyecto integrador que evidencien el proceso de aprendizaje.
+1. Comprender y aplicar variables, operadores, estructuras de control y funciones para resolver problemas de programación sencillos.
+2. Diseñar e implementar programas mediante técnicas de resolución de problemas, verificando la corrección y eficiencia básica de sus soluciones.
+3. Desarrollar pensamiento lógico y computacional para descomponer problemas en tareas más pequeñas y aplicar algoritmos que conduzcan a soluciones efectivas.
 
 ### Competencias
 
@@ -47,41 +44,35 @@ Al finalizar la asignatura, el estudiante podrá:
 
 | Modalidad | Horas | Trabajo principal |
 |---|---:|---|
-| Presencial | 24 | Explicación, ejercicios, resolución de dudas, laboratorio y revisiones |
-| No presencial | 120 | Lecturas, prácticas, mini proyectos, portafolio, proyecto final y estudio para el examen |
+| Presencial | 36 | Explicación, ejercicios, resolución de dudas, laboratorio, taller, parciales y revisiones |
+| No presencial | 108 | Lecturas, prácticas, mini proyectos, portafolio, proyecto y estudio para los parciales |
 | **Total** | **144** | **Dedicación total de la asignatura** |
 
-Las 120 horas no presenciales equivalen aproximadamente a 10 horas por cada clase. Para que sean realistas, conviene proponer metas, opciones de práctica y momentos de revisión, en vez de presentarlas como una cantidad indefinida de trabajo autónomo o como una lista rígida de entregas.
+Las 108 horas no presenciales equivalen aproximadamente a 5 horas por semana o 9 horas por cada uno de los 12 encuentros propuestos. Para que sean realistas, conviene proponer metas, opciones de práctica y momentos de revisión, en vez de presentarlas como una cantidad indefinida de trabajo autónomo o como una lista rígida de entregas.
 
 ### Distribución sugerida del trabajo no presencial
 
 | Actividad | Horas aproximadas |
 |---|---:|
-| Práctica técnica de TypeScript y React | 36 |
-| Mini proyectos y construcción del portafolio | 24 |
-| Desarrollo del proyecto integrador | 40 |
-| Estudio y preparación del examen | 12 |
+| Práctica técnica de programación y TypeScript | 30 |
+| Mini proyectos y construcción del portafolio | 20 |
+| Desarrollo del proyecto de curso | 32 |
+| Estudio y preparación de parciales | 18 |
 | Documentación, reflexión y revisión entre pares | 8 |
-| **Total** | **120** |
+| **Total** | **108** |
 
-### Distribución semanal
+### Distribución durante el periodo
 
-| Semana | Horas no presenciales | Trabajo esperado |
-|---:|---:|---|
-| 1 | 30 h | Práctica de TypeScript y React, configuración, primer componente y calculadora |
-| 2 | 30 h | Componentes, funciones, props, catálogo y documentación del portafolio |
-| 3 | 30 h | Arreglos, objetos, tiendita, algoritmos y preparación del examen |
-| 4 | 30 h | Proyecto integrador, pruebas, publicación, presentación y reflexión |
-
-Estas horas incluyen estudio, lectura de documentación, práctica deliberada, resolución de errores, construcción de proyectos, documentación y preparación del examen. No deben entenderse como cuatro semanas de trabajo exclusivamente frente al computador: también incluyen planificación y reflexión.
+El trabajo no presencial se distribuye a lo largo de las 21 semanas. En promedio, corresponde a cerca de 5 horas semanales, con una intensidad mayor en los momentos de práctica, preparación de parciales y desarrollo del proyecto. Estas horas incluyen estudio, lectura de documentación, práctica deliberada, resolución de errores, construcción de proyectos, documentación y preparación de los parciales. No deben entenderse como tiempo exclusivamente frente al computador: también incluyen planificación y reflexión.
 
 ## 5. Estructura recomendada de una sesión
 
 1. **Explicación - 30 minutos:** concepto, demostración y conexión con el proyecto.
 2. **Ejercicio - 30 minutos:** práctica guiada o reto corto para comprobar el concepto.
 3. **Laboratorio - 60 minutos:** resolución de dudas, trabajo en proyectos, revisión de código y checkpoint de avance.
+4. **Taller, acompañamiento o evaluación - 60 minutos:** aplicación más autónoma, preparación y realización de parciales, avance del proyecto o retroalimentación.
 
-La última hora no debe ser únicamente tiempo libre. Conviene cerrar con una conversación breve sobre avances, decisiones, bloqueos o próximos pasos; según la clase, esto puede incluir un commit, una función, una pantalla, una prueba o una nota de trabajo. El docente puede reservar los últimos 5 minutos de esa hora para ese registro, sin convertirlo necesariamente en una entrega.
+La hora adicional no debe ser únicamente tiempo libre. Conviene cerrarla con una conversación breve sobre avances, decisiones, bloqueos o próximos pasos; según la clase, esto puede incluir un commit, una función, una pantalla, una prueba o una nota de trabajo. El docente puede reservar los últimos 5 minutos para ese registro, sin convertirlo necesariamente en una entrega.
 
 ## 6. Stack técnico y publicación
 
@@ -134,9 +125,9 @@ Antes de la primera clase se debe comprobar que Node.js, npm, Git, un editor de 
 
 La primera publicación debe hacerse con una aplicación mínima. Después se publicarán la calculadora, la tiendita y el proyecto final dentro del mismo portafolio.
 
-## 7. Unidades del curso
+## 7. Desarrollo didáctico de las unidades
 
-### Unidad 0. Diagnóstico y planteamiento del proyecto
+### Momento inicial transversal: diagnóstico y planteamiento del proyecto
 
 **Propósito:** conocer el punto de partida del grupo y transformar una idea creativa en un proyecto viable.
 
@@ -220,7 +211,7 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Criterios:** la solución es comprensible, está dividida en pasos, contempla casos relevantes y se relaciona con el código que se implementará.
 
-### Unidad 6. Implementación del proyecto
+### Proyecto de curso transversal
 
 **Propósito:** integrar los aprendizajes en una propuesta creativa funcional y comunicar el proceso.
 
@@ -277,16 +268,30 @@ En cada actividad asistida por IA, se espera que el estudiante:
 
 | Componente | Porcentaje | Formas posibles de valoración |
 |---|---:|---|
-| Proyectos pequeños y ejercicios | 25 % | Prácticas de fundamentos y aplicaciones breves elegidas o adaptadas al grupo |
-| Portafolio y documentación | 15 % | Organización, explicaciones, bitácora, pruebas y mejoras relevantes |
-| Proyecto integrador | 30 % | Funcionamiento, decisiones técnicas, presentación y proceso de desarrollo |
-| Examen individual | 20 % | Conceptos, lectura de código, depuración y resolución de problemas |
-| Vibecoding responsable | 5 % | Revisión, verificación, atribución y explicación del código asistido |
-| Participación y revisión entre pares | 5 % | Trabajo de aula, retroalimentación y colaboración |
+| Parcial 1 | 25 % | Fundamentos de programación, lectura de código, ejercicios cortos o prueba individual |
+| Parcial 2 | 20 % | Funciones, modularidad, estructuras de datos y aplicación en una interfaz o programa |
+| Parcial 3 | 20 % | Resolución de problemas, algoritmos, depuración y prueba individual o práctica |
+| Proyecto de curso | 35 % | Aplicación o experiencia programable, proceso de desarrollo y socialización |
 
-### Examen individual
+### Propuesta complementaria de distribución didáctica
 
-El examen debe comprobar comprensión individual y no solo memoria de sintaxis. Puede incluir:
+La siguiente distribución puede proponerse a la coordinación académica si se busca valorar con mayor detalle el proceso de aprendizaje, el portafolio y el uso responsable de herramientas de IA. No reemplaza el esquema oficial del PIA mientras este conserve la distribución de tres parciales y proyecto.
+
+| Componente | Porcentaje |
+|---|---:|
+| Proyectos pequeños y ejercicios | 25 % |
+| Portafolio y documentación | 15 % |
+| Proyecto integrador final | 30 % |
+| Examen individual | 20 % |
+| Vibecoding responsable | 5 % |
+| Participación y revisión entre pares | 5 % |
+| **Total** | **100 %** |
+
+Esta propuesta permite observar el desarrollo de habilidades de forma continua: los proyectos pequeños consolidan fundamentos, el portafolio hace visible el proceso, el examen confirma comprensión individual y el proyecto integrador reúne los aprendizajes en una aplicación de alcance acordado.
+
+### Parciales y pruebas individuales
+
+Los parciales deben comprobar comprensión individual y no solo memoria de sintaxis. Pueden incluir:
 
 - lectura y explicación de un componente React;
 - identificación y corrección de errores de TypeScript;
@@ -294,7 +299,7 @@ El examen debe comprobar comprensión individual y no solo memoria de sintaxis. 
 - diseño de una solución breve mediante pseudocódigo;
 - implementación de una función o componente pequeño.
 
-Se recomienda realizarlo en la clase 9, sin asistencia de IA, durante la última hora de la sesión. La primera hora se mantiene como explicación y ejercicio de algoritmos; el diseño detallado del proyecto integrador se entrega como trabajo no presencial posterior. El examen debe tener una guía de criterios conocida previamente por el grupo.
+Se recomienda programar los tres parciales en momentos que acompañen el avance de las unidades, reservando una parte del encuentro para la prueba individual cuando corresponda. La clase 9 puede incluir el tercer parcial y la planificación de una solución. Cada parcial debe contar con una guía de criterios conocida previamente por el grupo. La asistencia de IA no se usa durante una prueba individual, salvo que el docente indique expresamente otra modalidad.
 
 ### Criterios transversales
 
@@ -317,9 +322,9 @@ Se recomienda realizarlo en la clase 9, sin asistencia de IA, durante la última
 - autoevaluación y coevaluación;
 - bitácora de avance.
 - rúbrica de uso responsable de IA.
-- examen individual escrito y práctico, realizado sin asistencia de IA.
+- parciales escritos, prácticos o mixtos, con momentos individuales cuando corresponda.
 
-## 12. Plan de 12 clases
+## 12. Plan de 12 encuentros
 
 | Clase | Enfoque | Posible avance o práctica |
 |---:|---|---|
@@ -331,12 +336,12 @@ Se recomienda realizarlo en la clase 9, sin asistencia de IA, durante la última
 | 6 | Modularidad, refactorización y revisión de IA | Mejora de estructura o práctica modular |
 | 7 | Arreglos, objetos y renderizado de listas | Colección de datos modelada y mostrada en pantalla |
 | 8 | Búsqueda, filtros y estado de colecciones | Interacción con una colección: catálogo, lista o tiendita |
-| 9 | Algoritmos, pseudocódigo y casos de prueba | Examen individual y planificación de una solución |
+| 9 | Algoritmos, pseudocódigo y casos de prueba | Parcial o práctica individual y planificación de una solución |
 | 10 | Vibecoding aplicado y prototipo | Primera versión de una idea integradora |
 | 11 | Integración, pruebas, depuración y portafolio | Revisión y mejora de los avances seleccionados |
 | 12 | Publicación, presentaciones, retroalimentación y reflexión | Socialización del proceso y de una versión compartible |
 
-Cada clase de 2 horas sigue la estructura de 30 minutos de explicación, 30 minutos de ejercicio y 60 minutos de laboratorio. El cierre se integra en los últimos minutos del laboratorio mediante el checkpoint de avance.
+Cada encuentro de 3 horas sigue como referencia una estructura de 30 minutos de explicación, 30 minutos de ejercicio, 60 minutos de laboratorio y 60 minutos de taller, acompañamiento o evaluación. El cierre se integra en los últimos minutos de este último bloque mediante un checkpoint de avance.
 
 ## 13. Pendientes antes de impartir el curso
 
