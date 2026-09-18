@@ -8,14 +8,15 @@ Sigue este orden. No necesitas elegir una ruta: el curso empieza por las bases y
 
 1. [Orientación del curso](00-orientacion/README.md)
 2. [Herramientas: Node, npm, terminal y Vite](01-herramientas/README.md)
-3. [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
-4. [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
-5. [Modelado de datos, estructuras y React](03-react-typescript/README.md)
-6. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
-7. [Git y GitHub](04-git-github/README.md)
-8. [Publicación en Vercel](05-publicacion/README.md)
-9. [Vibecoding responsable](06-vibecoding/README.md)
-10. [Algoritmia aplicada — profundización opcional](07-algoritmia/README.md)
+3. [Guías de JavaScript: lógica antes de los tipos](02-programacion-base/README.md#g%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) — `if`, `for`, `while` y listas
+4. [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
+5. [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
+6. [Modelado de datos, estructuras y React](03-react-typescript/README.md)
+7. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
+8. [Git y GitHub](04-git-github/README.md)
+9. [Publicación en Vercel](05-publicacion/README.md)
+10. [Vibecoding responsable](06-vibecoding/README.md)
+11. [Algoritmia aplicada — profundización opcional](07-algoritmia/README.md)
 
 Todos terminaremos con:
 
@@ -33,6 +34,7 @@ La sección de algoritmia no es un requisito ni una segunda ruta: es un banco de
 Si necesitas volver a un tema concreto:
 
 - [Herramientas: Node, npm, terminal y Vite](01-herramientas/README.md)
+- [Guías de JavaScript: `if`, `for`, `while` y listas](02-programacion-base/README.md#g%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos)
 - [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
 - [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
 - [Modelado de datos, estructuras y React](03-react-typescript/README.md)

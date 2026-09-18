@@ -4,6 +4,17 @@ Este módulo enseña las herramientas mínimas para leer, escribir y explicar pr
 
 Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexión con React se trabajan en el [módulo 03](../03-react-typescript/README.md). Aquí construimos las bases que los hacen comprensibles.
 
+## Guías de JavaScript: lógica antes de los tipos
+
+Estas guías complementan el módulo con la lógica de programación en **JavaScript puro** (condiciones, ciclos y listas), sin funciones ni tipos todavía. Funcionan como base: el estudiante lee, copia, modifica y ejecuta ejemplos, y resuelve ejercicios por dificultad. Se ejecutan con Node (`node archivo.js`) o en la consola del navegador.
+
+- [Guía 1: Tomar decisiones con `if`](guia-if.md)
+- [Guía 2: Repetir con `for`](guia-for.md)
+- [Guía 3: Repetir con `while`](guia-while.md)
+- [Guía 4: Listas (arrays)](guia-listas.md)
+
+Después de las guías, este README presenta la misma lógica con tipos de TypeScript, y el [Taller de fundamentos](taller-fundamentos.md) la lleva a retos prácticos.
+
 ## TypeScript: JavaScript con contratos
 
 TypeScript se escribe de forma muy parecida a JavaScript, pero permite declarar qué tipo de dato esperamos. Eso ayuda a detectar errores antes de ejecutar el programa y hace que las funciones sean más fáciles de entender.
