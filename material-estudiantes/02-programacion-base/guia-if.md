@@ -16,7 +16,7 @@ Al terminar esta guía deberías poder:
 >
 > Todo el código de esta guía es JavaScript básico. Puedes ejecutarlo de dos maneras:
 >
-> - **Con Node:** copia el código en un archivo como `ejemplo.js` y ejecuta `node ejemplo.js` en la terminal.
+> - **Con Node:** copia el código en un archivo como `ejemplo.js` y ejecuta `node ejemplo.js` en la terminal. Para crear y guardar ese archivo necesitas un editor de texto; si todavía no usas uno, revisa la [guía del editor VS Code](../01-herramientas/editor-vscode.md) del módulo 01.
 > - **Sin computadora propia o sin instalar nada:** abre la consola del navegador (F12 → pestaña *Console*), pega el código y presiona Enter.
 >
 > Si no tienes computadora en este momento, la consola del navegador de un celular también sirve para los ejemplos pequeños.

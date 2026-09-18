@@ -51,4 +51,4 @@ Haz commits pequeños y frecuentes. Un buen mensaje explica qué cambió, por ej
 
 Nunca subas contraseñas, claves, tokens ni archivos `.env` con información privada.
 
-**NOTA:** Recomiendo instalar la consola de [Git](https://git-scm.com), no solo la extensión de visual studio.
+**NOTA:** Recomiendo instalar la consola de [Git](https://git-scm.com), no solo una extensión del editor: la terminal de Git funciona también sin VS Code. Si no sabes qué es una extensión, lo explica la [guía del editor](../01-herramientas/editor-vscode.md) del módulo 01.

@@ -6,7 +6,7 @@ Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexi
 
 ## Guías de JavaScript: lógica antes de los tipos
 
-Estas guías complementan el módulo con la lógica de programación en **JavaScript puro** (condiciones, ciclos y listas), sin funciones ni tipos todavía. Funcionan como base: el estudiante lee, copia, modifica y ejecuta ejemplos, y resuelve ejercicios por dificultad. Se ejecutan con Node (`node archivo.js`) o en la consola del navegador.
+Estas guías complementan el módulo con la lógica de programación en **JavaScript puro** (condiciones, ciclos y listas), sin funciones ni tipos todavía. Funcionan como base: el estudiante lee, copia, modifica y ejecuta ejemplos, y resuelve ejercicios por dificultad. Se ejecutan con Node (`node archivo.js`) o en la consola del navegador. Para crear y guardar esos archivos de práctica se usa el editor de texto; si todavía no conoces VS Code, repasa la [guía del editor](../01-herramientas/editor-vscode.md) del módulo 01.
 
 - [Guía 1: Tomar decisiones con `if`](guia-if.md)
 - [Guía 2: Repetir con `for`](guia-for.md)

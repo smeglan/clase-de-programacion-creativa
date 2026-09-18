@@ -1,6 +1,6 @@
 # 1. Herramientas: escribir archivos y ejecutar programas
 
-Referencias oficiales: [Node.js](https://nodejs.org/en/download) y [Getting Started de Vite](https://vite.dev/guide/).
+Referencias oficiales: [Node.js](https://nodejs.org/en/download), [Visual Studio Code](https://code.visualstudio.com/) y [Getting Started de Vite](https://vite.dev/guide/).
 
 Esta guía te explica de qué sirven las herramientas antes de usarlas, para que no sean "cajas negras". Al final deberías poder escribir un programa en un archivo, ejecutarlo con Node y entender dónde aparece cada cosa.
 
@@ -33,7 +33,7 @@ Para trabajar necesitas cinco piezas, y cada una tiene un trabajo específico. N
 
 | Herramienta | Su rol | En una sola frase |
 |---|---|---|
-| **Editor** (VS Code u otro) | escribir, leer y editar archivos | el taller donde se crea el código |
+| **Editor** ([VS Code u otro](editor-vscode.md)) | escribir, leer y editar archivos | el taller donde se crea el código |
 | **Terminal** | dar órdenes a tu sistema: navegar carpetas y ejecutar comandos | el centro de mando |
 | **Node** | ejecutar archivos JavaScript fuera del navegador | el ejecutor de tus programas |
 | **npm** | instalar y administrar bibliotecas para tus proyectos | el gestor de paquetes |
@@ -42,6 +42,16 @@ Para trabajar necesitas cinco piezas, y cada una tiene un trabajo específico. N
 La frase que resume el flujo: **el editor escribe, la terminal ordena, Node ejecuta, npm consigue piezas y Vite ejecuta la app React.**
 
 Una aclaración importante desde ahora: en este curso, cuando hablemos de "ejecutar la aplicación", quien la ejecuta de verdad es **Vite**. Node y npm preparan el terreno (instalan las piezas y lanzan el comando), pero quien compila tu código React, lo abre en el navegador y lo refresca automáticamente cuando lo editas es Vite. Lo verás en acción en la parte final de esta guía.
+
+## El editor: VS Code
+
+Cuando escribes un programa, tu única herramienta de creación es el **editor de texto**: el lugar donde el código cobra forma de archivo. En este curso usamos **VS Code** (gratuito y recomendado), pero cualquier editor de texto sirve; lo importante es la habilidad de crear, guardar y modificar archivos, no la marca.
+
+```text
+editor escribe → terminal ordena → node ejecuta
+```
+
+No lo veas como una lección de configuración: es lo mínimo para dejar de "adivinar" dónde se escribe el código. La guía [Editor: VS Code](editor-vscode.md) explica qué es un editor, cómo instalarlo, la relación entre el explorador de archivos y su terminal integrada, cómo abrir una terminal independiente, la diferencia entre PowerShell y Command Prompt, y las extensiones que conviene usar (como ESLint). Antes de seguir con la instalación de Node, vale la pena tener el editor a la vista: tu primer programa quedará a un clic de distancia.
 
 ## Instalar y comprobar Node
 
