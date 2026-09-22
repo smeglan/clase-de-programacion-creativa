@@ -382,6 +382,15 @@ El [Taller de fundamentos](taller-fundamentos.md) sigue este orden:
 | siguiente módulo | abstracción, objetos y estructura FIFO | taller del módulo 03: proyecto Fila creativa |
 | siguiente módulo | convertir modelo y lógica en interfaz React | taller del módulo 03: proyecto Fila creativa |
 
+## Guías de algoritmos: Fibonacci y ordenamientos
+
+Cuando domines ciclos, funciones y listas con tipos, estas dos guías te llevan un paso más allá y se pueden trabajar después del taller de fundamentos:
+
+- [Guía 5: Fibonacci: la secuencia que suma](guia-fibonacci.md) — la matemática de la serie (recursión, proporción áurea y fórmula de Binet incluida) y el paso de "lineal contra exponencial" con código.
+- [Guía 6: Ordenamientos: bubble, merge y quicksort](guia-ordenamientos.md) — tres formas de ordenar, sus ventajas y cuál se usa más, y cómo medir cuánto trabajo hace cada una (logarítmica, lineal, cuadrática y exponencial) con el [gráfico de complejidad](grafico-complejidad.svg).
+
+No son un requisito del recorrido principal, pero conectan con la [profundización de algoritmia](../07-algoritmia/README.md) y con las preguntas de "¿qué tan eficiente es mi solución?" que aparecen en entrevistas y proyectos reales.
+
 ## Siguiente paso
 
 Cuando puedas explicar y resolver los retos 0-13, continúa con [Modelado de datos, estructuras y React](../03-react-typescript/README.md). Allí aprenderás a representar entidades con objetos, elegir estructuras como pila o cola y mostrar esos datos en una interfaz.

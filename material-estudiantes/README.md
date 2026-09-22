@@ -11,12 +11,13 @@ Sigue este orden. No necesitas elegir una ruta: el curso empieza por las bases y
 3. [Guías de JavaScript: lógica antes de los tipos](02-programacion-base/README.md#g%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) — `if`, `for`, `while` y listas
 4. [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
 5. [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
-6. [Modelado de datos, estructuras y React](03-react-typescript/README.md)
-7. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
-8. [Git y GitHub](04-git-github/README.md)
-9. [Publicación en Vercel](05-publicacion/README.md)
-10. [Vibecoding responsable](06-vibecoding/README.md)
-11. [Algoritmia aplicada — profundización opcional](07-algoritmia/README.md)
+6. [Guías de algoritmos: Fibonacci y ordenamientos](02-programacion-base/guia-fibonacci.md)
+7. [Modelado de datos, estructuras y React](03-react-typescript/README.md)
+8. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
+9. [Git y GitHub](04-git-github/README.md)
+10. [Publicación en Vercel](05-publicacion/README.md)
+11. [Vibecoding responsable](06-vibecoding/README.md)
+12. [Algoritmia aplicada — profundización opcional](07-algoritmia/README.md)
 
 Todos terminaremos con:
 
@@ -38,6 +39,7 @@ Si necesitas volver a un tema concreto:
 - [Guías de JavaScript: `if`, `for`, `while` y listas](02-programacion-base/README.md#g%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos)
 - [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
 - [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
+- [Guías de algoritmos: Fibonacci y ordenamientos](02-programacion-base/guia-fibonacci.md)
 - [Modelado de datos, estructuras y React](03-react-typescript/README.md)
 - [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
 - [Git y GitHub](04-git-github/README.md)

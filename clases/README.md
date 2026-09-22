@@ -20,9 +20,14 @@ No hay rutas separadas. Todos construyen el mismo portafolio y proyecto; el diag
 clases/
 ├── README.md
 ├── 00-plantilla-clase.md
-└── 01-diagnostico-entorno-portafolio/
+├── 01-diagnostico-entorno-portafolio/
+│   ├── clase.md
+│   ├── diagnostico.md
+│   ├── checklist-docente.md
+│   └── apoyos-y-extensiones.md
+└── 02-fibonacci-ordenamiento/
     ├── clase.md
-    ├── diagnostico.md
+    ├── guion-explicacion-docente.md
     ├── checklist-docente.md
     └── apoyos-y-extensiones.md
 ```
