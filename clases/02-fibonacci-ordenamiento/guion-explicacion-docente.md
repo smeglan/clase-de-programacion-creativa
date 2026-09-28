@@ -165,6 +165,10 @@ Mientras el grupo escribe y corre:
 | Divide y vencerás | Estrategia: partir un problema en partes pequeñas, resolver cada parte y combinar resultados. |
 | Bubble sort | Ordenamiento simple que compara vecinos y "sube" el mayor hasta el final en cada pasada. |
 | Merge sort | Ordenamiento que divide la lista en mitades y combina montones ya ordenados. |
+| Abstracción | Dejar fuera los detalles que no importan y modelar solo lo que el programa necesita. |
+| Clase | Plantilla que describe datos y operaciones; se convierte en objetos al instanciarla con `new`. |
+| Método | Función que pertenece a un objeto y usa sus datos. |
+| Encapsulamiento | Exponer un dato mediante lecturas y cambios controlados, en vez de dejarlo abierto. |
 
 ## Errores de explicación que conviene evitar
 
@@ -187,3 +191,13 @@ Usa dos o tres antes de iniciar el ejercicio:
 6. ¿Qué pasa en la pizarra si no hago el segundo recorrido en bubble sort?
 7. ¿En qué idea se apoya merge sort y cuál es la diferencia clave con bubble?
 8. ¿Por qué hacemos una copia de la lista con `[...numeros]` antes de ordenar?
+
+## Si alguien pregunta "¿cuándo uso objetos?"
+
+No es un tema de la clase, pero la pregunta aparece en cuanto el grupo empieza a pensar en datos reales ("¿y si tengo muchos productos?"). No la conviertas en un bloque nuevo: responde en una frase y remite a la guía.
+
+Puedes decir:
+
+> Los datos que siempre viajan juntos se pueden agrupar en un objeto, y si además comparten las mismas operaciones, en una clase. Pero lo importante no es la clase: es decidir qué datos vale la pena guardar y cuáles no. Eso se llama abstracción, y hay una guía entera sobre eso.
+
+Remisión: [Guía 7: Programación orientada a objetos](../../material-estudiantes/02-programacion-base/guia-poo.md). Sirve como lectura opcional entre esta clase y el módulo 03, y su sección 2 conecta con lo que ya se hizo hoy en la pizarra: por qué `bubbleSort` recibe una **copia** y no la lista original. Eso es abstracción de interfaz: quien llama no necesita saber cómo están guardados los datos por dentro.

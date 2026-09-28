@@ -1,6 +1,6 @@
 # 1. Herramientas: escribir archivos y ejecutar programas
 
-Referencias oficiales: [Node.js](https://nodejs.org/en/download), [Visual Studio Code](https://code.visualstudio.com/) y [Getting Started de Vite](https://vite.dev/guide/).
+Referencias oficiales: [Node.js](https://nodejs.org/en/download) y [Visual Studio Code](https://code.visualstudio.com/).
 
 Esta guía te explica de qué sirven las herramientas antes de usarlas, para que no sean "cajas negras". Al final deberías poder escribir un programa en un archivo, ejecutarlo con Node y entender dónde aparece cada cosa.
 
@@ -27,21 +27,22 @@ Esto tiene una consecuencia práctica enorme: programar y ejecutar son dos accio
 
 Cada vez que "corras" un programa, el archivo se vuelve a leer desde el inicio y sus instrucciones se ejecutan en orden. Modifica el archivo, vuelve a ejecutarlo, y el resultado cambia.
 
-## Tres herramientas y sus roles
+## Las herramientas y sus roles
 
-Para trabajar necesitas cinco piezas, y cada una tiene un trabajo específico. No son "la misma cosa disfrazada": cumplen roles diferentes.
+Para trabajar necesitas cuatro piezas, y cada una tiene un trabajo específico. No son "la misma cosa disfrazada": cumplen roles diferentes.
 
 | Herramienta | Su rol | En una sola frase |
 |---|---|---|
 | **Editor** ([VS Code u otro](editor-vscode.md)) | escribir, leer y editar archivos | el taller donde se crea el código |
 | **Terminal** | dar órdenes a tu sistema: navegar carpetas y ejecutar comandos | el centro de mando |
 | **Node** | ejecutar archivos JavaScript fuera del navegador | el ejecutor de tus programas |
-| **npm** | instalar y administrar bibliotecas para tus proyectos | el gestor de paquetes |
-| **Vite** | crear, ejecutar y construir el proyecto web con React del curso | el que ejecuta la app React |
+| **npm** | instalar y administrar bibliotecas | el gestor de paquetes |
 
-La frase que resume el flujo: **el editor escribe, la terminal ordena, Node ejecuta, npm consigue piezas y Vite ejecuta la app React.**
+La frase que resume el flujo: **el editor escribe, la terminal ordena, Node ejecuta y npm consigue piezas.**
 
-Una aclaración importante desde ahora: en este curso, cuando hablemos de "ejecutar la aplicación", quien la ejecuta de verdad es **Vite**. Node y npm preparan el terreno (instalan las piezas y lanzan el comando), pero quien compila tu código React, lo abre en el navegador y lo refresca automáticamente cuando lo editas es Vite. Lo verás en acción en la parte final de esta guía.
+Y una aclaración que evita mucha confusión, porque es la pregunta más frecuente del curso:
+
+> **Durante la primera mitad del curso solo usas Node y npm.** Los ejercicios de las guías se ejecutan con `node archivo.js` (o `npx tsx archivo.ts`), en archivos sueltos, sin proyecto, sin servidor y sin configuración extra. Las otras piezas del curso —el proyecto web con React, la herramienta que lo construye y la publicación en la web— aparecen más adelante, y las explicaremos cuando lleguen. Si ahora te pierdes pensando en frameworks, servidores o comandos que no reconoces, no estás perdiendo nada: todavía no llegamos a eso.
 
 ## El editor: VS Code
 
@@ -88,9 +89,39 @@ console.log("Hola, mundo");
 console.log("Estoy corriendo JavaScript desde un archivo.");
 ```
 
+### 3. Qué es `console.log`
+
 `console.log(...)` es la forma de decirle al programa: *"muestra este valor en la consola"*. Aquí, "consola" es la terminal. Por ahora, `console.log` es tu ventana de salida: la manera de *ver* lo que tu programa hace.
 
-### 3. Ejecuta el archivo
+Conviene entenderlo en tres partes, porque evita media hora de confusión:
+
+- **`console`** es un objeto que ya existe en el entorno donde corres el programa. No lo escribiste tú: te lo dio Node (o el navegador). Es el mismo tipo de cosa que cuando más adelante modelemos objetos en el curso.
+- **`log`** es un método de ese objeto. El punto significa "llama a este método de este objeto", igual que `producto.descripcion()` cuando veamos clases.
+- **`(...)`** es el valor que quieres ver. Puedes encerrar varios valores separados por comas.
+
+Qué se puede imprimir y cómo:
+
+| Quieres mostrar... | Se escribe | Notas |
+|---|---|---|
+| Un texto | `console.log("Hola")` | el texto va **entre comillas** |
+| Un número | `console.log(42)` | los números van **sin** comillas |
+| Una decisión | `console.log(42 > 10)` | imprime `true` o `false` |
+| El valor de una variable | `console.log(edad)` | **sin** comillas, o imprimirías el texto `edad` |
+| Una lista de valores | `console.log([10, 20, 30])` | muestra todos sus elementos |
+
+El error más común de quien empieza desde cero, y la causa de casi todas las dudas del primer día:
+
+```js
+console.log(Hola);   // ReferenceError: Hola is not defined
+```
+
+Sin comillas, `Hola` no es un texto: es el nombre de una variable que no existe. Al revés también cambia el resultado: `console.log("42")` muestra el texto `42`, y `console.log(42)` muestra el número `42`.
+
+Una nota de estilo: **en las guías de este curso todos los ejemplos usan `console.log` porque hay que ver qué hace el programa.** En una aplicación terminada no se imprime todo, solo lo que ayuda a entender qué está pasando.
+
+La sección [Tu primer programa: hola mundo y qué es `console.log`](../02-programacion-base/README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) del módulo 02 amplía esto con más ejemplos y ejercicios.
+
+### 4. Ejecuta el archivo
 
 En la terminal, asegúrate de estar dentro de la carpeta donde creaste el archivo:
 
@@ -118,7 +149,7 @@ Ese es el ciclo completo y no va a cambiar durante todo el curso:
 
 > **escribir archivo → `node archivo.js` → ver la salida**
 
-### 4. Modifica y vuelve a ejecutar
+### 5. Modifica y vuelve a ejecutar
 
 Cambia el texto del archivo, agrega una línea, quita otra… y ejecuta `node hola.js` de nuevo. El resultado cambia. Puedes editar y volver a correr tantas veces quieras: programar es justamente ese ciclo de editar y probar.
 
@@ -137,8 +168,8 @@ JavaScript es originalmente el lenguaje del navegador: por eso, cuando abres un 
 
 En este curso usamos los dos:
 
-- **Node** para ejecutar tus programas de práctica (los guiones de las [Guías de JavaScript](../02-programacion-base/README.md#gu%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) usan exactamente este flujo: escribes un `.js` y lo ejecutas con `node archivo.js`; puedes incluso practicar desde el navegador en la consola con F12).
-- **Node + Vite** para preparar, ejecutar y construir el proyecto web con React y TypeScript (lo explorarás más adelante en esta misma guía).
+- **Node** para ejecutar tus programas de práctica: escribes un archivo y lo corres con `node archivo.js`. Las [Guías de JavaScript](../02-programacion-base/README.md#gu%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) usan exactamente este flujo, y también puedes practicar desde la consola del navegador con F12.
+- **El navegador**, más adelante, cuando lleguemos a las aplicaciones de React: ahí el código corre dentro de la página.
 
 Nota: otra forma rápida de probar JavaScript sin guardar ningún archivo es abrir la consola del navegador (F12 → pestaña *Console*) y escribir directamente. Sirve para experimentar, pero para tener un programa de verdad necesitas un archivo: algo que se pueda guardar, modificar, reutilizar y compartir.
 
@@ -156,49 +187,64 @@ Si descargas un proyecto de Git y le falta `node_modules`, ese comando lo recons
 
 ## Comandos esenciales
 
+Estos son los comandos que vas a necesitar durante la primera mitad del curso. No hay más:
+
 | Comando | Qué hace |
 |---|---|
 | `node archivo.js` | ejecuta un programa JavaScript guardado en un archivo |
 | `node --version` | muestra la versión de Node instalada |
+| `npx tsx archivo.ts` | ejecuta un archivo TypeScript sin instalar nada más |
 | `npm --version` | muestra la versión de npm instalada |
 | `npm install` | instala (o reinstala) las dependencias del `package.json` |
-| `npm create vite@latest proyecto -- --template react-ts` | crea un proyecto web nuevo con Vite y la plantilla de React + TypeScript |
-| `npm run dev` | inicia el servidor de desarrollo |
-| `npm run build` | comprueba y construye la versión de producción |
-| `npm run preview` | previsualiza la construcción |
-| `Ctrl + C` | detiene el programa o servidor en marcha |
+| `Ctrl + C` | detiene el programa que está corriendo en la terminal |
 
-## Crear el proyecto web con Vite
+Si un comando no aparece en esta tabla, no lo necesitas todavía.
 
-Aquí encaja todo lo que ya sabes. Vite es la herramienta que **crea, ejecuta y construye** el proyecto web del curso (React + TypeScript); como todo llega a través de npm, el primer comando es precisamente crear el proyecto:
+## Para más adelante: el proyecto web
+
+En algún momento del curso (no ahora) vamos a construir una aplicación de verdad: una página que se abre en el navegador y que se publica en una URL. Para eso vamos a usar **Vite**, que es la herramienta que prepara el proyecto y lo ejecuta mientras lo escribes.
+
+Lo único que necesitas saber por ahora es esto:
+
+> El proyecto web es **otra cosa**, y vive aparte de los ejercicios del curso. En los ejercicios trabajas con archivos sueltos y `node`; en el proyecto web trabajas dentro de una carpeta de proyecto con un comando que la enciende. No son lo mismo, y no hace falta que entiendas el segundo para hacer bien el primero.
+
+Si quieres ir adelantando, aquí abajo está el resumen. Vuelve a esta sección cuando lleguemos al [módulo 03](../03-react-typescript/README.md).
+
+### Crear el proyecto
+
+Vite llega a través de npm, así que el primer comando es crear el proyecto:
 
 ```bash
 npm create vite@latest portafolio-programacion -- --template react-ts
 ```
 
-Recomiendo usar el linter llamado **ESLint**, es ya un clasico y se usa bastante en empresas, pero eres libre de usar el que quieras, lo realmente importante es su funcionalidad, la cual es la de un software que analiza tu código fuente de forma automática para detectar errores, fallos potenciales y problemas de estilo antes de ejecutarlo.
+Después entras en la carpeta creada:
 
 ```bash
 cd portafolio-programacion
 ```
 
-Lo normal seria que al crear la carpeta de tu proyecto este tambien te instale todas las dependencias en una carpeta que se llama **node_modules**, pero en caso de que te falte esta carpeta, ya sea porque clonaste el proyecto de un repositorio o cometiste algun error, el siguiente comando te puede ayudar a recuperarla:
+Lo normal es que al crear la carpeta se instalen también las dependencias en una subcarpeta llamada **node_modules**. Si te falta esa carpeta (porque clonaste un repositorio o algo salió mal), el comando que la reconstruye es:
 
 ```bash
 npm install
 ```
 
-Por ultimo, puedes correr el proyecto con este comando:
+La plantilla viene con **ESLint**, un analizador que revisa tu código automáticamente y detecta errores y problemas de estilo antes de que corras el programa. Si más adelante quieres añadir Prettier u otra herramienta, hazlo con criterio: cada extensión es una pieza más que puede fallar o desactualizarse.
+
+### Encender el proyecto
 
 ```bash
 npm run dev
 ```
 
-Aquí es donde **Vite ejecuta React**: compila tu código, lo sirve en el navegador y lo actualiza solo cada vez que editas un archivo del proyecto. Abre la dirección local que muestra la terminal y verás tu aplicación corriendo. Para detener el servidor, presiona `Ctrl + C`.
+Este es el único comando del proyecto que necesitas de memoria. Aquí es donde **Vite ejecuta tu aplicación**: lee tu código, lo muestra en el navegador y lo actualiza solo cada vez que guardas un archivo. Abre la dirección local que aparece en la terminal. Para detenerlo, `Ctrl + C`.
 
-Algunas veces este comando puede cambiar segun la herramienta, el framework, criterio o deseo egoista de alguna demente, pero no te asustes, generalmente esta especificado dentro del archivo package.json, ahi encontraras un apartado que dice "scripts" y podras checkar que cosas se corren con el run. Por defecto `npm run dev` es casi lo mismo que correr `npm run vite`.
+El comando puede cambiar según la herramienta, pero no tienes que memorizar nada: está escrito en el archivo `package.json`, en el apartado **"scripts"**. Ahí ves todo lo que se puede correr con `npm run`.
 
-Con esto ya tienes la última pieza del flujo completo: escribes instrucciones en archivos (editor), las ejecutas con Node y su ecosistema (terminal + npm), y **Vite ejecuta la app React**. El mismo principio de la sección inicial —**un programa es un archivo**— sigue aplicando: React, TypeScript y Vite son, en el fondo, archivos organizados dentro del proyecto.
+### Lo esencial del módulo
+
+Con esto ya tienes lo que necesitas para la primera mitad del curso: **escribes archivos, los ejecutas con Node y guardas versiones con git**. El proyecto web que acabas de crear es tu portafolio; volveremos a él en la última parte del curso, cuando le agreguemos las aplicaciones de React.
 
 ## Si algo falla
 

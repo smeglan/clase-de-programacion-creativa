@@ -17,6 +17,8 @@ Al terminar esta guía deberías poder:
 > **Cómo probar los ejemplos**
 >
 > Igual que en la [Guía 1](guia-if.md): copia el código en un archivo (`node ejemplo.js`) o pégalo en la consola del navegador. Las dos formas funcionan, elige la que tengas disponible.
+>
+> Y si `console.log` todavía te resulta extraño, la sección [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) lo explica desde cero.
 
 ## 1. El problema
 

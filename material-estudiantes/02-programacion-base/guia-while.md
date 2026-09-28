@@ -14,6 +14,8 @@ Al terminar esta guía deberías poder:
 > **Cómo probar los ejemplos**
 >
 > Como en las guías anteriores: guarda el código en un archivo y ejecútalo con `node ejemplo.js`, o pégalo en la consola del navegador (F12 → *Console*). En esta guía hay un ejemplo que **nunca termina**: si lo ejecutas, aprende a detenerlo (más abajo te explico cómo).
+>
+> Todo se imprime con `console.log`: si esa llamada te resulta nueva, mira [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog).
 
 ## 1. El problema
 

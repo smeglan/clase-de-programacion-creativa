@@ -15,6 +15,8 @@ Al terminar esta guía deberías poder:
 > **Cómo probar los ejemplos**
 >
 > Igual que en las guías anteriores: `node ejemplo.js` con el código en un archivo, o pegar el código en la consola del navegador. Todo es JavaScript básico.
+>
+> Los ejemplos usan `console.log` para que veas cada lista y cada resultado: la sección [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) te lo explica.
 
 ## 1. El problema
 

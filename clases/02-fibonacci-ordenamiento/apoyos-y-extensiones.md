@@ -72,6 +72,12 @@ Imprimir cada lista como barras de caracteres (`*` o `#`) al final de cada pasad
 
 Implementar `mergeSort` con la idea de dividir y combinar, probándolo con las mismas listas que bubble. No es obligatorio y no se revisa en clase; quien lo logre, que lo explique con palabras a un compañero.
 
+### 7. De variables sueltas a un modelo con clases
+
+Convertir el programa de la clase en algo que se parezca a la tiendita del curso: en vez de `let serie = []` suelto, escribir una clase `Serie` con `constructor`, un método `siguiente()` y un getter `valores`. Es el paso natural de "función que recibe datos" a "objeto que sabe lo suyo", y conecta con la [Guía 7: Programación orientada a objetos](../../material-estudiantes/02-programacion-base/guia-poo.md), especialmente con la sección 2 sobre qué datos vale la pena modelar.
+
+No es una revisión obligatoria: sirve para quien ya terminó los dos ejercicios de la clase y quiere ver el mismo problema resuelto con otro estilo.
+
 ### Criterio de logro de la extensión
 
 La persona propone una variante, la implementa, la prueba con casos propios y puede explicar qué cambió y por qué funcionó o falló.

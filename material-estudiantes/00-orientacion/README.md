@@ -13,6 +13,8 @@ Un portafolio web público con una página personal, proyectos pequeños de apre
 - Git y GitHub para guardar versiones;
 - Vercel para publicar el resultado.
 
+El curso tiene dos etapas y no conviene mezclarlas: **en la primera mitad trabajas solo con Node y npm** (archivos sueltos que se ejecutan en la terminal), y **Vite aparece en la parte final**, cuando hay que construir y publicar el proyecto web. Vite está en el stack del curso, pero no es una herramienta de la primera mitad.
+
 ## Carpeta de trabajo
 
 Usaremos un único proyecto llamado `portafolio-programacion`. Dentro de él habrá una sección para cada ejercicio y proyecto.

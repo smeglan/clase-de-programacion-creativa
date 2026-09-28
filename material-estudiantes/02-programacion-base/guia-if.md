@@ -21,6 +21,10 @@ Al terminar esta guía deberías poder:
 >
 > Si no tienes computadora en este momento, la consola del navegador de un celular también sirve para los ejemplos pequeños.
 
+> **Una nota antes de empezar**
+>
+> Todos los ejemplos de esta guía usan `console.log` para que veas qué está pasando. Si todavía no tienes claro cómo funciona o qué tanto puede imprimir, revisa [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) antes de continuar.
+
 ## 1. El problema
 
 Un programa que solo hace lo mismo siempre no es muy útil. Casi cualquier problema real necesita **decidir**:

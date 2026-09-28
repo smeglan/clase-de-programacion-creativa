@@ -120,7 +120,9 @@ Confirma cuando pregunte (escribe `S` o `Y` según el idioma). Esto no desactiva
 
 Las extensiones son paquetes que añaden funciones al editor. Son útiles, pero **no necesitas instalar decenas**: cada extensión es una pieza más que puede fallar o desactualizarse. Instala pocas, con un propósito claro.
 
-En este curso, la recomendada es **ESLint** (la menciona la [guía principal](README.md#crear-el-proyecto-web-con-vite) al crear el proyecto Vite): analiza tu código automáticamente y detecta errores o problemas de estilo antes de ejecutarlo. Un formato de código opcional y cómodo es **Prettier**.
+En este curso, la recomendada es **ESLint**: analiza tu código automáticamente y detecta errores o problemas de estilo antes de ejecutarlo. La verás aparecer sola cuando, más adelante, crees el proyecto web (la [guía principal](README.md#para-m%C3%A1s-adelante-el-proyecto-web) lo explica). Un formato de código opcional y cómodo es **Prettier**.
+
+No hace falta instalar nada para lo que vas a hacer en la primera mitad del curso: con el editor, la terminal y Node ya tienes todo.
 
 Para instalarla: abre el panel de Extensiones, busca el nombre y presiona **Install**. Cuando necesites verificar una extensión, revisa en el panel su nombre exacto y cuántas personas la usan antes de instalarla a ciegas.
 
@@ -138,8 +140,8 @@ Aplica siempre la secuencia de la [guía principal](README.md#si-algo-falla): le
 
 Con el editor claro, la frase del módulo cobra todo su sentido:
 
-> **El editor escribe, la terminal ordena, Node ejecuta, npm consigue piezas y Vite ejecuta la app React.**
+> **El editor escribe, la terminal ordena, Node ejecuta y npm consigue piezas.**
 
 El editor es la primera pieza del ciclo: ahí se escribe el archivo, la terminal integrada lo ejecuta y el resultado aparece abajo. Una herramienta menos misteriosa, un paso más del recorrido.
 
-Continúa con el [primer programa en Node](README.md#tu-primer-programa-con-node) donde vas a usar esto de inmediato.
+Continúa con el [primer programa en Node](README.md#tu-primer-programa-con-node) donde vas a usar esto de inmediato. Y recuerda: hasta la parte final del curso, estas cuatro piezas son todas las que necesitas.

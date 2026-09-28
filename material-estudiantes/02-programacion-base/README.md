@@ -2,7 +2,106 @@
 
 Este módulo enseña las herramientas mínimas para leer, escribir y explicar programas pequeños. La meta no es repetir sintaxis: es poder transformar un problema sencillo en pasos claros, código verificable y pruebas propias.
 
-Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexión con React se trabajan en el [módulo 03](../03-react-typescript/README.md). Aquí construimos las bases que los hacen comprensibles.
+Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexión con React se trabajan en el [módulo 03](../03-react-typescript/README.md). Aquí construimos las bases que los hacen comprensibles, y en la [Guía 7](#guía-7-poo-clases-y-abstracción) podrás ver el camino intermedio: pasar de variables sueltas a un modelo con clases y abstracción.
+
+## Tu primer programa: hola mundo y qué es `console.log`
+
+Todo curso de programación empieza con un "hola mundo", y no es superstición: es la forma más barata de comprobar que tu editor, tu terminal y tu entorno se están hablando. Si lograste ver esas palabras, ya hay un programa corriendo en tu máquina.
+
+En el [módulo 01](../01-herramientas/README.md#tu-primer-programa-con-node) lo escribiste y lo ejecutaste. Aquí lo desarmamos, porque esa línea contiene casi todos los conceptos que vas a ver en el módulo.
+
+### El programa más pequeño que funciona
+
+```js
+console.log("Hola, mundo");
+```
+
+Y en la terminal:
+
+```
+Hola, mundo
+```
+
+Eso es un programa completo. No necesita estructura de control, no necesita variables, no necesita imports. Un archivo, una instrucción, un resultado.
+
+### Las tres piezas de `console.log`
+
+```js
+console.log("Hola, mundo");
+```
+
+En una sola línea hay tres cosas escondidas:
+
+- **`console`** es un objeto que ya existe: no lo creaste tú, te lo dio el entorno donde corre el programa (Node o el navegador). Cuando en la [Guía 7](#guía-7-poo-clases-y-abstracción) modelemos nuestros propios objetos, esta estructura te va a sonar familiar.
+- **`log`** es un método de ese objeto. El punto significa *"llama a este método de este objeto"*, y por eso existen `console.log`, `console.error` y `console.warn`: el mismo objeto, distintas acciones.
+- **`(...)`** lleva lo que quieres mostrar. Puede ser un valor o varios separados por comas.
+
+El orden importa cuando el mismo nombre cumple dos papeles: `console.log` empieza por un objeto, y `log(...)` es una llamada a un método. Por eso más adelante, cuando tengas tus propios objetos, `producto.descripcion()` se leerá igual: objeto, punto, método.
+
+### Textos, números y decisiones
+
+Lo primero que se confunde al empezar es qué lleva comillas y qué no:
+
+```js
+console.log("Hola");          // texto: comillas
+console.log(42);              // número: sin comillas
+console.log(true);            // decisión: true o false
+console.log(2 + 3);           // una operación, no el texto "2 + 3"
+console.log("2 + 3");         // el texto literal 2 + 3
+```
+
+`console.log("2 + 3")` y `console.log(2 + 3)` se parecen en la pantalla, pero no son lo mismo: el primero muestra cinco caracteres escritos a mano; el segundo calcula una suma y muestra el número. La sección [Tipos básicos](#tipos-básicos) de este módulo (números, textos y booleanos) le da nombre formal a esta diferencia.
+
+También puedes imprimir el valor de una variable. Y aquí está la trampa clásica:
+
+```js
+const edad = 20;
+
+console.log(edad);        // 20        (el valor de la variable)
+console.log("edad");      // edad      (el texto "edad")
+```
+
+### El error que vas a cometer hoy
+
+```js
+console.log(Hola);   // ReferenceError: Hola is not defined
+```
+
+Sin comillas, `Hola` no es un texto: JavaScript lo interpreta como el **nombre de una variable**, busca esa variable, no la encuentra y te dice que no está definida. La solución casi siempre es la misma: ¿querías mostrar un texto? Entonces, comillas.
+
+En la terminal verás el error completo, con la línea donde ocurrió. No es un castigo: es el programa diciéndote exactamente qué no encontró. Por eso leer errores es parte del trabajo, y no un extra.
+
+### Cómo se ejecuta lo que escribes
+
+Dos formas, y las dos valen:
+
+```bash
+node hola.js          # 1. En un archivo, que es lo que usamos siempre
+
+node                  # 2. En la terminal directa, sin guardar nada
+# > "Hola, mundo"  y presionas Enter
+```
+
+Para tus prácticas de este módulo, guarda siempre el archivo: los programas de la [Guía 1](guia-if.md) y siguientes se ejecutan así, y sus comentarios `// salida esperada: ...` se comparan con lo que imprime tu consola.
+
+### Ejercicio
+
+1. Crea `hola.js` con tu nombre, tu ciudad y una frase que te defina.
+2. Ejecuta el archivo y comprueba que la terminal muestra las tres líneas.
+3. Ahora quita las comillas de una de ellas y ejecuta otra vez. Lee el error completo en voz alta: ¿qué le estás pidiendo a JavaScript?
+4. Agrega una línea que imprima la cantidad de caracteres de tu nombre usando `.length`, sin buscar nada: es tu turno de adivinar.
+5. Usa un **argumento**: `console.log("Hola", "mundo", "!", 42)`. ¿Cuántos espacios aparecen entre los valores? ¿Por qué?
+
+### Y ahora, a lo que vinimos
+
+Un `console.log` no es un simple trámite: es un **punto de observación** sobre el programa. Es exactamente lo que harás durante todo el módulo 02:
+
+- para ver qué valor tiene una variable en cada punto del código;
+- para comprobar una decisión (`if`, `for`, `while`) por dónde entró el programa;
+- para comparar tu resultado con el esperado;
+- y, más adelante, para entender qué hace un objeto cuando todavía no hay interfaz.
+
+Si puedes escribir "hola mundo" y explicar qué hace cada símbolo, ya tienes lo necesario para empezar.
 
 ## Guías de JavaScript: lógica antes de los tipos
 
@@ -391,6 +490,18 @@ Cuando domines ciclos, funciones y listas con tipos, estas dos guías te llevan 
 
 No son un requisito del recorrido principal, pero conectan con la [profundización de algoritmia](../07-algoritmia/README.md) y con las preguntas de "¿qué tan eficiente es mi solución?" que aparecen en entrevistas y proyectos reales.
 
+## Guía 7: POO, clases y abstracción
+
+La tercera profundización del módulo, con la misma lógica que las guías 5 y 6: partir de un problema concreto, escribir el código y explicar las decisiones. Aquí el problema son los **datos que siempre viajan juntos** (un producto, un carrito, un turno) y la pregunta central es una:
+
+> **¿qué necesita saber esta aplicación para cumplir su propósito, y qué puede quedarse afuera?**
+
+- [Guía 7: Programación orientada a objetos: clases y abstracción](guia-poo.md) — la abstracción explicada a fondo (datos, comportamiento e interfaz), clases con `constructor`, `this` y `new`, encapsulamiento con `private` y getters, composición frente a herencia ("¿es un?"), polimorfismo con `interface`, y una sección honesta sobre cuándo conviene un `type` con funciones puras en vez de una clase.
+
+Los ejemplos usan TypeScript y salen del mismo dominio del curso (la tiendita), así que conectan directo con el [módulo 03](../03-react-typescript/README.md) y con el proyecto integrador.
+
 ## Siguiente paso
 
 Cuando puedas explicar y resolver los retos 0-13, continúa con [Modelado de datos, estructuras y React](../03-react-typescript/README.md). Allí aprenderás a representar entidades con objetos, elegir estructuras como pila o cola y mostrar esos datos en una interfaz.
+
+Si te queda la duda de por qué un producto necesita tantos datos, o de cuándo conviene una clase y cuándo no, la [Guía 7: POO](#guía-7-poo-clases-y-abstracción) responde exactamente eso y sirve de puente entre los dos módulos.

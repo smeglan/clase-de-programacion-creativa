@@ -46,7 +46,7 @@ Presentar en este orden y sin saltar pasos:
 4. **Bubble sort:** con números físicos o dibujados, mostrar una pasada completa: comparar de vecino en vecino, intercambiar cuando el de la izquierda es mayor y dejar que el más grande "suba como burbuja" hasta el final. Repetir para cada posición restante.
 5. **Merge sort como idea (no se implementa):** dividir la lista en mitades, seguir dividiendo hasta tener elementos sueltos y volver a combinar montones ordenados. Comparar con bubble sort en una frase: bubble es el más simple de explicar, merge aprovecha dividir y hace menos trabajo con listas grandes.
 
-Cerrar con dos o tres de las [preguntas de comprobación](guion-explicacion-docente.md#preguntas-de-comprobacion) antes de iniciar el ejercicio.
+Cerrar con dos o tres de las [preguntas de comprobación](guion-explicacion-docente.md#preguntas-de-comprobaci%C3%B3n) antes de iniciar el ejercicio.
 
 ### 2. Ejercicio guiado - 40 minutos
 
