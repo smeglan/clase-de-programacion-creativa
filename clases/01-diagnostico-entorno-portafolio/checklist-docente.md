@@ -2,34 +2,31 @@
 
 ## Antes de la clase
 
-- [ ] Probé la plantilla `react-ts`.
-- [ ] Probé `npm install`, `npm run dev` y `npm run build`.
-- [ ] Probé el flujo GitHub-Vercel.
-- [ ] Preparé una alternativa en navegador para casos de instalación fallida.
-- [ ] Preparé una guía paso a paso y un reto opcional de extensión.
+- [ ] Comprobé que Node se ejecuta en los equipos disponibles.
+- [ ] Preparé editor, terminal y carpeta de práctica.
+- [ ] Probé `node hola.js` con un ejemplo mínimo.
+- [ ] Imprimí o abrí el diagnóstico inicial.
+- [ ] Preparé la ficha breve para delimitar la idea de proyecto.
 
 ## Durante la clase
 
-- [ ] Todos conocen el propósito y las posibilidades de cierre del curso.
-- [ ] Todos respondieron el diagnóstico.
-- [ ] Todos lograron ejecutar la aplicación localmente o tienen un plan alternativo.
-- [ ] Todos modificaron el componente principal.
-- [ ] Todos crearon o recibieron un repositorio.
-- [ ] Todos tienen una primera publicación, una versión local o un plan alternativo de continuidad.
-- [ ] Registré necesidades de apoyo y posibles extensiones por estudiante.
+- [ ] Presenté el propósito del curso y sus etapas.
+- [ ] El grupo completó el diagnóstico sin calificación numérica.
+- [ ] Cada persona creó y ejecutó `hola.js`.
+- [ ] Cada persona distinguió el trabajo del editor, la terminal y Node.
+- [ ] Cada persona describió una idea inicial con usuario o propósito.
+- [ ] Registré necesidades de apoyo y preguntas para la siguiente clase.
 
 ## Señales de apoyo adicional
 
-- confunde terminal y editor;
-- no puede ejecutar el proyecto con una guía;
-- no reconoce un archivo `.tsx`;
-- copia código sin poder explicar dónde se usa;
-- se bloquea ante errores básicos de instalación.
+- confunde la carpeta del editor con la carpeta actual de la terminal;
+- no encuentra o no guarda el archivo `.js`;
+- no entiende por qué hay que volver a ejecutar el archivo;
+- propone un proyecto muy grande y necesita reducirlo a una función inicial.
 
 ## Señales para proponer una extensión
 
-- ejecuta y modifica el proyecto de forma autónoma;
-- entiende componentes y props básicos;
-- puede explicar una función o un tipo;
-- propone mejoras sin esperar instrucciones paso a paso;
-- documenta y prueba sus cambios.
+- ejecuta el archivo sin guía paso a paso;
+- modifica el mensaje y predice la salida;
+- puede describir una entrada, un proceso y una salida para su idea;
+- ayuda a un compañero a localizar la carpeta o entender el flujo sin hacerle el trabajo.

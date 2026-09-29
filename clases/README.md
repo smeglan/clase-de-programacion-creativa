@@ -25,12 +25,24 @@ clases/
 │   ├── diagnostico.md
 │   ├── checklist-docente.md
 │   └── apoyos-y-extensiones.md
-└── 02-fibonacci-ordenamiento/
+├── 02-fibonacci-ordenamiento/
+│   ├── clase.md
+│   ├── guion-explicacion-docente.md
+│   ├── checklist-docente.md
+│   └── apoyos-y-extensiones.md
+├── 03-poo-abstraccion/
+│   ├── clase.md
+│   ├── guion-explicacion-docente.md
+│   ├── checklist-docente.md
+│   └── apoyos-y-extensiones.md
+└── 04-html-css/
     ├── clase.md
     ├── guion-explicacion-docente.md
     ├── checklist-docente.md
     └── apoyos-y-extensiones.md
 ```
+
+La clase 3 está dirigida al docente y se ocupa de POO y abstracción. La clase 4 introduce HTML, CSS y una interacción con JavaScript plano en una página local que abre directamente en el navegador. El [material de HTML para estudiantes](../material-estudiantes/03-react-typescript/guia-html.md) y la [guía de JavaScript con HTML](../material-estudiantes/03-react-typescript/guia-javascript-html.md) son archivos separados que preparan el recorrido a React.
 
 ## Apoyos y extensiones
 

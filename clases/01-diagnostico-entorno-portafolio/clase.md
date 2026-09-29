@@ -1,121 +1,114 @@
-# Clase 1: Diagnóstico, entorno y portafolio
+# Clase 1: Diagnóstico, herramientas e idea de proyecto
 
 ## Datos generales
 
 - Duración presencial: 3 horas.
 - Trabajo no presencial asociado: 9 horas.
-- Momento: diagnóstico y planteamiento transversal del proyecto de curso.
-- Resultado de aprendizaje: el estudiante identifica su punto de partida, configura el entorno de trabajo y define una primera idea para su portafolio y proyecto integrador.
-- Meta de la clase: reconocer el punto de partida, explorar el entorno de trabajo y definir un primer avance para el portafolio.
+- Momento: inicio del curso y diagnóstico.
+- Resultado de aprendizaje: el estudiante identifica su punto de partida, prepara su espacio de trabajo y define una idea inicial para el portafolio o proyecto integrador.
+- Meta de la clase: explicar para qué sirven editor, terminal y Node, ejecutar un archivo JavaScript sencillo y formular una idea de proyecto.
 
 ## Objetivos de la sesión
 
 Al terminar la clase, el estudiante podrá:
 
-1. explicar qué espera aprender y qué experiencia previa tiene;
-2. abrir, ejecutar y modificar un proyecto React con TypeScript;
-3. crear un repositorio para su portafolio;
-4. publicar una primera versión funcional;
-5. proponer una idea inicial de proyecto integrador.
+1. explicar qué experiencia previa tiene y qué espera aprender;
+2. distinguir editor, terminal y Node;
+3. crear y guardar un archivo `.js`;
+4. ejecutar el archivo con Node y leer su salida;
+5. describir una idea de proyecto con usuario, propósito y una función principal.
 
 ## Preparación docente
 
-Antes de la clase, comprobar:
+- Comprobar Node.js, npm y un editor de texto en los equipos disponibles.
+- Preparar un archivo `hola.js` y una carpeta de práctica.
+- Tener a mano la [guía de herramientas](../../material-estudiantes/01-herramientas/README.md) y la [guía de VS Code](../../material-estudiantes/01-herramientas/editor-vscode.md).
+- Preparar el formulario de diagnóstico y una pizarra para recoger ideas.
+- No se crea todavía un proyecto React/Vite ni se publica el portafolio; ese flujo se introduce después de HTML y CSS.
 
-- Node.js y npm instalados;
-- editor de código disponible;
-- Git funcionando;
-- acceso a GitHub;
-- acceso a Vercel o una alternativa de publicación;
-- una plantilla base de Vite con React y TypeScript;
-- una página de respaldo en caso de que alguien no pueda instalar herramientas.
+## Núcleo común - 180 minutos
 
-La plantilla base debe ser mínima: React, TypeScript, Vite y CSS nativo. No se deben añadir librerías adicionales en esta primera sesión.
+### 1. Bienvenida y propósito del curso - 20 minutos
 
-## Núcleo común - primeras 2 horas
+Presentar la meta del curso: resolver problemas y construir progresivamente un portafolio con proyectos que cada persona pueda explicar. Compartir canales y acuerdos del curso, y explicar que el grupo avanzará por etapas.
 
-### 1. Explicación y demostración - 30 minutos
+### 2. Diagnóstico inicial - 25 minutos
 
-Para preparar definiciones, ejemplos y preguntas de comprobación, usar el [guion de explicación docente](guion-explicacion-docente.md).
+Aplicar el [diagnóstico](diagnostico.md). No asignar nota: permite conocer experiencia con programación, HTML/CSS, Git, React, IA y herramientas básicas para ofrecer apoyos pertinentes.
 
-Presentar:
+### 3. Herramientas y flujo mínimo - 30 minutos
 
-- qué es programación creativa;
-- qué se construirá durante el curso;
-- diferencia entre TypeScript, React, Vite y Vercel;
-- estructura básica de un proyecto;
-- relación entre código, repositorio y URL publicada;
-- propósito del portafolio.
+Explicar con ejemplos concretos:
 
-Demostrar el flujo completo:
+- el editor crea y modifica archivos;
+- la terminal ejecuta comandos desde una carpeta;
+- Node ejecuta archivos JavaScript fuera del navegador;
+- npm administra paquetes y permite ejecutar herramientas como `tsx`.
 
-```bash
-npm create vite@latest portafolio-programacion -- --template react-ts
-cd portafolio-programacion
-npm install
-npm run dev
+Mencionar que Vite y React se usarán en una etapa posterior. Hoy no hace falta instalarlos ni aprender sus comandos.
+
+### 4. Primer archivo ejecutable - 40 minutos
+
+El grupo crea una carpeta `portafolio-programacion`, abre esa carpeta en el editor y guarda `hola.js`:
+
+```js
+const nombre = "Ada";
+console.log(`Hola, ${nombre}`);
 ```
 
-Después mostrar una modificación sencilla en `src/App.tsx`, subirla a GitHub y explicar cómo se conecta con Vercel.
+Desde la terminal ubicada en esa carpeta, ejecuta:
 
-### 2. Diagnóstico y ejercicio - 30 minutos
+```bash
+node hola.js
+```
 
-Aplicar el diagnóstico de `diagnostico.md`. No se califica como examen; sirve para identificar apoyos necesarios y retos opcionales adecuados, no para etiquetar a nadie.
+Pide que cambien el nombre, guarden, ejecuten otra vez y describan qué cambió. El objetivo es observar el ciclo archivo → ejecución → salida, no memorizar sintaxis.
 
-Luego, todos deben modificar el texto de la página inicial para incluir:
+### 5. Idea inicial de proyecto - 45 minutos
 
-- nombre o seudónimo;
-- una frase sobre sus intereses;
-- una lista de tres cosas que esperan aprender;
-- una sección vacía para los proyectos del curso.
+Cada estudiante completa una ficha breve:
 
-### 3. Laboratorio y resolución de dudas - 60 minutos
+- ¿Quién podría usar mi proyecto?
+- ¿Qué necesidad, pregunta o interés atiende?
+- ¿Qué acción principal debería permitir?
+- ¿Cómo sabré que funciona?
+- ¿Qué todavía no sé construir?
 
-Cada estudiante debe:
+En parejas, explicar la idea en un minuto y recibir una pregunta que ayude a delimitarla. El proyecto puede cambiar durante el curso.
 
-1. crear o clonar su proyecto;
-2. ejecutarlo localmente;
-3. modificar la página inicial;
-4. crear el repositorio;
-5. realizar el primer commit;
-6. publicar la primera versión;
-7. registrar el enlace en su ficha de curso.
+### 6. Cierre y bitácora - 20 minutos
 
-El docente recorre el aula usando el checklist de `checklist-docente.md`, registra bloqueos frecuentes y propone apoyos o extensiones puntuales según sea necesario.
-
-### 4. Taller de acompañamiento y proyección - 60 minutos
-
-Usar esta hora para que cada estudiante continúe el flujo con el que tenga más sentido trabajar: resolver una instalación pendiente, crear el repositorio, publicar una primera versión, mejorar su página inicial o delimitar una idea de proyecto. El docente puede alternar acompañamiento técnico, revisión breve entre pares y conversación individual sobre el punto de partida.
+Cada estudiante escribe qué herramienta ejecutó el archivo, en qué carpeta lo guardó y qué pregunta tiene para la próxima sesión. Recoger bloqueos para preparar apoyos.
 
 ## Observación y retroalimentación
 
-Durante la sesión, observar si el estudiante puede explorar el diagnóstico, ejecutar o reconocer un proyecto React, localizar el componente principal y explicar qué desea construir. Según las condiciones técnicas, puede registrar un repositorio, una aplicación local, una primera URL o una nota de planificación; ninguna de estas opciones debe impedir el avance de quien tenga dificultades de instalación.
+Observar si cada estudiante puede abrir una carpeta, localizar su archivo, distinguir editor de terminal y relacionar el comando con la salida. En la idea de proyecto, comprobar si hay un usuario o propósito comprensible y si se puede describir una función inicial.
 
 ## Trabajo no presencial - 9 horas
 
-### Propuesta de continuidad
-
-Como práctica sugerida, mejorar la página inicial del portafolio con algunos de estos elementos:
-
-- presentación breve;
-- objetivos personales;
-- sección de proyectos;
-- sección "qué aprendí en esta clase";
-- enlace al repositorio;
-- enlace a la aplicación publicada.
-
-### Distribución sugerida
-
-- 2 h: repasar la estructura de un proyecto Vite y React;
-- 2 h: practicar edición de JSX y estilos CSS básicos;
-- 2 h: revisar Git, commits y repositorios;
-- 2 h: mejorar la página inicial;
-- 1 h: escribir la idea del proyecto integrador o documentar bloqueos y preguntas para la siguiente clase.
+1. Repetir el ejercicio `hola.js` con tres mensajes distintos y explicar cada cambio.
+2. Revisar la guía de herramientas y anotar las dudas que aún quedan sobre terminal, carpetas o Node.
+3. Expandir la ficha de proyecto con tres funciones posibles y priorizar la más pequeña.
+4. Buscar dos proyectos o sitios que inspiren la idea y anotar qué elemento visual o funcional resulta interesante.
+5. Registrar en la bitácora qué se logró y qué necesita apoyo.
 
 ## Criterios de logro
 
-- puede ejecutar el proyecto sin seguir una guía paso a paso completa;
-- puede localizar el componente principal;
-- puede modificar contenido y estilos básicos;
-- tiene un repositorio y una URL funcionales;
-- puede explicar qué hizo y qué necesita aprender.
+- El estudiante describe su punto de partida sin que el diagnóstico se use como calificación.
+- Crea, guarda y ejecuta `hola.js`.
+- Distingue editor, terminal y Node en el flujo de trabajo.
+- Formula una idea inicial con propósito y una función abordable.
+
+## Materiales
+
+- Computador, editor de texto, terminal y Node.js.
+- Carpeta de práctica `portafolio-programacion`.
+- [Diagnóstico](diagnostico.md), [guion docente](guion-explicacion-docente.md), [checklist](checklist-docente.md), [apoyos](apoyos-y-extensiones.md) y [guía de herramientas para estudiantes](../../material-estudiantes/01-herramientas/README.md).
+
+## Bloqueos previsibles y respuestas
+
+- **No encuentra la terminal:** abrir una integrada del editor o usar la del sistema; comprobar la carpeta actual.
+- **`node` no se reconoce:** revisar la instalación y abrir una terminal nueva.
+- **El archivo no aparece:** confirmar que se abrió la carpeta del proyecto y revisar el nombre y la extensión `.js`.
+- **El resultado no cambia:** guardar el archivo antes de volver a ejecutar el comando.
+- **No sabe qué proyecto proponer:** partir de una actividad cotidiana, una afición o una dificultad que haya encontrado.

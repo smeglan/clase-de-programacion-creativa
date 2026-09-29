@@ -1,23 +1,40 @@
 # Clase 1: apoyos y extensiones
 
-Este documento acompaña una única experiencia de clase. No divide al grupo: ofrece opciones para responder a necesidades concretas mientras todos construyen su primera página publicada.
-
 ## Apoyo puntual
 
-Úsalo cuando una persona no logra iniciar el proyecto o no sabe todavía dónde hacer cambios.
+### 1. Localizar el archivo
 
-1. Entregar una guía visual con los comandos `npm install` y `npm run dev`.
-2. Indicar que el primer cambio ocurre en `src/App.tsx` y pedir que modifique solo un título antes de añadir más contenido.
-3. Trabajar en pareja durante diez minutos: una persona ejecuta los pasos y la otra explica qué aparece en pantalla.
-4. Pedir una explicación breve: qué archivo cambió, qué comando inició el proyecto y qué mensaje de error apareció si algo falló.
+Pedir al estudiante que muestre la carpeta abierta en el editor y confirme que `hola.js` aparece ahí. En la terminal, comprobar la carpeta actual con `pwd` (PowerShell y macOS/Linux) o `cd` en Command Prompt. Si no coincide, abrir la carpeta correcta o navegar hasta ella.
+
+### 2. Ejecutar una sola instrucción
+
+Si el ejemplo completo abruma, usar:
+
+```js
+console.log("Hola");
+```
+
+Guardar y correr `node hola.js`. Cambiar únicamente el texto y repetir.
+
+### 3. Apoyar la idea del proyecto
+
+Ofrecer esta estructura:
+
+> Una persona que ___ necesita ___ para poder ___ .
+
+Después preguntar cuál sería la primera función pequeña que permitiría comprobar que la idea sirve.
+
+### Criterio de logro del apoyo
+
+El estudiante ejecuta un archivo JavaScript y explica qué cambió entre dos ejecuciones.
 
 ## Extensión opcional
 
-Úsalo si alguien ya creó, ejecutó y modificó su página inicial.
+1. Imprimir nombre, ciudad e interés en líneas separadas.
+2. Guardar una frase en una variable y mostrarla junto al nombre.
+3. Escribir una entrada, proceso y salida posibles para la idea del proyecto.
+4. Dibujar en papel una pantalla que podría tener el producto terminado, sin programarla todavía.
 
-1. Crear un tipo `Proyecto` con `titulo`, `descripcion` y `tecnologias`.
-2. Guardar dos proyectos de ejemplo en un arreglo tipado.
-3. Crear un componente `ProjectCard` que reciba un proyecto por `props`.
-4. Mostrar las tarjetas con `.map()` y añadir una sección de intereses visualmente consistente.
+### Criterio de logro de la extensión
 
-No se requieren librerías adicionales. La meta es practicar tipos, componentes, `props` y renderizado de listas sin adelantar contenidos de forma obligatoria.
+El estudiante modifica el ejemplo con autonomía y puede explicar cómo se relaciona su idea de proyecto con el contenido que escribió.

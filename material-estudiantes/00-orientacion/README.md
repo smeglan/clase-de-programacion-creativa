@@ -2,7 +2,7 @@
 
 ## ¿Qué vamos a construir?
 
-Un portafolio web público con una página personal, proyectos pequeños de aprendizaje y un proyecto integrador, que finalmente acabara en una serie de examenes para medir nuestro conocimiento.
+Un portafolio web público con una página personal, proyectos pequeños de aprendizaje y un proyecto integrador. El curso también incluye evaluaciones para revisar lo aprendido.
 
 ## Stack del curso
 
@@ -13,7 +13,7 @@ Un portafolio web público con una página personal, proyectos pequeños de apre
 - Git y GitHub para guardar versiones;
 - Vercel para publicar el resultado.
 
-El curso tiene dos etapas y no conviene mezclarlas: **en la primera mitad trabajas solo con Node y npm** (archivos sueltos que se ejecutan en la terminal), y **Vite aparece en la parte final**, cuando hay que construir y publicar el proyecto web. Vite está en el stack del curso, pero no es una herramienta de la primera mitad.
+El curso tiene dos etapas: primero practicas la lógica con archivos sueltos que ejecutas con Node; después usas Vite para construir y publicar el proyecto web. npm acompaña ambos momentos: permite ejecutar herramientas como `tsx` y administrar las dependencias del proyecto.
 
 ## Carpeta de trabajo
 

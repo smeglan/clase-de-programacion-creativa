@@ -122,7 +122,7 @@ Las extensiones son paquetes que añaden funciones al editor. Son útiles, pero 
 
 En este curso, la recomendada es **ESLint**: analiza tu código automáticamente y detecta errores o problemas de estilo antes de ejecutarlo. La verás aparecer sola cuando, más adelante, crees el proyecto web (la [guía principal](README.md#para-m%C3%A1s-adelante-el-proyecto-web) lo explica). Un formato de código opcional y cómodo es **Prettier**.
 
-No hace falta instalar nada para lo que vas a hacer en la primera mitad del curso: con el editor, la terminal y Node ya tienes todo.
+Para ejecutar archivos `.js` basta con el editor, la terminal y Node. Para las guías escritas en TypeScript también necesitarás npm y `npx tsx archivo.ts`; `npx` puede descargar `tsx` la primera vez que lo uses.
 
 Para instalarla: abre el panel de Extensiones, busca el nombre y presiona **Install**. Cuando necesites verificar una extensión, revisa en el panel su nombre exacto y cuántas personas la usan antes de instalarla a ciegas.
 

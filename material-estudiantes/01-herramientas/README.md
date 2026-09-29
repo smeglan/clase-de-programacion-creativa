@@ -193,7 +193,7 @@ Estos son los comandos que vas a necesitar durante la primera mitad del curso. N
 |---|---|
 | `node archivo.js` | ejecuta un programa JavaScript guardado en un archivo |
 | `node --version` | muestra la versión de Node instalada |
-| `npx tsx archivo.ts` | ejecuta un archivo TypeScript sin instalar nada más |
+| `npx tsx archivo.ts` | ejecuta un archivo TypeScript; la primera vez puede descargar `tsx` temporalmente con npm |
 | `npm --version` | muestra la versión de npm instalada |
 | `npm install` | instala (o reinstala) las dependencias del `package.json` |
 | `Ctrl + C` | detiene el programa que está corriendo en la terminal |

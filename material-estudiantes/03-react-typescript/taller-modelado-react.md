@@ -2,6 +2,12 @@
 
 ## Un solo proyecto, máximo 4 horas
 
+## Antes de comenzar
+
+Este taller da por hecho que ya puedes estructurar una página con la [guía completa de HTML](guia-html.md), completar la práctica de [HTML y CSS](../02-programacion-base/guia-html-css.md), modelar entidades con [POO](../02-programacion-base/guia-poo.md) y crear componentes sencillos en React. Si todavía no has visto React y JSX, sigue primero el recorrido de este [módulo](README.md#3-de-html-a-react-con-vite).
+
+Necesitas Node, npm y un proyecto React con Vite que abra localmente. El taller se puede completar y probar en tu computadora; la publicación se realiza después de aprender el flujo de Git y Vercel.
+
 Construye una interfaz gráfica para gestionar una fila de turnos. La aplicación permite registrar personas, ver quién sigue y atender en orden de llegada.
 
 El proyecto enseña abstracción, objetos, arreglos, estado en React y el comportamiento de una **cola FIFO** sin intentar cubrir demasiadas estructuras a la vez.
@@ -10,7 +16,7 @@ El proyecto enseña abstracción, objetos, arreglos, estado en React y el compor
 
 ## Resultado esperado
 
-Una página React publicada que tenga:
+Una página React que corra localmente y tenga:
 
 - formulario para registrar nombre y motivo del turno;
 - tarjeta destacada con el siguiente turno;
@@ -49,7 +55,7 @@ La abstracción es intencional: no guardamos la historia completa de la persona,
 | 1. Modelo y pantalla estática | 45 min | Definir `Turno`, crear datos de ejemplo y dibujar la interfaz |
 | 2. Formulario y estado | 60 min | Agregar turnos desde inputs controlados |
 | 3. Comportamiento FIFO | 60 min | Atender el primer turno sin mutar el estado |
-| 4. Pruebas, diseño y publicación | 75 min | Probar casos, mejorar estilos, documentar y publicar |
+| 4. Pruebas, diseño y preparación para publicar | 75 min | Probar casos, mejorar estilos y dejar documentado el proyecto |
 
 ## Paso 1. Dibuja la interfaz antes de programar
 
@@ -199,7 +205,7 @@ return (
 - Atender respeta FIFO.
 - La interfaz muestra estados con y sin turnos.
 - El estudiante puede explicar por qué el primer elemento es el siguiente.
-- La aplicación está publicada y enlazada desde el portafolio.
+- La aplicación corre localmente y queda lista para publicarse cuando completes los módulos de Git y Vercel.
 
 ## Extensiones opcionales
 

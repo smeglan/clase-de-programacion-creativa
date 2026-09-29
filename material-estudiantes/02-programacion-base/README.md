@@ -492,7 +492,7 @@ No son un requisito del recorrido principal, pero conectan con la [profundizaci�
 
 ## Guía 7: POO, clases y abstracción
 
-La tercera profundización del módulo, con la misma lógica que las guías 5 y 6: partir de un problema concreto, escribir el código y explicar las decisiones. Aquí el problema son los **datos que siempre viajan juntos** (un producto, un carrito, un turno) y la pregunta central es una:
+Esta guía es un paso obligatorio entre los fundamentos y el módulo 03. Parte de un problema concreto, escribe el código y explica las decisiones. Aquí el problema son los **datos que pertenecen a una misma entidad** (un producto, un carrito, un turno) y la pregunta central es una:
 
 > **¿qué necesita saber esta aplicación para cumplir su propósito, y qué puede quedarse afuera?**
 
@@ -502,6 +502,6 @@ Los ejemplos usan TypeScript y salen del mismo dominio del curso (la tiendita), 
 
 ## Siguiente paso
 
-Cuando puedas explicar y resolver los retos 0-13, continúa con [Modelado de datos, estructuras y React](../03-react-typescript/README.md). Allí aprenderás a representar entidades con objetos, elegir estructuras como pila o cola y mostrar esos datos en una interfaz.
+Cuando puedas explicar y resolver los retos 0-13, completa la [guía obligatoria de POO](guia-poo.md) y estudia HTML en la [guía independiente](../03-react-typescript/guia-html.md). Después continúa con [Modelado de datos, estructuras y React](../03-react-typescript/README.md), donde pasarás de una página HTML a React con Vite.
 
 Si te queda la duda de por qué un producto necesita tantos datos, o de cuándo conviene una clase y cuándo no, la [Guía 7: POO](#guía-7-poo-clases-y-abstracción) responde exactamente eso y sirve de puente entre los dos módulos.

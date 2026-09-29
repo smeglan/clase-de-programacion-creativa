@@ -18,7 +18,7 @@ Al finalizar el curso, el estudiante podrá:
 
 ## Progresión de aprendizaje
 
-El curso sigue un recorrido único: fundamentos de TypeScript y lógica, práctica guiada, modelado de datos y React, control de versiones, publicación y proyecto final. Cada bloque se apoya en el anterior para que el portafolio crezca de forma gradual.
+El curso sigue un recorrido único: fundamentos de TypeScript y lógica, programación orientada a objetos y abstracción, primera página web con HTML, CSS y JavaScript, modelado de datos y una aplicación con React y Vite, control de versiones, publicación y proyecto final. Cada bloque se apoya en el anterior para que el portafolio crezca de forma gradual.
 
 La algoritmia aplicada se ofrece como profundización opcional una vez que las bases estén firmes. Sirve para retar a quien avanza más rápido sin convertirla en una ruta separada ni en un requisito para continuar.
 
@@ -62,7 +62,7 @@ Se proponen 12 encuentros presenciales de 3 horas para cubrir las 36 horas defin
 
 ## Stack técnico
 
-El stack base será TypeScript, React, Vite, CSS nativo, GitHub y Vercel. Se utilizará la plantilla `react-ts` de Vite para crear una aplicación ligera, mantener una cantidad reducida de dependencias y publicar el trabajo mediante un repositorio conectado a Vercel.
+El recorrido presenta primero HTML, CSS y JavaScript plano en archivos locales para aprender a estructurar, dar estilo y añadir una interacción sin configuración. Después se avanza a React; Vite se usa para preparar la aplicación. GitHub y Vercel permiten guardar y publicar el proyecto.
 
 Se recomienda que cada estudiante mantenga un único repositorio de portafolio para reunir avances, ejercicios seleccionados y proyectos. La organización concreta puede variar: los ejemplos de calculadora, catálogo y tiendita son puntos de partida, no una lista obligatoria. La meta es terminar con trabajo funcional, explicable y compartible, idealmente mediante una URL pública.
 

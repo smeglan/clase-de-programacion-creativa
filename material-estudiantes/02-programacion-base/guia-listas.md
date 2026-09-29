@@ -767,7 +767,7 @@ Ya tienes el trío completo:
 - **`while`** → repetir mientras una condición sea verdadera.
 - **Listas (arrays)** → almacenar múltiples valores relacionados.
 
-Y la combinación poderosaque tantos problemas resuelve:
+Y la combinación poderosa que resuelve muchos problemas:
 
 ```js
 const edades = [12, 18, 25, 15, 30];

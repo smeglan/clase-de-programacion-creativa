@@ -17,14 +17,12 @@ Al terminar esta guía deberías poder:
 > Son funciones de TypeScript con tipos, como las del módulo `02`. Guarda el código en un archivo `.ts`, por ejemplo `fibonacci.ts`, y ejecútalo con:
 >
 > ```bash
-> node fibonacci.ts
-> ```
-> O en su defecto
-> ```bash
 > npx tsx fibonacci.ts
 > ```
->
-> Si el entorno no permite `tsx`, quita las anotaciones `: number` y ejecuta con `node fibonacci.js`.
+> Si `tsx` no está disponible, puedes quitar las anotaciones de tipo y guardar el archivo como `.js`:
+> ```bash
+> node fibonacci.js
+> ```
 
 ## 1. La historia: el problema de los conejos
 
@@ -158,7 +156,7 @@ F(n) = (φⁿ − ψⁿ) / √5
 donde φ = (1 + √5)/2   y   ψ = (1 − √5)/2 ≈ −0.618...
 ```
 
-Compruébalo con F(10) mentalmente si puedes, y en código más abajo. Atención a la trampa: ψⁿ se hace muy pequeño al crecer n, así que con decimales de coma flotante hay que redondear el resultado. En código real casi siempre conviene más la versión iterativa (exacta, sin errores de redondeo) que la fórmula "bonita".
+Compruébalo con F(10) mentalmente si puedes, y en código más abajo. Atención a la trampa: ψⁿ se hace muy pequeño al crecer n, así que con decimales de coma flotante hay que redondear el resultado. En código real casi siempre conviene más la versión iterativa (sin redondeo de coma flotante mientras el resultado sea un entero seguro de JavaScript) que la fórmula "bonita".
 
 ## 4. En la naturaleza: qué hay y qué no hay de cierto
 
@@ -176,6 +174,10 @@ Lo que es *exageración*: la concha del nautilo no es una espiral de Fibonacci e
 
 ```ts
 function fibonacci(n: number): number[] {
+  if (!Number.isInteger(n) || n < 0) {
+    throw new Error("n debe ser un entero no negativo");
+  }
+
   const serie: number[] = [0, 1];
 
   for (let i = 2; i < n; i++) {
@@ -188,6 +190,7 @@ function fibonacci(n: number): number[] {
 console.log(fibonacci(8)); // [0, 1, 1, 2, 3, 5, 8, 13]
 console.log(fibonacci(1)); // [0]
 console.log(fibonacci(2)); // [0, 1]
+console.log(fibonacci(0)); // []
 ```
 
 Puntos por explicar en voz alta:
@@ -199,6 +202,9 @@ Puntos por explicar en voz alta:
 
 ```ts
 function fibo(n: number): number {
+  if (!Number.isInteger(n) || n < 0) {
+    throw new Error("n debe ser un entero no negativo");
+  }
   if (n <= 1) return n;
   return fibo(n - 1) + fibo(n - 2);
 }

@@ -109,6 +109,8 @@ El docente recorre el aula usando el checklist de `checklist-docente.md`, regist
 - Cada estudiante registra en su bitácora: qué entendió, qué le costó y una pregunta que llevará a la próxima clase.
 - Si el grupo ya usa Git en el portafolio, realizar un commit con los archivos de práctica; si no, basta con guardarlos en una carpeta ordenada.
 
+La [clase 3: POO y abstracción](../03-poo-abstraccion/clase.md) organiza datos y operaciones en modelos claros. Después, la clase 4 presenta HTML y CSS antes de convertir una página en un proyecto React con Vite.
+
 ## Observación y retroalimentación
 
 Durante la sesión, observar si el estudiante puede explicar la regla de Fibonacci sin mirar el código, si se pierde o no en el ciclo anidado de bubble sort y si prueba casos de borde de forma autónoma. Un indicador clave de comprensión no es que el código corra: es que la persona sepa decir qué hace cada ciclo y qué cambia en cada vuelta.

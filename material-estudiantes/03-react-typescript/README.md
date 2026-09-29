@@ -1,6 +1,217 @@
-# 3. Modelado de datos, estructuras y React
+# 3. De HTML a React con Vite
 
-El módulo 02 enseñó cómo expresar pasos con variables, condiciones, ciclos y funciones. Ahora damos un salto importante: aprender a **modelar** aquello sobre lo que trabaja la aplicación y a mostrar ese modelo mediante React.
+En el [módulo 02](../02-programacion-base/README.md) aprendiste la lógica de programación y completaste la [guía obligatoria de POO](../02-programacion-base/guia-poo.md). También creaste una [primera página con HTML y CSS](../02-programacion-base/guia-html-css.md).
+
+Ahora vas a llevar una página estática a un proyecto con React. El recorrido será:
+
+```text
+index.html abierto directamente → proyecto Vite → componente React con JSX y CSS
+```
+
+## Antes de continuar: comprende HTML
+
+Lee primero la [guía independiente de HTML: de cero a una base sólida](guia-html.md). HTML sigue siendo importante aunque construyas interfaces con React: describe la estructura y el significado del contenido que el navegador representa. React usa JSX, una sintaxis parecida a HTML, y termina creando elementos HTML. Conocer HTML te permite elegir etiquetas semánticas, hacer interfaces más accesibles y entender qué escribes cuando pases a JSX.
+
+Después de la guía, repasa la [práctica de HTML y CSS](../02-programacion-base/guia-html-css.md), y luego estudia [JavaScript con HTML](guia-javascript-html.md) para crear interacciones en el navegador antes de continuar con Vite y React.
+
+## 1. Antes de empezar
+
+Comprueba que Node.js y npm estén instalados:
+
+```bash
+node --version
+npm --version
+```
+
+Necesitas entender carpetas, guardar archivos y usar la terminal. Si todavía no tienes este entorno listo, consulta la [guía de herramientas](../01-herramientas/README.md). Según la [guía actual de Vite](https://vite.dev/guide/), se requiere Node 20.19+ o 22.12+; revisa esa página si aparece una advertencia de versión porque el requisito puede cambiar.
+
+La página HTML y CSS anterior se puede abrir con doble clic porque es estática. En este recorrido, React se ejecutará dentro de un proyecto con dependencias y un servidor de desarrollo; Vite se encarga de iniciar ese entorno y preparar la aplicación.
+
+> React es la biblioteca para construir la interfaz; Vite es la herramienta de desarrollo y construcción del proyecto. No son dos nombres para lo mismo.
+
+## 2. Crea un proyecto React con Vite
+
+Abre una terminal en la carpeta donde guardas tus prácticas y ejecuta:
+
+```bash
+npm create vite@latest mi-pagina-react -- --template react-ts
+cd mi-pagina-react
+npm install
+npm run dev
+```
+
+Vite mostrará una dirección local, normalmente `http://localhost:5173/`. Ábrela en el navegador. Para detener el servidor de desarrollo, vuelve a la terminal y presiona `Ctrl + C`.
+
+Qué hace cada comando:
+
+- `npm create vite@latest ...` crea un proyecto inicial usando la plantilla React con TypeScript.
+- `cd mi-pagina-react` entra a la carpeta creada.
+- `npm install` descarga las dependencias declaradas por el proyecto.
+- `npm run dev` inicia el servidor local para trabajar y ver cambios.
+
+Si prefieres crear el proyecto con las preguntas interactivas de Vite, ejecuta `npm create vite@latest`, elige un nombre, React y TypeScript.
+
+## 3. Reconoce las piezas del proyecto
+
+La plantilla contiene más archivos que la página estática, pero cada uno tiene una función:
+
+```text
+mi-pagina-react/
+├── index.html
+├── package.json
+└── src/
+    ├── main.tsx
+    ├── App.tsx
+    ├── App.css
+    └── index.css
+```
+
+- `index.html` es el documento inicial que carga el navegador. Incluye el contenedor donde React dibuja la interfaz.
+- `src/main.tsx` conecta React con ese contenedor.
+- `src/App.tsx` contiene el componente principal de la página. Aquí escribirás JSX.
+- `src/App.css` y `src/index.css` contienen estilos CSS.
+- `package.json` registra dependencias y comandos del proyecto.
+
+En esta práctica cambia principalmente `App.tsx` y los archivos CSS. No borres el contenedor raíz de `index.html` ni el código de montaje de `main.tsx`.
+
+## 4. Pasa tu HTML a JSX
+
+En la guía estática pudiste escribir:
+
+```html
+<article class="tarjeta">
+  <h1>Mi proyecto</h1>
+  <p>Una descripción breve.</p>
+</article>
+```
+
+En `src/App.tsx`, ese contenido se coloca dentro de un componente:
+
+```tsx
+function App() {
+  return (
+    <main>
+      <article className="tarjeta">
+        <h1>Mi proyecto</h1>
+        <p>Una descripción breve.</p>
+      </article>
+    </main>
+  );
+}
+
+export default App;
+```
+
+JSX se parece a HTML, pero tiene algunas reglas propias:
+
+- Usa `className` en lugar de `class` para asignar una clase CSS.
+- Cierra las etiquetas, incluso las que no llevan contenido: `<img />`, `<input />`.
+- Devuelve un elemento raíz. Si necesitas varios elementos hermanos, envuélvelos en `<main>`, un `<div>` o un fragmento `<>...</>`.
+- Usa llaves `{}` para mostrar un valor o una expresión de JavaScript, por ejemplo `<h1>Hola, {nombre}</h1>`.
+- Los atributos se escriben en camelCase en algunos casos: `onClick`, `htmlFor`.
+
+Las etiquetas semánticas que aprendiste (`main`, `article`, `section`, `h1`, `p`, `ul`) siguen siendo útiles en JSX. React las convierte en elementos que el navegador representa como HTML.
+
+## 5. Conserva los estilos CSS
+
+Puedes reaprovechar la mayoría de las reglas CSS de tu página anterior. Importa la hoja al inicio de `App.tsx`:
+
+```tsx
+import "./App.css";
+```
+
+Y usa la clase en JSX:
+
+```tsx
+<article className="tarjeta">...</article>
+```
+
+Una clase CSS escrita como `.tarjeta` se conserva igual. El atributo cambia de `class` a `className` porque `class` ya tiene otro significado en JavaScript.
+
+## 6. Convierte contenido repetido en datos
+
+Una página estática repite a mano cada tarjeta. En React puedes guardar la información en un arreglo y describir una tarjeta como un componente:
+
+```tsx
+import "./App.css";
+
+type Proyecto = {
+  id: string;
+  nombre: string;
+  descripcion: string;
+};
+
+  const proyectos: Proyecto[] = [
+  { id: "p-1", nombre: "Calculadora", descripcion: "Operaciones básicas." },
+  { id: "p-2", nombre: "Catálogo", descripcion: "Productos por categoría." },
+];
+
+function TarjetaProyecto({ proyecto }: { proyecto: Proyecto }) {
+  return (
+    <article className="tarjeta">
+      <h2>{proyecto.nombre}</h2>
+      <p>{proyecto.descripcion}</p>
+    </article>
+  );
+}
+
+function App() {
+  return (
+    <main>
+      <h1>Mis proyectos</h1>
+      <section className="galeria">
+        {proyectos.map((proyecto) => (
+          <TarjetaProyecto key={proyecto.id} proyecto={proyecto} />
+        ))}
+      </section>
+    </main>
+  );
+}
+
+export default App;
+```
+
+- `Proyecto` describe los datos permitidos.
+- `proyectos` contiene dos objetos de ese tipo.
+- `TarjetaProyecto` recibe un proyecto por `props` y lo muestra.
+- `map` crea una tarjeta por cada dato.
+- `key` le da a React una identidad estable para cada elemento de la lista.
+
+Este ejemplo une lo que ya viste: HTML semántico, CSS, objetos, arreglos, funciones y tipos.
+
+## 7. Cómo trabajar con Vite
+
+Deja abierta la terminal con `npm run dev`. Cuando guardas cambios en los archivos, Vite actualiza la página. Si cierras la terminal, el servidor se detiene; vuelve a iniciarlo desde la carpeta del proyecto con `npm run dev`.
+
+Para generar una versión lista para publicar, más adelante usarás:
+
+```bash
+npm run build
+```
+
+La salida de producción queda en `dist/`. En este curso prepararás la publicación después de aprender el flujo de Git y GitHub.
+
+## 8. Errores frecuentes
+
+- **`npm` o `node` no se reconoce:** confirma la instalación y abre una terminal nueva.
+- **`Missing script: dev`:** comprueba que la terminal está dentro de la carpeta que contiene `package.json`.
+- **No se ve un cambio:** revisa la terminal por errores y guarda el archivo correcto.
+- **Aparece un error por `class`:** cambia el atributo JSX a `className`.
+- **Error de cierre o de elementos hermanos:** cierra todas las etiquetas y asegúrate de que el `return` tenga un solo elemento raíz.
+- **Error con el CSS:** confirma que `App.css` está en `src` y que la ruta de `import` coincide.
+- **No inicia por la versión de Node:** instala una versión compatible indicada por Vite y vuelve a abrir la terminal.
+
+## 9. Orden recomendado para aprender este módulo
+
+1. Confirma que la página estática de HTML abre en el navegador.
+2. Crea el proyecto React con Vite y explora los archivos principales.
+3. Copia la estructura de la página estática a JSX y reutiliza el CSS.
+4. Define un modelo de datos con `type` o `interface`.
+5. Representa listas y estructuras de datos con componentes.
+6. Añade eventos y estado para permitir cambios en la interfaz.
+7. Completa el [Taller Fila creativa](taller-modelado-react.md).
+
+Los conceptos de abstracción, objetos, arreglos y estructuras que siguen en esta página te ayudarán a tomar decisiones antes de escribir componentes más grandes.
 
 ## Abstracción: construir un modelo útil
 

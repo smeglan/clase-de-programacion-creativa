@@ -98,7 +98,7 @@ Retos sugeridos:
 - Día 1: funciones;
 - Día 2: operadores;
 - Día 3: condicionales;
-- Día 4: clases, opcional;
+- Día 4: clases (la práctica en HackerRank es opcional; POO sí forma parte del recorrido y se estudia en la [Guía 7](guia-poo.md));
 - Día 5: template literals;
 - Día 6: fechas, opcional.
 

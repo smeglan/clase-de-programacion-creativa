@@ -183,8 +183,8 @@ Ventajas: en promedio es rapidísimo y en versiones "en el lugar" (sin listas nu
 
 Y la respuesta a "cuál se usa más" que probablemente buscas:
 
-- **En JavaScript/TypeScript**, el `sort()` de un arreglo que ya trae el lenguaje usa internamente **TimSort**, un híbrido de *merge sort* + *insertion sort* que aprovecha listas casi ordenadas. O sea: cuando hagas `miLista.sort(...)`, estarás usando esta familia, no bubble.
-- **Quicksort** (o su pariente introsort) es el favorito de muchas bibliotecas por su velocidad promedio y su poco uso de memoria. Por ejemplo, los `sort` de C++ y Java se basan en él.
+- En JavaScript, `Array.prototype.sort()` ordena según un comparador y el algoritmo interno depende del motor; el estándar no exige TimSort. Para comparar números pasa `(a, b) => a - b`, porque sin comparador los valores se ordenan como texto.
+- **Quicksort y sus variantes aparecen en algunas bibliotecas por su velocidad promedio y su uso moderado de memoria. Cada lenguaje y biblioteca elige su propia implementación; no conviene asumir que todos usan el mismo algoritmo.
 - **Merge sort** es la estrella cuando importa que el orden sea **estable** o cuando se ordenan datos enormes (que no caben en memoria) y datos en listas enlazadas.
 
 Conclusión honesta: no existe "el algoritmo perfecto". Se elige según el orden inicial de los datos, si necesitamos estabilidad, cuánta memoria hay disponible y qué tan simple queremos el código. Saber de su existencia —como en esta guía— es más útil que memorizar uno solo.
@@ -237,7 +237,7 @@ Con números pequeños (n = 2, 4, 8, 16, 32) el "trabajo aproximado" sería:
 | 16 | 4 | 16 | 64 | 256 | 65536 |
 | 32 | 5 | 32 | 160 | 1024 | 4294967296 |
 
-Fíjate en la última fila: una lista de **32** elementos (¡una fila del aula!) con un algoritmo exponencial llegaría a miles de millones de pasos. Por eso la exponencial no se usa para nada serio, y por eso "medir cómo crece el trabajo" importa: **el mismo problema puede resolverse bien o quedar inútil según el algoritmo**.
+Fíjate en la última fila: una lista de **32** elementos (¡una fila del aula!) con un algoritmo exponencial llegaría a miles de millones de pasos. Por eso un algoritmo exponencial resulta inviable incluso con entradas relativamente pequeñas, aunque sí aparece en algunos problemas y métodos exactos. Medir cómo crece el trabajo importa: **el mismo problema puede resolverse bien o quedar inútil según el algoritmo**.
 
 ### Verlo con tus propios números
 
@@ -305,7 +305,7 @@ Una nota de honestidad: a esto, los cursos de algoritmos le pondrán el nombre *
 
 9. Investiga: ¿qué pasa con `quickSort` si la lista ya está ordenada y el pivote siempre es el primero? Mídelo con el contador. ¿Qué se te ocurre para arreglarlo?
 10. Prepara un pivote aleatorio (`numeros[Math.floor(Math.random() * numeros.length)]`) y compara los conteos del ejercicio 8.
-11. Investigando la pregunta "¿qué usa el `.sort()` de JavaScript?" escribe un breve resumen de qué es TimSort y por qué es bueno con listas casi ordenadas.
+11. Investiga qué garantiza el estándar de JavaScript sobre `Array.prototype.sort()` y qué algoritmo usa un motor concreto. Explica por qué no debemos asumir que todos los motores usan el mismo.
 
 ## 8. Vocabulario
 

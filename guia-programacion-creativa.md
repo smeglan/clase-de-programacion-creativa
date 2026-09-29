@@ -145,13 +145,13 @@ La primera publicación debe hacerse con una aplicación mínima. Después se pu
 
 **Propósito:** comprender cómo una idea se convierte en instrucciones que el computador puede ejecutar.
 
-**Resultado de aprendizaje:** el estudiante explica la relación entre problema, algoritmo, programa y lenguaje, y construye una interfaz React sencilla con TypeScript.
+**Resultado de aprendizaje:** el estudiante explica la relación entre problema, algoritmo, programa y lenguaje, y estructura una página web sencilla con HTML semántico y CSS.
 
-**Contenidos:** algoritmo, programa y lenguaje; componentes; JSX; tipado básico; props; entorno de trabajo; flujo de ejecución; errores; entrada, procesamiento y salida.
+**Contenidos:** algoritmo, programa y lenguaje; estructura de documentos HTML; etiquetas semánticas y atributos; CSS básico; navegador y archivos locales; entorno de trabajo; flujo de ejecución; errores; entrada, procesamiento y salida. React, componentes y JSX se introducen después de esta base.
 
-**Actividades:** describir una tarea como instrucciones; leer y modificar un componente; crear una tarjeta o página de bienvenida; pedir a una herramienta de IA una explicación o alternativa; revisar, ejecutar y corregir el resultado.
+**Actividades:** describir una tarea como instrucciones; crear una tarjeta o página de bienvenida con HTML y CSS; abrirla en el navegador desde `index.html`; pedir a una herramienta de IA una explicación o alternativa; revisar y corregir el resultado.
 
-**Posibles manifestaciones de aprendizaje:** componente React sencillo, explicación oral o escrita del flujo de ejecución, y revisión de cualquier asistencia de IA utilizada.
+**Posibles manifestaciones de aprendizaje:** página HTML y CSS sencilla, explicación oral o escrita del flujo de trabajo, y revisión de cualquier asistencia de IA utilizada.
 
 **Criterios:** el programa se ejecuta, las instrucciones están ordenadas y el estudiante explica cada paso.
 
@@ -329,11 +329,11 @@ Se recomienda programar los tres parciales en momentos que acompañen el avance 
 | Clase | Enfoque | Posible avance o práctica |
 |---:|---|---|
 | 1 | Diagnóstico, entorno, repositorio y portafolio | Primera exploración del entorno y una idea de trabajo |
-| 2 | Introducción a React, JSX y TypeScript | Componente o pantalla sencilla |
-| 3 | Variables, tipos, operadores y eventos | Interacción simple |
-| 4 | Condicionales, ciclos, estado y formularios | Aplicación breve de cálculo, conversión o decisión |
-| 5 | Funciones, props y componentes | Interfaz compuesta por piezas reutilizables |
-| 6 | Modularidad, refactorización y revisión de IA | Mejora de estructura o práctica modular |
+| 2 | Fundamentos de programación y algoritmos iniciales | Práctica con ciclos, Fibonacci y ordenamiento básico |
+| 3 | POO, abstracción y modelado de entidades | Clase sencilla con datos, métodos y reglas |
+| 4 | Primera página interactiva con HTML, CSS y JavaScript | Página local interactiva que abre desde `index.html` |
+| 5 | Vite, React, JSX y TypeScript | Primer componente a partir de la página anterior |
+| 6 | Funciones, props, eventos y estado | Interfaz que responde a la interacción |
 | 7 | Arreglos, objetos y renderizado de listas | Colección de datos modelada y mostrada en pantalla |
 | 8 | Búsqueda, filtros y estado de colecciones | Interacción con una colección: catálogo, lista o tiendita |
 | 9 | Algoritmos, pseudocódigo y casos de prueba | Parcial o práctica individual y planificación de una solución |
@@ -357,8 +357,10 @@ Cada encuentro de 3 horas sigue como referencia una estructura de 30 minutos de 
 flowchart LR
     A[0. Diagnóstico y proyecto] --> B[1. Introducción]
     B --> C[2. Fundamentos]
-    C --> D[3. Funciones y modularidad]
-    D --> E[4. Estructuras de datos]
+    C --> I[POO y abstracción]
+    I --> H[HTML y CSS]
+    H --> D[3. Funciones y modularidad]
+    D --> E[4. Estructuras de datos y React]
     E --> F[5. Problemas y algoritmos]
     F --> G[6. Implementación]
 ```

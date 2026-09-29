@@ -200,4 +200,4 @@ Puedes decir:
 
 > Los datos que siempre viajan juntos se pueden agrupar en un objeto, y si además comparten las mismas operaciones, en una clase. Pero lo importante no es la clase: es decidir qué datos vale la pena guardar y cuáles no. Eso se llama abstracción, y hay una guía entera sobre eso.
 
-Remisión: [Guía 7: Programación orientada a objetos](../../material-estudiantes/02-programacion-base/guia-poo.md). Sirve como lectura opcional entre esta clase y el módulo 03, y su sección 2 conecta con lo que ya se hizo hoy en la pizarra: por qué `bubbleSort` recibe una **copia** y no la lista original. Eso es abstracción de interfaz: quien llama no necesita saber cómo están guardados los datos por dentro.
+Remisión: [Guía 7: Programación orientada a objetos](../../material-estudiantes/02-programacion-base/guia-poo.md). Es el siguiente paso del recorrido: conecta la idea de ocultar detalles (por ejemplo, por qué `bubbleSort` recibe una **copia**) con el modelado de datos y comportamiento mediante objetos y clases. Después, el curso introduce HTML y CSS antes de pasar a React con Vite.
