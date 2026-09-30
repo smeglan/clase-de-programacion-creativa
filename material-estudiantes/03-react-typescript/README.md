@@ -14,6 +14,21 @@ Lee primero la [guía independiente de HTML: de cero a una base sólida](guia-ht
 
 Después de la guía, repasa la [práctica de HTML y CSS](../02-programacion-base/guia-html-css.md), y luego estudia [JavaScript con HTML](guia-javascript-html.md) para crear interacciones en el navegador antes de continuar con Vite y React.
 
+## Antes de programar: la guía de React
+
+Este README te muestra el camino en orden corto. La [Guía de React: de la página estática a una interfaz que responde](guia-react.md) es la versión extendida: aplica la misma estructura con la profundidad de la [Guía 7 de POO](../02-programacion-base/guia-poo.md), con el problema, los conceptos uno por uno, un ejemplo completo refactorizado paso a paso, errores frecuentes, ejercicios por niveles, glosario y chuleta.
+
+Cuando ya puedas construir y hacer responder una página estática, es el momento de leerla: explica en detalle lo que este README solo menciona.
+
+- por qué la página estática se queda corta y qué cambia cuando la verdad de los datos pasa del DOM al estado;
+- las cuatro diferencias entre HTML y JSX, con la tabla de traducción;
+- por qué un componente empieza con mayúscula y qué error aparece si no;
+- por qué una variable `let` no redibuja la pantalla y `useState` sí;
+- la diferencia entre input controlado y no controlado;
+- por qué la `key` de una lista debe ser el `id` del dato y no el índice;
+- por qué en React se crea una versión nueva de un arreglo en vez de modificarlo;
+- y las dos reglas de los Hooks, con el error que producen.
+
 ## 1. Antes de empezar
 
 Comprueba que Node.js y npm estén instalados:
@@ -201,15 +216,18 @@ La salida de producción queda en `dist/`. En este curso prepararás la publicac
 - **Error con el CSS:** confirma que `App.css` está en `src` y que la ruta de `import` coincide.
 - **No inicia por la versión de Node:** instala una versión compatible indicada por Vite y vuelve a abrir la terminal.
 
+Estos son los errores de entorno. Los errores de React tienen su propia lista, con diez casos explicados uno por uno, en la [sección 15 de la guía de React](guia-react.md#15-errores-frecuentes): `class` en vez de `className`, elementos hermanos sin contenedor, `key` con índice, estado mutado, estado leído después de cambiarlo, un `useState` dentro de una condición, un componente en minúscula, estado derivado guardado como estado, el componente que lo hace todo y `style` escrito como texto.
+
 ## 9. Orden recomendado para aprender este módulo
 
 1. Confirma que la página estática de HTML abre en el navegador.
-2. Crea el proyecto React con Vite y explora los archivos principales.
-3. Copia la estructura de la página estática a JSX y reutiliza el CSS.
-4. Define un modelo de datos con `type` o `interface`.
-5. Representa listas y estructuras de datos con componentes.
-6. Añade eventos y estado para permitir cambios en la interfaz.
-7. Completa el [Taller Fila creativa](taller-modelado-react.md).
+2. Lee la [Guía de React](guia-react.md) completa: es la que explica el porqué de los pasos siguientes.
+3. Crea el proyecto React con Vite y explora los archivos principales.
+4. Copia la estructura de la página estática a JSX y reutiliza el CSS.
+5. Define un modelo de datos con `type` o `interface`.
+6. Representa listas y estructuras de datos con componentes.
+7. Añade eventos y estado para permitir cambios en la interfaz.
+8. Completa el [Taller Fila creativa](taller-modelado-react.md).
 
 Los conceptos de abstracción, objetos, arreglos y estructuras que siguen en esta página te ayudarán a tomar decisiones antes de escribir componentes más grandes.
 
@@ -466,7 +484,9 @@ function Catalogo({ productos }: { productos: Producto[] }) {
 }
 ```
 
-Cada elemento necesita una `key` estable. El `id` del modelo de datos suele ser una buena opción.
+Cada elemento necesita una `key` estable. El `id` del modelo de datos suele ser una buena opción, y el [error 3 de la guía de React](guia-react.md#error-3-olvidar-la-key-o-usar-el-índice) muestra por qué usar el índice produce textos descuadrados al reordenar o borrar.
+
+La sección [React: mostrar el modelo y permitir cambios](#react-mostrar-el-modelo-y-permitir-cambios) resume el estado y las listas. Si alguna de esas piezas te queda dando vueltas, la [guía de React](guia-react.md) las explica una por una: el [estado](guia-react.md#5-estado-lo-que-cambia-y-hay-que-redibujar), los [eventos y formularios controlados](guia-react.md#6-eventos-y-formularios-controlados), las [listas y la `key`](guia-react.md#7-listas-map-y-key), la [inmutabilidad](guia-react.md#11-inmutabilidad-crear-una-versión-nueva) y las [reglas de los Hooks](guia-react.md#12-reglas-de-los-hooks).
 
 ## Preguntas opcionales de profundización
 
@@ -477,6 +497,6 @@ No son entregas adicionales del taller. Úsalas si terminas antes o quieres expl
 3. Implementa una cola FIFO para turnos de soporte.
 4. Construye una cola de prioridad y explica por qué no es una cola normal.
 5. Representa un tablero con una matriz y muéstralo en React.
-6. Construye una tiendita que filtre productos y agregue elementos al carrito sin mutar el estado.
+6. Construye una tiendita que filtre productos y agregue elementos al carrito sin mutar el estado. La [sección 13 de la guía de React](guia-react.md#13-ejemplo-completo-la-tiendita) resuelve exactamente esta: es el mismo recorrido, con el código completo y la explicación de por qué cada actualización crea una versión nueva.
 
 Continúa con el [Taller de modelado y React: Fila creativa](taller-modelado-react.md). Es un único proyecto visual de máximo cuatro horas: modela turnos como objetos, los organiza en una cola FIFO y los muestra con React.

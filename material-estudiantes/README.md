@@ -16,11 +16,13 @@ Sigue este orden para el recorrido principal hasta publicar una aplicación. Pri
 8. [HTML de cero a una base sólida](03-react-typescript/guia-html.md) — guía completa en archivo independiente
 9. [Tu primera página con HTML y CSS](02-programacion-base/guia-html-css.md) — práctica guiada
 10. [JavaScript con HTML: de una página estática a una interacción](03-react-typescript/guia-javascript-html.md)
-11. [De HTML a React con Vite](03-react-typescript/README.md)
-12. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
-13. [Git y GitHub](04-git-github/README.md)
-14. [Publicación en Vercel](05-publicacion/README.md)
-15. [Vibecoding responsable](06-vibecoding/README.md)
+11. [Guía de React: de la página estática a una interfaz que responde](03-react-typescript/guia-react.md) — guía obligatoria, con el porqué de cada concepto
+12. [De HTML a React con Vite](03-react-typescript/README.md) — recorrido corto y proyecto paso a paso
+13. [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
+14. [Git y GitHub](04-git-github/README.md)
+15. [Publicación en Vercel](05-publicacion/README.md)
+16. [Vibecoding responsable](06-vibecoding/README.md)
+17. [Proyecto final: una herramienta interactiva para tu mundo](08-proyecto-final/README.md)
 
 ## Profundiza cuando quieras
 
@@ -36,7 +38,7 @@ Todos terminaremos con:
 - un proyecto integrador;
 - una URL pública para compartir el trabajo.
 
-POO es parte del recorrido obligatorio. La guía independiente de HTML te lleva a construir una página estática; con JavaScript plano añades interacción; después, el módulo 03 muestra cómo organizar la interfaz en un proyecto Vite con React. Las guías extensas de Fibonacci y ordenamientos, junto con la sección de algoritmia, sirven para profundizar.
+POO es parte del recorrido obligatorio. La guía independiente de HTML te lleva a construir una página estática; con JavaScript plano añades interacción; después, la [Guía de React](03-react-typescript/guia-react.md) explica por qué esa página se queda corta y cómo un componente resuelve el problema, y el [módulo 03](03-react-typescript/README.md) muestra cómo organizar la interfaz en un proyecto Vite. Las guías extensas de Fibonacci y ordenamientos, junto con la sección de algoritmia, sirven para profundizar.
 
 ## Referencias rápidas
 
@@ -51,11 +53,13 @@ Si necesitas volver a un tema concreto:
 - [Tu primera página con HTML y CSS](02-programacion-base/guia-html-css.md)
 - [JavaScript con HTML](03-react-typescript/guia-javascript-html.md)
 - [HTML de cero a una base sólida](03-react-typescript/guia-html.md)
+- [Guía de React: de la página estática a una interfaz que responde](03-react-typescript/guia-react.md)
 - [Guías de algoritmos: Fibonacci y ordenamientos](02-programacion-base/guia-fibonacci.md)
 - [Guía de POO: clases y abstracción](02-programacion-base/guia-poo.md)
-- [Modelado de datos, estructuras y React](03-react-typescript/README.md)
+- [De HTML a React con Vite](03-react-typescript/README.md)
 - [Taller de modelado y React: Fila creativa](03-react-typescript/taller-modelado-react.md)
 - [Git y GitHub](04-git-github/README.md)
 - [Publicación en Vercel](05-publicacion/README.md)
 - [Vibecoding responsable](06-vibecoding/README.md)
 - [Algoritmia aplicada](07-algoritmia/README.md)
+- [Proyecto final](08-proyecto-final/README.md)

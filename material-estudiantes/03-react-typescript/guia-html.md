@@ -2,6 +2,8 @@
 
 Esta guía te lleva desde un archivo vacío hasta una página bien estructurada, semántica y accesible. No necesitas saber HTML antes de empezar. Al terminar, tendrás una base para diseñar con CSS y para entender el JSX que usarás en React.
 
+Si vienes del [módulo 02](../02-programacion-base/README.md), esta es la primera guía del módulo 03. Al terminar, continúa con [JavaScript con HTML](guia-javascript-html.md) para hacer que la página responda, y después con la [Guía de React](guia-react.md), que lleva esa misma página a un proyecto con componentes.
+
 > “De cero a una base sólida” es una meta realista: nadie aprende todas las etiquetas de memoria. Lo valioso es saber elegir elementos por su significado, organizarlos y consultar la documentación cuando haga falta.
 
 ## Ruta de aprendizaje
@@ -591,8 +593,10 @@ Pídele a un compañero que use solo el teclado y que responda:
 ## Qué aprender después
 
 - **CSS:** colores, tipografía, diseño adaptable, Flexbox y Grid.
-- **JavaScript:** interacción, eventos y manipulación de datos.
-- **React y JSX:** componentes que describen interfaces dinámicas. Tu HTML sigue siendo una base útil; JSX tiene diferencias que estudiarás en el [módulo de React con Vite](README.md#3-de-html-a-react-con-vite).
+- **JavaScript:** interacción, eventos y manipulación de datos. Empieza por [JavaScript con HTML](guia-javascript-html.md), que conecta esta página con una interacción real.
+- **React y JSX:** componentes que describen interfaces dinámicas. Tu HTML sigue siendo una base útil; JSX tiene diferencias que estudiarás en la [Guía de React: de la página estática a una interfaz que responde](guia-react.md), y el camino completo, desde el proyecto con Vite, en el [módulo de React](README.md#3-de-html-a-react-con-vite).
+
+La [Guía de React](guia-react.md) es la continuación natural de este archivo: empieza justo con el problema que aparece cuando una página bien estructurada tiene que **cambiar**, y muestra cómo cada etiqueta que aprendiste aquí sigue siendo la correcta dentro de JSX.
 
 ## Referencias recomendadas
 

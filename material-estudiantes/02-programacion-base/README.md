@@ -498,10 +498,10 @@ Esta guía es un paso obligatorio entre los fundamentos y el módulo 03. Parte d
 
 - [Guía 7: Programación orientada a objetos: clases y abstracción](guia-poo.md) — la abstracción explicada a fondo (datos, comportamiento e interfaz), clases con `constructor`, `this` y `new`, encapsulamiento con `private` y getters, composición frente a herencia ("¿es un?"), polimorfismo con `interface`, y una sección honesta sobre cuándo conviene un `type` con funciones puras en vez de una clase.
 
-Los ejemplos usan TypeScript y salen del mismo dominio del curso (la tiendita), así que conectan directo con el [módulo 03](../03-react-typescript/README.md) y con el proyecto integrador.
+Los ejemplos usan TypeScript y salen del mismo dominio del curso (la tiendita), así que conectan directo con la [Guía de React](../03-react-typescript/guia-react.md), el [módulo 03](../03-react-typescript/README.md) y el proyecto integrador.
 
 ## Siguiente paso
 
-Cuando puedas explicar y resolver los retos 0-13, completa la [guía obligatoria de POO](guia-poo.md) y estudia HTML en la [guía independiente](../03-react-typescript/guia-html.md). Después continúa con [Modelado de datos, estructuras y React](../03-react-typescript/README.md), donde pasarás de una página HTML a React con Vite.
+Cuando puedas explicar y resolver los retos 0-13, completa la [guía obligatoria de POO](guia-poo.md) y estudia HTML en la [guía independiente](../03-react-typescript/guia-html.md). Después, la [Guía de React](../03-react-typescript/guia-react.md) te muestra por qué una página estática se queda corta y cómo un componente con estado resuelve el problema, y luego continúa con el [recorrido de React con Vite](../03-react-typescript/README.md).
 
 Si te queda la duda de por qué un producto necesita tantos datos, o de cuándo conviene una clase y cuándo no, la [Guía 7: POO](#guía-7-poo-clases-y-abstracción) responde exactamente eso y sirve de puente entre los dos módulos.

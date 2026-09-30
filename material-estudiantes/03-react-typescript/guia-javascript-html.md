@@ -2,6 +2,8 @@
 
 Esta guía enseña a conectar JavaScript con una página HTML sin React ni otros frameworks. Vas a empezar con un botón que responde a un clic y terminarás con una lista interactiva de ideas. Solo necesitas un editor de texto y un navegador.
 
+Es el paso intermedio entre la [guía de HTML](guia-html.md) y la [Guía de React](guia-react.md): aquí ves el problema de mantener el estado a mano en el DOM, y allí ves la solución en componentes.
+
 > HTML organiza el contenido, CSS presenta la página y JavaScript responde a acciones y cambios. Esta guía se enfoca en cómo JavaScript encuentra y actualiza elementos HTML.
 
 ## Ruta de aprendizaje
@@ -217,7 +219,9 @@ Elige una idea apropiada para tu portafolio: tareas, libros por leer, planes par
 
 ## ¿Qué aprendiste y qué sigue?
 
-Ahora puedes describir cómo HTML, CSS y JavaScript trabajan juntos, escuchar una acción, cambiar la página y representar datos con elementos del DOM. En el [módulo 03](README.md#3-de-html-a-react-con-vite), usarás estas ideas dentro de componentes React y trabajarás con Vite para organizar módulos y ejecutar un servidor de desarrollo.
+Ahora puedes describir cómo HTML, CSS y JavaScript trabajan juntos, escuchar una acción, cambiar la página y representar datos con elementos del DOM.
+
+En la [Guía de React: de la página estática a una interfaz que responde](guia-react.md) llevas exactamente esta página a un proyecto con React. La diferencia central está explicada en su [sección 1.2](guia-react.md#12-la-interacción-manual-se-rompe): con JavaScript plano la verdad sobre los datos vive en el DOM, y por eso hay que contar elementos para saber si una lista está vacía. React invierte eso: la verdad vive en el estado y el DOM es solo su representación. Después, el [módulo 03](README.md#3-de-html-a-react-con-vite) te da el recorrido corto con Vite, y el [taller Fila creativa](taller-modelado-react.md) lo pone a prueba con un modelo, una cola FIFO y un formulario controlado.
 
 ### Para consultar
 

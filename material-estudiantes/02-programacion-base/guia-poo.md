@@ -958,7 +958,7 @@ carrito.productos.push(nuevoProducto);
 setCarrito({ productos: [...carrito.productos, nuevoProducto] });
 ```
 
-**Error:** aunque un objeto tenga métodos, si lo guardas en el estado de React y lo mutas por dentro, React no se entera del cambio. La encapsulación ayuda (por eso los métodos de clase que mutan se usan con cuidado en React), pero la regla del curso sigue siendo: **crea una versión nueva, no mutes la anterior**. Volveremos a esto en el [módulo 03](../03-react-typescript/README.md).
+**Error:** aunque un objeto tenga métodos, si lo guardas en el estado de React y lo mutas por dentro, React no se entera del cambio. La encapsulación ayuda (por eso los métodos de clase que mutan se usan con cuidado en React), pero la regla del curso sigue siendo: **crea una versión nueva, no mutes la anterior**. Volveremos a esto en la [Guía de React](../03-react-typescript/guia-react.md#11-inmutabilidad-crear-una-versión-nueva), donde está la sección completa, con la tabla de operaciones mutadas y sus equivalentes.
 
 ## 12. Resolver antes de seguir
 
@@ -1101,7 +1101,7 @@ type ProductoTO = {
 
 Esta guía te dio el vocabulario de la programación orientada a objetos (clase, instancia, encapsulamiento, composición, herencia, polimorfismo) y, sobre todo, la idea que las sostiene: **abstraer es elegir qué merece existir en el programa**. Con eso entiendes el código cuando crece hacia un proyecto real.
 
-Lo que sigue, en el [módulo 03](../03-react-typescript/README.md), es la otra mitad de la historia: modelar entidades con `type` e `interface` (el camino que este curso prefiere), elegir estructuras de datos como pila, cola, matriz o diccionario según el comportamiento que necesites, y mostrar todo eso en pantalla con React. Después viene el [taller de modelado y React: Fila creativa](../03-react-typescript/taller-modelado-react.md), donde modelas turnos como objetos y los organizas en una cola FIFO.
+Lo que sigue, en la [Guía de React](../03-react-typescript/guia-react.md), es la otra mitad de la historia: la misma tiendita, ahora dibujada en pantalla. Verás por qué el estado tiene que vivir en React y no en una variable, por qué se reemplaza por una versión nueva en vez de mutarse, y por qué la composición es la relación que más se usa también en una interfaz. Después continúa con [De HTML a React con Vite](../03-react-typescript/README.md), el recorrido corto con el proyecto, y con el [taller de modelado y React: Fila creativa](../03-react-typescript/taller-modelado-react.md), donde modelas turnos como objetos y los organizas en una cola FIFO.
 
 Antes de seguir, comprueba que puedes responder estas cuatro preguntas sin mirar el código:
 
