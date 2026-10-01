@@ -1,12 +1,14 @@
 # Guía 2: Repetir con `for`
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 2: Repetir con `for`**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
-- Explicar qué problema resuelve un ciclo.
+- Explicar qué problema resuelve un [ciclo](../glosario.md#ciclo).
 - Reconocer cuándo conviene usar `for`.
-- Leer y escribir las tres partes del `for`: inicialización, condición y actualización.
+- Leer y escribir las tres partes del `for`: inicialización, [condición](../glosario.md#condicion) y actualización.
 - Contar hacia adelante, hacia atrás y con saltos.
 - Recorrer listas (arrays) y textos (strings).
 - Usar `for` junto con `if` para filtrar, buscar y contar.
@@ -16,21 +18,37 @@ Al terminar esta guía deberías poder:
 
 > **Cómo probar los ejemplos**
 >
-> Igual que en la [Guía 1](guia-if.md): copia el código en un archivo (`node ejemplo.js`) o pégalo en la consola del navegador. Las dos formas funcionan, elige la que tengas disponible.
+> Igual que en la [Guía 1](guia-if.md): copia el [código](../glosario.md#codigo) en un [archivo](../glosario.md#archivo) (`node ejemplo.js`) o pégalo en la [consola del navegador](../glosario.md#consola-del-navegador). Las dos formas funcionan, elige la que tengas disponible.
 >
 > Y si `console.log` todavía te resulta extraño, la sección [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) lo explica desde cero.
+
+**En esta guía:**
+
+1. [El problema](#1-el-problema)
+2. [Concepto](#2-concepto)
+3. [Sintaxis](#3-sintaxis)
+4. [Ejemplos progresivos](#4-ejemplos-progresivos)
+5. [Contadores vs acumuladores](#5-contadores-vs-acumuladores)
+6. [¿Cómo pienso este problema?](#6-cómo-pienso-este-problema)
+7. [Errores frecuentes](#7-errores-frecuentes)
+8. [Tips](#8-tips)
+9. [Ejercicios](#9-ejercicios)
+10. [Chuleta rápida](#10-chuleta-rápida)
+11. [¿Qué puedo hacer ahora?](#11-qué-puedo-hacer-ahora)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema
 
 > *"Tengo que repetir una acción varias veces."*
 
-Imprimir los números del 1 al 100. Sumar los valores de una lista. Contar cuántas vocales tiene una frase. Ninguno de esos problemas se resuelve escribiendo la acción cien veces: se resuelve pidiéndole al programa que **repita** con una estructura.
+Imprimir los números del 1 al 100. Sumar los valores de una lista. Contar cuántas vocales tiene una frase. Ninguno de esos problemas se resuelve escribiendo la acción cien veces: se resuelve pidiéndole al [programa](../glosario.md#programa) que **repita** con una estructura.
 
 Hacer una copia y pegar la misma línea cien veces no es programar: es escribir. Un ciclo le dice a la máquina *"esto se repite N veces"* en unas pocas líneas.
 
 ## 2. Concepto
 
-Un **ciclo** (también llamado *bucle* o *iteración*) es una estructura que ejecuta un bloque de código **más de una vez**.
+Un **ciclo** (también llamado *bucle* o *[iteración](../glosario.md#iteracion)*) es una estructura que ejecuta un bloque de código **más de una vez**.
 
 Antes de usar un ciclo, debes poder responder cuatro cosas:
 
@@ -49,7 +67,7 @@ for (inicializacion; condicion; actualizacion) {
 }
 ```
 
-- **Inicialización:** se ejecuta una sola vez, antes de empezar. Crea la variable que controla el ciclo (por ejemplo, `let i = 0`).
+- **Inicialización:** se ejecuta una sola vez, antes de empezar. Crea la [variable](../glosario.md#variable) que controla el ciclo (por ejemplo, `let i = 0`).
 - **Condición:** se evalúa antes de cada repetición. Si es `true`, el bloque se ejecuta; si es `false`, el ciclo termina.
 - **Actualización:** se ejecuta después de cada repetición. Cambia la variable de control (por ejemplo, `i++`).
 
@@ -119,7 +137,7 @@ for (let i = 0; i < 5; i++) {
 4
 ```
 
-Fíjate en un detalle importante: aunque `i < 5`, se imprimen los números `0` a `4`, no `1` a `5`. En programación contamos desde `0` con mucha frecuencia. No es un error: es la convención que usa JavaScript para listas e índices, y la verás mucho.
+Fíjate en un detalle importante: aunque `i < 5`, se imprimen los números `0` a `4`, no `1` a `5`. En programación contamos desde `0` con mucha frecuencia. No es un [error](../glosario.md#error): es la convención que usa [JavaScript](../glosario.md#javascript) para listas e índices, y la verás mucho.
 
 ### Ejemplo 3: Contar hacia atrás
 
@@ -184,7 +202,7 @@ for (let i = 1; i <= 10; i++) {
 }
 ```
 
-**Explicación:** aquí el ciclo visita todos los números y el `if` se queda con los pares, usando el operador `%` que conoces de la [Guía 1](guia-if.md). Es el patrón **recorrer → preguntar → actuar**. El salto (camino A) es más eficiente, pero el `if` es más flexible: si mañana quisieras los pares *y* los que no terminan en 0, el salto no bastaría.
+**Explicación:** aquí el ciclo visita todos los números y el `if` se queda con los pares, usando el [operador](../glosario.md#operador) `%` que conoces de la [Guía 1](guia-if.md). Es el patrón **recorrer → preguntar → actuar**. El salto (camino A) es más eficiente, pero el `if` es más flexible: si mañana quisieras los pares *y* los que no terminan en 0, el salto no bastaría.
 
 ### Ejemplo 5: Imprimir los impares
 
@@ -234,7 +252,7 @@ for (let i = 1; i <= 100; i++) {
 console.log("La suma es:", suma);
 ```
 
-**Explicación:** la variable `suma` va **acumulando** cada valor de `i`. Primero suma 1, luego 2, luego 3, y así hasta 100. Esta variable guarda un resultado que crece con cada iteración; se llama **acumulador** (lo verás en detalle en la sección 5). Nota que `suma` se modifica, por eso se declara con `let`.
+**Explicación:** la variable `suma` va **acumulando** cada [valor](../glosario.md#valor) de `i`. Primero suma 1, luego 2, luego 3, y así hasta 100. Esta variable guarda un resultado que crece con cada iteración; se llama **acumulador** (lo verás en detalle en la sección 5). Nota que `suma` se modifica, por eso se declara con `let`.
 
 **Resultado esperado:**
 
@@ -284,7 +302,7 @@ for (let i = 0; i < palabra.length; i++) {
 }
 ```
 
-**Explicación:** un texto también se puede recorrer letra por letra. `palabra.length` es cuántos caracteres tiene, y `palabra[i]` es el carácter en la posición `i`. Los strings y las listas comparten esta lógica de índice.
+**Explicación:** un texto también se puede recorrer letra por letra. `palabra.length` es cuántos caracteres tiene, y `palabra[i]` es el carácter en la posición `i`. Los strings y las listas comparten esta lógica de [índice](../glosario.md#indice).
 
 **Resultado esperado:**
 
@@ -314,7 +332,7 @@ for (let i = 0; i < edades.length; i++) {
 console.log("Mayores de edad:", mayores);
 ```
 
-**Explicación:** `mayores++` suma 1 al contador cuando la condición se cumple. Ejecutamos el patrón **recorrer → preguntar → actuar**: recorremos la lista, preguntamos por cada edad y actuamos (contamos) solo cuando corresponde. Este patrón aparece constantemente al programar y la meta de esta guía es que se vuelva natural.
+**Explicación:** `mayores++` suma 1 al [contador](../glosario.md#contador) cuando la condición se cumple. Ejecutamos el patrón **recorrer → preguntar → actuar**: recorremos la lista, preguntamos por cada edad y actuamos (contamos) solo cuando corresponde. Este patrón aparece constantemente al programar y la meta de esta guía es que se vuelva natural.
 
 **Resultado esperado:**
 
@@ -345,7 +363,7 @@ if (encontrado) {
 }
 ```
 
-**Explicación:** usamos una variable booleana `encontrado` que empieza en `false` y cambia a `true` si aparece el nombre. Después del ciclo, un `if` (de la [Guía 1](guia-if.md)) muestra el resultado. La variable "estado" guarda la respuesta de *¿lo encontré?* mientras el ciclo trabaja.
+**Explicación:** usamos una variable booleana `encontrado` que empieza en `false` y cambia a `true` si aparece el nombre. Después del ciclo, un `if` (de la [Guía 1](guia-if.md)) muestra el resultado. La variable "[estado](../glosario.md#estado)" guarda la respuesta de *¿lo encontré?* mientras el ciclo trabaja.
 
 **Resultado esperado:**
 
@@ -537,7 +555,7 @@ console.log("Suma total:", suma);
 | Ejemplo | cantidad de aprobados | suma de notas |
 | Resultado típico | un entero pequeño | un total |
 
-Si al final necesitas *"cuántos"*, es contador. Si necesitas *"cuánto suma"*, es acumulador. En el ejemplo de las notas: para contar aprobados usas contador; para sumar las notas usas acumulador. Muchos problemas usan ambos a la vez.
+Si al final necesitas *"cuántos"*, es contador. Si necesitas *"cuánto suma"*, es [acumulador](../glosario.md#acumulador). En el ejemplo de las notas: para contar aprobados usas contador; para sumar las notas usas acumulador. Muchos problemas usan ambos a la vez.
 
 ## 6. ¿Cómo pienso este problema?
 
@@ -752,3 +770,7 @@ Pero a veces no sabes cuántas veces vas a repetir:
 - *"Busca mientras queden elementos."*
 
 Ahí la cantidad de repeticiones depende de **una condición que cambia durante el proceso**, y no la conoces de antemano. Para esos casos existe otro ciclo: `while`. La siguiente guía explica cuándo conviene cada uno, sin afirmar que uno sea siempre mejor: [Guía 3: Repetir con `while`](guia-while.md).
+
+---
+
+**Anterior:** [Guia 1: if](guia-if.md) · **Siguiente:** [Guia 3: while](guia-while.md)

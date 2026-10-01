@@ -1,10 +1,12 @@
 # HTML de cero a una base sólida
 
-Esta guía te lleva desde un archivo vacío hasta una página bien estructurada, semántica y accesible. No necesitas saber HTML antes de empezar. Al terminar, tendrás una base para diseñar con CSS y para entender el JSX que usarás en React.
+**Estás aquí:** [Inicio](../README.md) › [3. De HTML a React](README.md) › **HTML de cero a una base sólida**
+
+Esta guía te lleva desde un [archivo](../glosario.md#archivo) vacío hasta una página bien estructurada, semántica y accesible. No necesitas saber HTML antes de empezar. Al terminar, tendrás una base para diseñar con CSS y para entender el JSX que usarás en React.
 
 Si vienes del [módulo 02](../02-programacion-base/README.md), esta es la primera guía del módulo 03. Al terminar, continúa con [JavaScript con HTML](guia-javascript-html.md) para hacer que la página responda, y después con la [Guía de React](guia-react.md), que lleva esa misma página a un proyecto con componentes.
 
-> “De cero a una base sólida” es una meta realista: nadie aprende todas las etiquetas de memoria. Lo valioso es saber elegir elementos por su significado, organizarlos y consultar la documentación cuando haga falta.
+> “De cero a una base sólida” es una meta realista: nadie aprende todas las etiquetas de memoria. Lo valioso es saber elegir elementos por su significado, organizarlos y consultar la [documentación](../glosario.md#documentacion) cuando haga falta.
 
 ## Ruta de aprendizaje
 
@@ -15,11 +17,36 @@ Si vienes del [módulo 02](../02-programacion-base/README.md), esta es la primer
 5. Crear tablas de datos y formularios accesibles.
 6. Revisar, validar y completar un proyecto.
 
+**En esta guía:**
+
+1. [Qué es HTML](#1-qué-es-html)
+2. [Prepara tu primera página](#2-prepara-tu-primera-página)
+3. [Etiquetas, elementos y atributos](#3-etiquetas-elementos-y-atributos)
+4. [Organiza texto con significado](#4-organiza-texto-con-significado)
+5. [Enlaces y rutas](#5-enlaces-y-rutas)
+6. [Listas](#6-listas)
+7. [Imágenes y contenido multimedia](#7-imágenes-y-contenido-multimedia)
+8. [Estructura semántica de una página](#8-estructura-semántica-de-una-página)
+9. [Tablas para datos tabulares](#9-tablas-para-datos-tabulares)
+10. [Formularios: pedir datos correctamente](#10-formularios-pedir-datos-correctamente)
+11. [Atributos comunes](#11-atributos-comunes)
+12. [Accesibilidad desde el HTML](#12-accesibilidad-desde-el-html)
+13. [Metadata, comentarios y páginas completas](#13-metadata-comentarios-y-páginas-completas)
+14. [Cosas que suelen confundirse](#14-cosas-que-suelen-confundirse)
+15. [Valida y depura tu HTML](#15-valida-y-depura-tu-html)
+16. [Proyecto final: una página de evento](#16-proyecto-final-una-página-de-evento)
+17. [Chuleta rápida](#17-chuleta-rápida)
+
+- [Ruta de aprendizaje](#ruta-de-aprendizaje)
+- [Vocabulario](#vocabulario)
+- [Qué aprender después](#qué-aprender-después)
+- [Referencias recomendadas](#referencias-recomendadas)
+
 ## 1. Qué es HTML
 
-HTML significa *HyperText Markup Language*. Es un lenguaje de marcado: utiliza elementos para dar estructura y significado al contenido de una página. Por ejemplo, un navegador puede distinguir un encabezado, una lista, un enlace y un formulario.
+HTML significa *HyperText Markup Language*. Es un lenguaje de marcado: utiliza elementos para dar estructura y significado al contenido de una página. Por ejemplo, un navegador puede distinguir un encabezado, una lista, un enlace y un [formulario](../glosario.md#formulario).
 
-HTML no es el lenguaje que define los colores y la distribución visual; eso le corresponde principalmente a CSS. Tampoco realiza por sí solo la lógica general de una aplicación; para eso se usa JavaScript. En una página web:
+HTML no es el lenguaje que define los colores y la distribución visual; eso le corresponde principalmente a CSS. Tampoco realiza por sí solo la lógica general de una aplicación; para eso se usa [JavaScript](../glosario.md#javascript). En una página web:
 
 | Tecnología | Pregunta que responde | Ejemplo |
 |---|---|---|
@@ -31,13 +58,13 @@ HTML no es el lenguaje que define los colores y la distribución visual; eso le 
 
 HTML describe qué es cada parte de una página: un encabezado, una navegación, un artículo, un botón o un formulario. Esa estructura permite que el navegador presente el contenido de manera coherente y que las tecnologías de asistencia identifiquen mejor su propósito.
 
-Aprender HTML también hace más claro el paso a React. JSX se parece a HTML y conserva muchas de sus etiquetas; React crea elementos que el navegador representa como HTML. Vite organiza el proyecto y facilita el desarrollo, pero no reemplaza HTML. Una buena base te ayuda a escribir JSX con sentido, elegir elementos adecuados y detectar problemas de estructura y accesibilidad.
+Aprender HTML también hace más claro el paso a React. JSX se parece a HTML y conserva muchas de sus etiquetas; React crea elementos que el navegador representa como HTML. Vite organiza el proyecto y facilita el desarrollo, pero no reemplaza HTML. Una buena base te ayuda a escribir JSX con sentido, elegir elementos adecuados y detectar problemas de estructura y [accesibilidad](../glosario.md#accesibilidad).
 
 En resumen: HTML aporta estructura y significado; CSS controla la presentación; JavaScript añade comportamiento. Las herramientas modernas cambian cómo organizas y construyes una interfaz, pero sigues necesitando decidir qué contenido representa cada elemento.
 
 ## 2. Prepara tu primera página
 
-Crea una carpeta llamada `mi-pagina` y dentro crea `index.html`. Usa un editor de texto y guarda el archivo con la extensión `.html`.
+Crea una [carpeta](../glosario.md#carpeta) llamada `mi-pagina` y dentro crea `index.html`. Usa un [editor de texto](../glosario.md#editor) y guarda el archivo con la extensión `.html`.
 
 Escribe lo siguiente:
 
@@ -70,7 +97,7 @@ Guarda el archivo y ábrelo con doble clic. El navegador mostrará la página. C
 
 ## 3. Etiquetas, elementos y atributos
 
-Un elemento común tiene etiqueta de apertura, contenido y etiqueta de cierre:
+Un elemento común tiene [etiqueta](../glosario.md#etiqueta) de apertura, contenido y etiqueta de cierre:
 
 ```html
 <p>Estoy aprendiendo.</p>
@@ -91,7 +118,7 @@ Los **atributos** agregan información o configuración. Se escriben en la etiqu
 <img src="fotos/perfil.jpg" alt="Retrato de Alex en el jardín" />
 ```
 
-Un atributo normalmente tiene nombre y valor. En el ejemplo, `href` contiene el destino del enlace; `src` indica la ubicación de la imagen; `alt` ofrece una alternativa textual.
+Un [atributo](../glosario.md#atributo) normalmente tiene nombre y [valor](../glosario.md#valor). En el ejemplo, `href` contiene el destino del enlace; `src` indica la ubicación de la imagen; `alt` ofrece una alternativa textual.
 
 ### Elementos vacíos
 
@@ -160,7 +187,7 @@ Usa encabezados para expresar jerarquía, no solo para cambiar el tamaño del te
 - `<em>` da énfasis en el texto.
 - `<b>` y `<i>` llaman la atención visualmente sin aportar el mismo significado; usa primero las opciones semánticas cuando correspondan.
 - `<small>` puede marcar notas o texto secundario.
-- `<code>` marca fragmentos de código.
+- `<code>` marca fragmentos de [código](../glosario.md#codigo).
 
 No uses una etiqueta por su apariencia predeterminada. Esa apariencia puede cambiar con CSS y variar entre navegadores.
 
@@ -208,11 +235,11 @@ mi-pagina/
 
 Desde `index.html`, las rutas son `contacto.html` y `imagenes/perfil.jpg`. El nombre debe coincidir exactamente, incluidas las extensiones. Es una buena práctica usar nombres sencillos, sin espacios ni tildes, para archivos y carpetas.
 
-Evita usar “haz clic aquí” como único texto del enlace: al leer una lista de enlaces fuera de su contexto, no se entiende a dónde llevan.
+Evita usar “haz clic aquí” como único texto del enlace: al leer una lista de enlaces fuera de su [contexto](../glosario.md#contexto), no se entiende a dónde llevan.
 
 ## 6. Listas
 
-Usa listas cuando los elementos formen un conjunto o una secuencia.
+Usa listas cuando los elementos formen un [conjunto](../glosario.md#conjunto) o una secuencia.
 
 ### Lista sin orden
 
@@ -255,7 +282,7 @@ Usa `<ol>` cuando el orden importe, como en instrucciones o pasos.
 
 ### Imágenes
 
-Guarda los recursos en una carpeta y usa una ruta relativa:
+Guarda los recursos en una carpeta y usa una [ruta relativa](../glosario.md#ruta-relativa):
 
 ```html
 <img
@@ -470,7 +497,7 @@ Una buena estructura ayuda a que más personas puedan recorrer y comprender la p
 - Añade `alt` a imágenes informativas; usa `alt=""` para las decorativas.
 - Asocia cada campo del formulario con un `<label>`.
 - Conserva controles nativos y asegúrate de que se puedan usar con teclado.
-- No comuniques un estado solamente por color; acompaña el color con texto o estructura.
+- No comuniques un [estado](../glosario.md#estado) solamente por color; acompaña el color con texto o estructura.
 - Usa el atributo `lang` correcto en `<html>`.
 
 Usar ARIA no arregla un HTML mal elegido. Primero intenta expresar el contenido con elementos HTML nativos; agrega ARIA solo cuando haga falta describir una interacción que la semántica nativa no cubre.
@@ -492,14 +519,14 @@ Los comentarios sirven para notas del código; el navegador no los muestra:
 <nav aria-label="Principal">...</nav>
 ```
 
-No guardes contraseñas, claves o datos privados en el HTML: cualquier persona puede ver el contenido que se entrega al navegador.
+No guardes contraseñas, claves o datos privados en el HTML: cualquier persona puede ver el contenido que se [entrega](../glosario.md#entrega) al navegador.
 
 ## 14. Cosas que suelen confundirse
 
 ### `id` y `class`
 
 - Usa `id` para un identificador único, por ejemplo para enlazar a una sección o asociar una etiqueta a un control.
-- Usa `class` para marcar uno o varios elementos que comparten una función o estilo.
+- Usa `class` para marcar uno o varios elementos que comparten una [función](../glosario.md#funcion) o estilo.
 - No asignes el mismo `id` a varios elementos.
 
 ### Enlace y botón
@@ -531,7 +558,7 @@ El navegador intenta mostrar documentos incluso si tienen errores, así que “s
 6. que los campos tengan etiquetas y las imágenes informativas tengan alternativa;
 7. que los encabezados y regiones tengan sentido al leerlos sin estilos.
 
-Puedes pegar o subir una copia de tu archivo al [Nu HTML Checker](https://validator.w3.org/nu/). Lee los mensajes uno por uno y corrige primero los errores. El validador detecta problemas de sintaxis y estructura, pero no decide si el contenido es claro, accesible o útil.
+Puedes pegar o subir una copia de tu archivo al [Nu HTML Checker](https://validator.w3.org/nu/). Lee los mensajes uno por uno y corrige primero los errores. El validador detecta problemas de [sintaxis](../glosario.md#sintaxis) y estructura, pero no decide si el contenido es claro, accesible o útil.
 
 ## 16. Proyecto final: una página de evento
 
@@ -578,6 +605,8 @@ Pídele a un compañero que use solo el teclado y que responda:
 
 ## Vocabulario
 
+Estas son las palabras que usa esta guía. Si alguna no te queda clara, el [glosario del curso](../glosario.md#capitulo-4) la explica con calma: qué es, un ejemplo y dónde la verás.
+
 | Término | Significado |
 |---|---|
 | Etiqueta | Marca de apertura o cierre escrita entre `<` y `>`. |
@@ -605,3 +634,7 @@ La [Guía de React](guia-react.md) es la continuación natural de este archivo: 
 - [Formularios - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms)
 - [Accesibilidad con HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML)
 - [Nu HTML Checker](https://validator.w3.org/nu/)
+
+---
+
+**Anterior:** [Taller de fundamentos](../02-programacion-base/taller-fundamentos.md) · **Siguiente:** [Practica: HTML y CSS](../02-programacion-base/guia-html-css.md)

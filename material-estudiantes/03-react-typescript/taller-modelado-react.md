@@ -1,16 +1,18 @@
 # Taller de modelado y React: Fila creativa
 
+**Estás aquí:** [Inicio](../README.md) › [3. De HTML a React](README.md) › **Taller de modelado y React: Fila creativa**
+
 ## Un solo proyecto, máximo 4 horas
 
 ## Antes de comenzar
 
-Este taller da por hecho que ya puedes estructurar una página con la [guía completa de HTML](guia-html.md), completar la práctica de [HTML y CSS](../02-programacion-base/guia-html-css.md), modelar entidades con [POO](../02-programacion-base/guia-poo.md) y crear componentes sencillos en React. Si todavía no has visto React y JSX, sigue primero el recorrido de este [módulo](README.md#3-de-html-a-react-con-vite).
+Este taller da por hecho que ya puedes estructurar una página con la [guía completa de HTML](guia-html.md), completar la práctica de [HTML y CSS](../02-programacion-base/guia-html-css.md), modelar entidades con [POO](../02-programacion-base/guia-poo.md) y crear componentes sencillos en [React](../glosario.md#react). Si todavía no has visto React y JSX, sigue primero el recorrido de este [módulo](README.md#3-de-html-a-react-con-vite).
 
-Necesitas Node, npm y un proyecto React con Vite que abra localmente. El taller se puede completar y probar en tu computadora; la publicación se realiza después de aprender el flujo de Git y Vercel.
+Necesitas Node, npm y un proyecto React con Vite que abra localmente. El taller se puede completar y probar en tu computadora; la publicación se realiza después de aprender el flujo de Git y [Vercel](../glosario.md#vercel).
 
 Construye una interfaz gráfica para gestionar una fila de turnos. La aplicación permite registrar personas, ver quién sigue y atender en orden de llegada.
 
-El proyecto enseña abstracción, objetos, arreglos, estado en React y el comportamiento de una **cola FIFO** sin intentar cubrir demasiadas estructuras a la vez.
+El proyecto enseña [abstracción](../glosario.md#abstraccion), objetos, arreglos, estado en React y el comportamiento de una **cola FIFO** sin intentar cubrir demasiadas estructuras a la vez.
 
 > **FIFO** significa *First In, First Out*: la primera persona que entra a la fila es la primera que se atiende.
 
@@ -18,7 +20,7 @@ El proyecto enseña abstracción, objetos, arreglos, estado en React y el compor
 
 Una página React que corra localmente y tenga:
 
-- formulario para registrar nombre y motivo del turno;
+- [formulario](../glosario.md#formulario) para registrar nombre y motivo del turno;
 - tarjeta destacada con el siguiente turno;
 - lista visual de personas en espera;
 - botón para atender al siguiente turno;
@@ -37,7 +39,7 @@ type Turno = {
 };
 ```
 
-Un `Turno` representa una solicitud de atención. La fila completa es un arreglo:
+Un `Turno` representa una solicitud de atención. La fila completa es un [arreglo](../glosario.md#arreglo):
 
 ```ts
 const turnosIniciales: Turno[] = [
@@ -59,7 +61,7 @@ La abstracción es intencional: no guardamos la historia completa de la persona,
 
 ## Paso 1. Dibuja la interfaz antes de programar
 
-En papel o en un comentario, decide dónde estarán:
+En papel o en un [comentario](../glosario.md#comentario), decide dónde estarán:
 
 ```text
 ┌─────────────────────────────────────┐
@@ -108,7 +110,7 @@ function App() {
 
 ## Paso 3. Agrega un turno
 
-Usa una cláusula de guarda para evitar turnos vacíos y crea un nuevo arreglo en lugar de modificar el actual.
+Usa una [cláusula de guarda](../glosario.md#clausula-de-guarda) para evitar turnos vacíos y crea un nuevo arreglo en lugar de modificar el actual.
 
 ```tsx
 function agregarTurno() {
@@ -131,7 +133,7 @@ function agregarTurno() {
 }
 ```
 
-El operador `...` crea una nueva lista. Esto importa porque React debe recibir un estado nuevo para representar el cambio.
+El [operador](../glosario.md#operador) `...` crea una nueva lista. Esto importa porque React debe recibir un estado nuevo para representar el cambio.
 
 ## Paso 4. Atiende al siguiente turno
 
@@ -143,7 +145,7 @@ function atenderSiguiente() {
 }
 ```
 
-`slice(1)` crea una nueva lista desde el segundo elemento. De este modo respetamos FIFO y evitamos mutar el estado.
+`slice(1)` crea una nueva lista desde el segundo elemento. De este modo respetamos FIFO y evitamos [mutar](../glosario.md#mutacion) el estado.
 
 ## Paso 5. Muestra la información en React
 
@@ -221,7 +223,7 @@ Agrega una prioridad `normal` o `urgente`. Antes de hacerlo, explica cómo cambi
 
 ### C. Diseño creativo
 
-Convierte la fila en sala de espera espacial, tablero de videojuego, atención de mascotas, cola de conciertos o laboratorio futurista. El diseño puede cambiar; el modelo y la regla FIFO deben seguir siendo comprensibles.
+Convierte la fila en sala de espera espacial, tablero de videojuego, atención de mascotas, cola de conciertos o laboratorio futurista. El diseño puede cambiar; el [modelo](../glosario.md#modelo) y la regla FIFO deben seguir siendo comprensibles.
 
 ## Reflexión final
 
@@ -232,3 +234,7 @@ En la página del proyecto responde:
 3. ¿Por qué `slice(1)` es preferible a mutar el estado con `shift()`?
 4. ¿Qué pasaría si atendieras siempre al último elemento?
 5. ¿Qué cambiaría si agregas prioridad?
+
+---
+
+**Anterior:** [De HTML a React con Vite](README.md) · **Siguiente:** [Git y GitHub](../04-git-github/README.md)

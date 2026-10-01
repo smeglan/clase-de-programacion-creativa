@@ -1,29 +1,46 @@
 # Guía 1: Tomar decisiones con `if`
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 1: Tomar decisiones con `if`**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
-- Explicar qué problema resuelve `if` en un programa.
-- Distinguir un valor booleano (`true` / `false`) de otros datos.
+- Explicar qué problema resuelve `if` en un [programa](../glosario.md#programa).
+- Distinguir un [valor](../glosario.md#valor) [booleano](../glosario.md#booleano) (`true` / `false`) de otros datos.
 - Escribir condiciones con los operadores de comparación (`===`, `!==`, `>`, `<`, `>=`, `<=`).
 - Combinar condiciones con los operadores lógicos (`&&`, `||`, `!`).
 - Construir estructuras `if`, `if / else` e `if / else if / else`.
-- Convertir un problema escrito en una condición.
+- Convertir un problema escrito en una [condición](../glosario.md#condicion).
 - Reconocer y corregir los errores más frecuentes al usar `if`.
 
 > **Cómo probar los ejemplos**
 >
-> Todo el código de esta guía es JavaScript básico. Puedes ejecutarlo de dos maneras:
+> Todo el [código](../glosario.md#codigo) de esta guía es [JavaScript](../glosario.md#javascript) básico. Puedes ejecutarlo de dos maneras:
 >
-> - **Con Node:** copia el código en un archivo como `ejemplo.js` y ejecuta `node ejemplo.js` en la terminal. Para crear y guardar ese archivo necesitas un editor de texto; si todavía no usas uno, revisa la [guía del editor VS Code](../01-herramientas/editor-vscode.md) del módulo 01.
-> - **Sin computadora propia o sin instalar nada:** abre la consola del navegador (F12 → pestaña *Console*), pega el código y presiona Enter.
+> - **Con Node:** copia el código en un [archivo](../glosario.md#archivo) como `ejemplo.js` y ejecuta `node ejemplo.js` en la [terminal](../glosario.md#terminal). Para crear y guardar ese archivo necesitas un [editor de texto](../glosario.md#editor); si todavía no usas uno, revisa la [guía del editor VS Code](../01-herramientas/editor-vscode.md) del módulo 01.
+> - **Sin computadora propia o sin instalar nada:** abre la [consola del navegador](../glosario.md#consola-del-navegador) (F12 → pestaña *Console*), pega el código y presiona Enter.
 >
 > Si no tienes computadora en este momento, la consola del navegador de un celular también sirve para los ejemplos pequeños.
 
 > **Una nota antes de empezar**
 >
 > Todos los ejemplos de esta guía usan `console.log` para que veas qué está pasando. Si todavía no tienes claro cómo funciona o qué tanto puede imprimir, revisa [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) antes de continuar.
+
+**En esta guía:**
+
+1. [El problema](#1-el-problema)
+2. [Concepto](#2-concepto)
+3. [Sintaxis](#3-sintaxis)
+4. [Ejemplos progresivos](#4-ejemplos-progresivos)
+5. [¿Cómo pienso este problema?](#5-cómo-pienso-este-problema)
+6. [Errores frecuentes](#6-errores-frecuentes)
+7. [Tips](#7-tips)
+8. [Ejercicios](#8-ejercicios)
+9. [Chuleta rápida](#9-chuleta-rápida)
+10. [¿Qué puedo hacer ahora?](#10-qué-puedo-hacer-ahora)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema
 
@@ -158,7 +175,7 @@ if (numero % 2 === 0) {
 }
 ```
 
-**Explicación:** el operador `%` (módulo) devuelve el **resto** de una división. Por ejemplo, `7 % 2` es `1`, porque 7 entre 2 da 3 y sobra 1. Si el resto de dividir entre 2 es `0`, el número es par; si es `1`, es impar. Es una de las condiciones más usadas en programación.
+**Explicación:** el [operador](../glosario.md#operador) `%` (módulo) devuelve el **resto** de una división. Por ejemplo, `7 % 2` es `1`, porque 7 entre 2 da 3 y sobra 1. Si el resto de dividir entre 2 es `0`, el número es par; si es `1`, es impar. Es una de las condiciones más usadas en programación.
 
 **Resultado esperado:**
 
@@ -339,7 +356,7 @@ if (edad < 12) {
 console.log("Precio de la entrada:", precio);
 ```
 
-**Explicación:** aquí la variable `precio` se **modifica** dentro de la condición. Por eso se declara con `let` y no con `const`: su valor cambia. Este ejemplo muestra una diferencia importante entre **consultar** una variable y **modificarla**; el `if` modifica `precio` solo si corresponde.
+**Explicación:** aquí la [variable](../glosario.md#variable) `precio` se **modifica** dentro de la condición. Por eso se declara con `let` y no con `const`: su valor cambia. Este ejemplo muestra una diferencia importante entre **consultar** una variable y **modificarla**; el `if` modifica `precio` solo si corresponde.
 
 **Resultado esperado:**
 
@@ -424,7 +441,7 @@ Me quedo en casa.
 
 ### Ejemplo 12: Valores verdaderos o falsos (truthy y falsy)
 
-En JavaScript, una condición no tiene que ser un booleano literal. Cada valor se comporta como verdadero o falso cuando se usa como condición:
+En JavaScript, una condición no tiene que ser un booleano [literal](../glosario.md#literal). Cada valor se comporta como verdadero o falso cuando se usa como condición:
 
 - **Falsy** (se comportan como `false`): `false`, `0`, `""` (texto vacío), `null`, `undefined`, `NaN`.
 - **Truthy** (casi todo lo demás): números distintos de 0, textos no vacíos, arreglos aunque estén vacíos.
@@ -453,7 +470,7 @@ No has escrito tu nombre.
 
 ### Ejemplo 13: Guardar la condición en una variable
 
-**Problema:** decidir si se puede comprar cuando hay dinero, hay stock y no hay oferta de entrega mínima.
+**Problema:** decidir si se puede comprar cuando hay dinero, hay stock y no hay oferta de [entrega](../glosario.md#entrega) mínima.
 
 **Código:**
 
@@ -522,7 +539,7 @@ if (edad = 18) {
 }
 ```
 
-**Error:** `=` **asigna** un valor, no compara. Este código pone `edad` en 18 (lo modifica) y la condición queda como `true`. No es el error que parece: cambia tus datos y nunca detecta el problema como esperarías. Comparar se hace con `===`.
+**Error:** `=` **asigna** un valor, no compara. Este código pone `edad` en 18 (lo modifica) y la condición queda como `true`. No es el [error](../glosario.md#error) que parece: cambia tus datos y nunca detecta el problema como esperarías. Comparar se hace con `===`.
 
 **Corrección:**
 
@@ -690,9 +707,13 @@ if (puedeComprar) {
 
 Con `if` un programa puede **decidir** una vez. Pero los problemas reales no hacen una sola pregunta: hacen miles.
 
-*"Recorre esta lista de 50 edades y dime cuántas son mayores de edad."* Ahí necesitas tomar una decisión (el `if` de esta guía) **una y otra vez**. Eso es exactamente lo que resuelve el ciclo `for`:
+*"Recorre esta lista de 50 edades y dime cuántas son mayores de edad."* Ahí necesitas tomar una decisión (el `if` de esta guía) **una y otra vez**. Eso es exactamente lo que resuelve el [ciclo](../glosario.md#ciclo) `for`:
 
 - **`if`** decide (*¿se cumple esta condición?*).
 - **`for`** repite la decisión (*hazlo para cada elemento*).
 
 Cuando conectes ambos, podrás escribir el patrón que aparece constantemente al programar: **recorrer → preguntar → actuar**. Esa es la meta de la siguiente guía: [Guía 2: Repetir con `for`](guia-for.md).
+
+---
+
+**Anterior:** [Tu primer programa: hola mundo](README.md) · **Siguiente:** [Guia 2: for](guia-for.md)

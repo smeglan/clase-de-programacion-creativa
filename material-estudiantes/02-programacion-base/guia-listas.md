@@ -1,12 +1,14 @@
 # Guía 4: Listas (arrays)
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 4: Listas (arrays)**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
 - Explicar qué problema resuelve una lista y por qué no se guardan valores relacionados en variables separadas.
-- Crear un array en JavaScript, acceder a sus elementos y modificarlos.
-- Explicar por qué el primer índice es `0` y reconocer cuándo un índice está fuera de rango.
+- Crear un array en [JavaScript](../glosario.md#javascript), acceder a sus elementos y modificarlos.
+- Explicar por qué el primer [índice](../glosario.md#indice) es `0` y reconocer cuándo un índice está fuera de rango.
 - Usar `length`, `push`, `pop`, `shift`, `unshift`, `includes` e `indexOf`.
 - Recorrer un array con `for` y con `while`.
 - Resolver problemas de sumar, promediar, buscar, contar, filtrar y encontrar extremos.
@@ -14,9 +16,26 @@ Al terminar esta guía deberías poder:
 
 > **Cómo probar los ejemplos**
 >
-> Igual que en las guías anteriores: `node ejemplo.js` con el código en un archivo, o pegar el código en la consola del navegador. Todo es JavaScript básico.
+> Igual que en las guías anteriores: `node ejemplo.js` con el [código](../glosario.md#codigo) en un [archivo](../glosario.md#archivo), o pegar el código en la [consola del navegador](../glosario.md#consola-del-navegador). Todo es JavaScript básico.
 >
 > Los ejemplos usan `console.log` para que veas cada lista y cada resultado: la sección [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog) te lo explica.
+
+**En esta guía:**
+
+1. [El problema](#1-el-problema)
+2. [Concepto](#2-concepto)
+3. [Sintaxis](#3-sintaxis)
+4. [Índices: la trampa número uno](#4-índices-la-trampa-número-uno)
+5. [Ejemplos progresivos](#5-ejemplos-progresivos)
+6. [¿Cómo pienso este problema?](#6-cómo-pienso-este-problema)
+7. [Errores frecuentes](#7-errores-frecuentes)
+8. [Tips](#8-tips)
+9. [Ejercicios](#9-ejercicios)
+10. [Chuleta rápida](#10-chuleta-rápida)
+11. [Lo que viene después](#11-lo-que-viene-después)
+12. [¿Qué puedo hacer ahora?](#12-qué-puedo-hacer-ahora)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema
 
@@ -30,9 +49,9 @@ let nombre2 = "Carlos";
 let nombre3 = "Pedro";
 ```
 
-Pero ¿qué pasa si son 50 nombres? ¿Y si no sabes cuántos van a ser? Guardarlos en variables separadas no escala: no puedes "recorrerlas" ni "contarlas" con un ciclo.
+Pero ¿qué pasa si son 50 nombres? ¿Y si no sabes cuántos van a ser? Guardarlos en variables separadas no escala: no puedes "recorrerlas" ni "contarlas" con un [ciclo](../glosario.md#ciclo).
 
-La solución es agruparlos en una sola variable:
+La solución es agruparlos en una sola [variable](../glosario.md#variable):
 
 ```js
 const nombres = ["Ana", "Carlos", "Pedro"];
@@ -42,7 +61,7 @@ Ahora es **una sola cosa** que contiene varios valores. Puedes recorrerla, pregu
 
 ## 2. Concepto
 
-Una **lista** es una colección ordenada de valores. En JavaScript, la forma de representar una lista se llama **array** (arreglo). Por eso decimos *"Lista (Array)"*: el concepto general y su implementación concreta son la misma idea.
+Una **lista** es una colección ordenada de valores. En JavaScript, la forma de representar una lista se llama **array** ([arreglo](../glosario.md#arreglo)). Por eso decimos *"Lista (Array)"*: el concepto general y su implementación concreta son la misma idea.
 
 Características básicas:
 
@@ -58,7 +77,7 @@ const estados = [true, false, true];
 const vacia = [];
 ```
 
-`vacia` es una lista sin elementos: su `length` es `0`. No es un error; es útil cuando una lista se irá llenando.
+`vacia` es una lista sin elementos: su `length` es `0`. No es un [error](../glosario.md#error); es útil cuando una lista se irá llenando.
 
 ## 3. Sintaxis
 
@@ -132,7 +151,7 @@ Ahora piensa: `frutas[3]` **no corresponde a ningún elemento existente**. La li
 console.log(frutas[3]);   // undefined
 ```
 
-Devuelve `undefined`: el valor "no existe" de JavaScript. El programa no se cae, pero tampoco hay nada ahí. **El error más común con listas es usar `length` como si fuera el último índice válido.** No lo es: el último válido es `length - 1`.
+Devuelve `undefined`: el [valor](../glosario.md#valor) "no existe" de JavaScript. El [programa](../glosario.md#programa) no se cae, pero tampoco hay nada ahí. **El error más común con listas es usar `length` como si fuera el último índice válido.** No lo es: el último válido es `length - 1`.
 
 ¿Por qué se cuenta desde `0`? Es una convención que JavaScript hereda de los lenguajes más antiguos: la primera posición se llama `0`, como en la guía anterior viste que `i < length` recorre exactamente las posiciones `0, 1, …, length - 1`. Una vez que lo interiorizas, los ciclos y las listas encajan sin fricción.
 
@@ -152,7 +171,7 @@ for (let i = 0; i < nombres.length; i++) {
 }
 ```
 
-**Explicación:** el ciclo (de la [Guía 2](guia-for.md)) recorre las posiciones `0`, `1` y `2` porque la condición es `i < nombres.length`. Si en lugar de `i <` escribieras `i <=`, el índice `3` caería fuera de rango y aparecería `undefined` (la trampa de la sección 4).
+**Explicación:** el ciclo (de la [Guía 2](guia-for.md)) recorre las posiciones `0`, `1` y `2` porque la [condición](../glosario.md#condicion) es `i < nombres.length`. Si en lugar de `i <` escribieras `i <=`, el índice `3` caería fuera de rango y aparecería `undefined` (la trampa de la sección 4).
 
 **Resultado esperado:**
 
@@ -235,7 +254,7 @@ console.log("¿Existe María?", nombres.includes("María"));
 console.log("Posición de María:", nombres.indexOf("María"));
 ```
 
-**Explicación:** `includes` responde `true`/`false` (un booleano, como en la [Guía 1](guia-if.md)). `indexOf` responde un número: la posición, o `-1` cuando no existe. Esa es la convención de JavaScript: `-1` significa "no está".
+**Explicación:** `includes` responde `true`/`false` (un [booleano](../glosario.md#booleano), como en la [Guía 1](guia-if.md)). `indexOf` responde un número: la posición, o `-1` cuando no existe. Esa es la convención de JavaScript: `-1` significa "no está".
 
 **Resultado esperado:**
 
@@ -265,7 +284,7 @@ for (let i = 0; i < numeros.length; i++) {
 console.log("Números mayores que 10:", contador);
 ```
 
-**Explicación:** el patrón **recorrer → preguntar → actuar** con un **contador** (de la [Guía 2](guia-for.md)): se recorre con el ciclo, se pregunta con `if` y se actúa sumando al contador solo cuando corresponde.
+**Explicación:** el patrón **recorrer → preguntar → actuar** con un **contador** (de la [Guía 2](guia-for.md)): se recorre con el ciclo, se pregunta con `if` y se actúa sumando al [contador](../glosario.md#contador) solo cuando corresponde.
 
 **Resultado esperado:**
 
@@ -290,7 +309,7 @@ for (let i = 0; i < precios.length; i++) {
 console.log("Total:", suma);
 ```
 
-**Explicación:** la variable `suma` es un **acumulador**: guarda la suma de todo lo visitado hasta el momento. Es exactamente el mismo acumulador de la guía 2, pero ahora los valores vienen de una lista.
+**Explicación:** la variable `suma` es un **acumulador**: guarda la suma de todo lo visitado hasta el momento. Es exactamente el mismo [acumulador](../glosario.md#acumulador) de la guía 2, pero ahora los valores vienen de una lista.
 
 **Resultado esperado:**
 
@@ -632,7 +651,7 @@ El mismo error de la guía 1, pero ahora además **modifica los datos** de la li
 compra.push "huevos";    // Error de sintaxis
 ```
 
-**Error:** `push`, `pop`, `includes`… son métodos: se llaman con `()`. Sin paréntesis solo estás haciendo referencia a la función, no ejecutando la acción. Recuerda `compra.push("huevos")`.
+**Error:** `push`, `pop`, `includes`… son métodos: se llaman con `()`. Sin paréntesis solo estás haciendo referencia a la [función](../glosario.md#funcion), no ejecutando la acción. Recuerda `compra.push("huevos")`.
 
 ### Error 6: modificar la lista mientras la recorres sin un plan
 
@@ -756,7 +775,7 @@ const numeros = [4, 12, 7, 20, 3];
 const mayores = numeros.filter((numero) => numero > 10);
 ```
 
-Esto filtra en una línea. Pero es importante que primero domines el recorrido con ciclos (como en esta guía): así, cuando veas `filter`, entenderás **qué está haciendo**, no solo cómo copiarlo. Además, en el curso estas listas se convertirán en el modelado de datos con objetos y en la base para mostrar listas en la interfaz con React.
+Esto filtra en una línea. Pero es importante que primero domines el recorrido con ciclos (como en esta guía): así, cuando veas `filter`, entenderás **qué está haciendo**, no solo cómo copiarlo. Además, en el curso estas listas se convertirán en el modelado de datos con objetos y en la base para mostrar listas en la interfaz con [React](../glosario.md#react).
 
 ## 12. ¿Qué puedo hacer ahora?
 
@@ -781,4 +800,8 @@ for (const edad of edades) {
 
 Ese patrón — **listas + for + if** — aparece en casi todo el código real: en un catálogo, en una tiendita, en filtros y búsquedas. Con estas cuatro guías tienes las bases para leer, escribir y explicar programas pequeños.
 
-El siguiente paso en el curso es convertir este razonamiento en código con **tipo**: declarar qué contiene cada lista, cada variable y cada función con TypeScript. Todo lo que aprendiste aquí se mantiene; simplemente ganas herramientas para que el programa se revise a sí mismo. Continúa con el módulo [Fundamentos de TypeScript y lógica](README.md), cuya parte práctica es el [Taller de fundamentos](taller-fundamentos.md).
+El siguiente paso en el curso es convertir este razonamiento en código con **tipo**: declarar qué contiene cada lista, cada variable y cada función con [TypeScript](../glosario.md#typescript). Todo lo que aprendiste aquí se mantiene; simplemente ganas herramientas para que el programa se revise a sí mismo. Continúa con el módulo [Fundamentos de TypeScript y lógica](README.md), cuya parte práctica es el [Taller de fundamentos](taller-fundamentos.md).
+
+---
+
+**Anterior:** [Guia 3: while](guia-while.md) · **Siguiente:** [Guia 5: Fibonacci](guia-fibonacci.md)

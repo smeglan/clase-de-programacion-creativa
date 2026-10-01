@@ -1,8 +1,12 @@
 # 1. Herramientas: escribir archivos y ejecutar programas
 
+**Estás aquí:** [Inicio](../README.md) › **1. Herramientas: escribir archivos y ejecutar programas**
+
+> **¿Te se frenó una palabra?** El [glosario del curso](../glosario.md#capitulo-2) explica las herramientas, una por una y con ejemplos.
+
 Referencias oficiales: [Node.js](https://nodejs.org/en/download) y [Visual Studio Code](https://code.visualstudio.com/).
 
-Esta guía te explica de qué sirven las herramientas antes de usarlas, para que no sean "cajas negras". Al final deberías poder escribir un programa en un archivo, ejecutarlo con Node y entender dónde aparece cada cosa.
+Esta guía te explica de qué sirven las herramientas antes de usarlas, para que no sean "cajas negras". Al final deberías poder escribir un [programa](../glosario.md#programa) en un [archivo](../glosario.md#archivo), ejecutarlo con Node y entender dónde aparece cada cosa.
 
 ## Un programa es un archivo
 
@@ -18,12 +22,12 @@ Pensemos en una receta de cocina:
 - El **chef que la sigue** es el programa que ejecuta las instrucciones.
 - Si la receta dice "agrega un poco de sal", una persona interpreta. Pero una computadora necesita precisión: *¿cuánta sal?* *¿cuándo?* *¿qué pasa si no hay sal?*
 
-Por eso programar no es escribir código "para la máquina": es **planear y escribir archivos** con instrucciones lo suficientemente exactas para que un ejecutor las cumpla sin inventar nada.
+Por eso programar no es escribir [código](../glosario.md#codigo) "para la máquina": es **planear y escribir archivos** con instrucciones lo suficientemente exactas para que un ejecutor las cumpla sin inventar nada.
 
 Esto tiene una consecuencia práctica enorme: programar y ejecutar son dos acciones distintas.
 
 - **Programar** = crear y modificar archivos (lo haces con el editor).
-- **Ejecutar** = correr un archivo para que sus instrucciones se cumplan (lo haces con la terminal y con Node).
+- **Ejecutar** = correr un archivo para que sus instrucciones se cumplan (lo haces con la [terminal](../glosario.md#terminal) y con Node).
 
 Cada vez que "corras" un programa, el archivo se vuelve a leer desde el inicio y sus instrucciones se ejecutan en orden. Modifica el archivo, vuelve a ejecutarlo, y el resultado cambia.
 
@@ -42,17 +46,17 @@ La frase que resume el flujo: **el editor escribe, la terminal ordena, Node ejec
 
 Y una aclaración que evita mucha confusión, porque es la pregunta más frecuente del curso:
 
-> **Durante la primera mitad del curso solo usas Node y npm.** Los ejercicios de las guías se ejecutan con `node archivo.js` (o `npx tsx archivo.ts`), en archivos sueltos, sin proyecto, sin servidor y sin configuración extra. Las otras piezas del curso —el proyecto web con React, la herramienta que lo construye y la publicación en la web— aparecen más adelante, y las explicaremos cuando lleguen. Si ahora te pierdes pensando en frameworks, servidores o comandos que no reconoces, no estás perdiendo nada: todavía no llegamos a eso.
+> **Durante la primera mitad del curso solo usas Node y npm.** Los ejercicios de las guías se ejecutan con `node archivo.js` (o `npx tsx archivo.ts`), en archivos sueltos, sin proyecto, sin servidor y sin configuración extra. Las otras piezas del curso —el proyecto web con [React](../glosario.md#react), la herramienta que lo construye y la publicación en la web— aparecen más adelante, y las explicaremos cuando lleguen. Si ahora te pierdes pensando en frameworks, servidores o comandos que no reconoces, no estás perdiendo nada: todavía no llegamos a eso.
 
 ## El editor: VS Code
 
-Cuando escribes un programa, tu única herramienta de creación es el **editor de texto**: el lugar donde el código cobra forma de archivo. En este curso usamos **VS Code** (gratuito y recomendado), pero cualquier editor de texto sirve; lo importante es la habilidad de crear, guardar y modificar archivos, no la marca.
+Cuando escribes un programa, tu única herramienta de creación es el **editor de texto**: el lugar donde el código cobra forma de archivo. En este curso usamos **VS Code** (gratuito y recomendado), pero cualquier [editor de texto](../glosario.md#editor) sirve; lo importante es la habilidad de crear, guardar y modificar archivos, no la marca.
 
 ```text
 editor escribe → terminal ordena → node ejecuta
 ```
 
-No lo veas como una lección de configuración: es lo mínimo para dejar de "adivinar" dónde se escribe el código. La guía [Editor: VS Code](editor-vscode.md) explica qué es un editor, cómo instalarlo, la relación entre el explorador de archivos y su terminal integrada, cómo abrir una terminal independiente, la diferencia entre PowerShell y Command Prompt, y las extensiones que conviene usar (como ESLint). Antes de seguir con la instalación de Node, vale la pena tener el editor a la vista: tu primer programa quedará a un clic de distancia.
+No lo veas como una lección de configuración: es lo mínimo para dejar de "adivinar" dónde se escribe el código. La guía [Editor: VS Code](editor-vscode.md) explica qué es un editor, cómo instalarlo, la relación entre el explorador de archivos y su terminal integrada, cómo abrir una terminal independiente, la diferencia entre PowerShell y Command [Prompt](../glosario.md#prompt), y las extensiones que conviene usar (como ESLint). Antes de seguir con la instalación de Node, vale la pena tener el editor a la vista: tu primer programa quedará a un clic de distancia.
 
 ## Instalar y comprobar Node
 
@@ -68,9 +72,9 @@ node --version
 npm --version
 ```
 
-Si aparecen dos números de versión, Node y npm están disponibles. Un número de versión es solo eso: la etiqueta de qué versión tienes instalada.
+Si aparecen dos números de versión, Node y npm están disponibles. Un [número de versión](../glosario.md#version) es solo eso: la [etiqueta](../glosario.md#etiqueta) de qué versión tienes instalada.
 
-**Si la terminal dice algo como `node no se reconoce como un comando`**: el sistema no encuentra a Node en su ruta de comandos. Cierra la terminal y ábrela de nuevo; si el problema sigue, repite la instalación y reinicia. Si aún así no aparece, copia el mensaje exacto y consúltalo: los errores se resuelven con el texto del error, no adivinando.
+**Si la terminal dice algo como `node no se reconoce como un comando`**: el sistema no encuentra a Node en su ruta de comandos. Cierra la terminal y ábrela de nuevo; si el problema sigue, repite la instalación y reinicia. Si aún así no aparece, copia el mensaje exacto y consúltalo: los errores se resuelven con el texto del [error](../glosario.md#error), no adivinando.
 
 ## Tu primer programa con Node
 
@@ -78,7 +82,7 @@ Vamos a hacer lo más simple pero decisivo de todo el curso: escribir un program
 
 ### 1. Crea un archivo
 
-Abre tu editor y dentro de él abre una carpeta de práctica (por ejemplo, `practica-node`). Crea un archivo nuevo y nómbralo `hola.js`. La extensión `.js` le dice al sistema: *"esto es código JavaScript"*.
+Abre tu editor y dentro de él abre una [carpeta](../glosario.md#carpeta) de práctica (por ejemplo, `practica-node`). Crea un archivo nuevo y nómbralo `hola.js`. La extensión `.js` le dice al sistema: *"esto es código [JavaScript](../glosario.md#javascript)"*.
 
 ### 2. Escribe unas instrucciones
 
@@ -91,12 +95,12 @@ console.log("Estoy corriendo JavaScript desde un archivo.");
 
 ### 3. Qué es `console.log`
 
-`console.log(...)` es la forma de decirle al programa: *"muestra este valor en la consola"*. Aquí, "consola" es la terminal. Por ahora, `console.log` es tu ventana de salida: la manera de *ver* lo que tu programa hace.
+`console.log(...)` es la forma de decirle al programa: *"muestra este [valor](../glosario.md#valor) en la [consola](../glosario.md#consola)"*. Aquí, "consola" es la terminal. Por ahora, `console.log` es tu ventana de salida: la manera de *ver* lo que tu programa hace.
 
 Conviene entenderlo en tres partes, porque evita media hora de confusión:
 
-- **`console`** es un objeto que ya existe en el entorno donde corres el programa. No lo escribiste tú: te lo dio Node (o el navegador). Es el mismo tipo de cosa que cuando más adelante modelemos objetos en el curso.
-- **`log`** es un método de ese objeto. El punto significa "llama a este método de este objeto", igual que `producto.descripcion()` cuando veamos clases.
+- **`console`** es un [objeto](../glosario.md#objeto) que ya existe en el entorno donde corres el programa. No lo escribiste tú: te lo dio Node (o el navegador). Es el mismo tipo de cosa que cuando más adelante modelemos objetos en el curso.
+- **`log`** es un [método](../glosario.md#metodo) de ese objeto. El punto significa "llama a este método de este objeto", igual que `producto.descripcion()` cuando veamos clases.
 - **`(...)`** es el valor que quieres ver. Puedes encerrar varios valores separados por comas.
 
 Qué se puede imprimir y cómo:
@@ -115,7 +119,7 @@ El error más común de quien empieza desde cero, y la causa de casi todas las d
 console.log(Hola);   // ReferenceError: Hola is not defined
 ```
 
-Sin comillas, `Hola` no es un texto: es el nombre de una variable que no existe. Al revés también cambia el resultado: `console.log("42")` muestra el texto `42`, y `console.log(42)` muestra el número `42`.
+Sin comillas, `Hola` no es un texto: es el nombre de una [variable](../glosario.md#variable) que no existe. Al revés también cambia el resultado: `console.log("42")` muestra el texto `42`, y `console.log(42)` muestra el número `42`.
 
 Una nota de estilo: **en las guías de este curso todos los ejemplos usan `console.log` porque hay que ver qué hace el programa.** En una aplicación terminada no se imprime todo, solo lo que ayuda a entender qué está pasando.
 
@@ -145,7 +149,7 @@ Hola, mundo
 Estoy corriendo JavaScript desde un archivo.
 ```
 
-Ese es el ciclo completo y no va a cambiar durante todo el curso:
+Ese es el [ciclo](../glosario.md#ciclo) completo y no va a cambiar durante todo el curso:
 
 > **escribir archivo → `node archivo.js` → ver la salida**
 
@@ -168,7 +172,7 @@ JavaScript es originalmente el lenguaje del navegador: por eso, cuando abres un 
 
 En este curso usamos los dos:
 
-- **Node** para ejecutar tus programas de práctica: escribes un archivo y lo corres con `node archivo.js`. Las [Guías de JavaScript](../02-programacion-base/README.md#gu%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) usan exactamente este flujo, y también puedes practicar desde la consola del navegador con F12.
+- **Node** para ejecutar tus programas de práctica: escribes un archivo y lo corres con `node archivo.js`. Las [Guías de JavaScript](../02-programacion-base/README.md#gu%C3%ADas-de-javascript-l%C3%B3gica-antes-de-los-tipos) usan exactamente este flujo, y también puedes practicar desde la [consola del navegador](../glosario.md#consola-del-navegador) con F12.
 - **El navegador**, más adelante, cuando lleguemos a las aplicaciones de React: ahí el código corre dentro de la página.
 
 Nota: otra forma rápida de probar JavaScript sin guardar ningún archivo es abrir la consola del navegador (F12 → pestaña *Console*) y escribir directamente. Sirve para experimentar, pero para tener un programa de verdad necesitas un archivo: algo que se pueda guardar, modificar, reutilizar y compartir.
@@ -177,7 +181,7 @@ Nota: otra forma rápida de probar JavaScript sin guardar ningún archivo es abr
 
 npm viene instalado junto con Node. Su trabajo es **instalar y administrar bibliotecas**: pedazos de código ya escritos que otros desarrolladores publican y que tu proyecto puede usar (React, Vite, y otros).
 
-Cuando instalas las piezas de un proyecto, npm las descarga en una carpeta llamada `node_modules`. Esa carpeta es grande y no se guarda en Git (conviene regenerarla cuando se necesita), así que lo importante no es su contenido, sino poder recrearla con un solo comando:
+Cuando instalas las piezas de un proyecto, npm las descarga en una carpeta llamada `node_modules`. Esa carpeta es grande y no se guarda en Git (conviene regenerarla cuando se necesita), así que lo importante no es su contenido, sino poder recrearla con un solo [comando](../glosario.md#comando):
 
 ```bash
 npm install
@@ -224,13 +228,13 @@ Después entras en la carpeta creada:
 cd portafolio-programacion
 ```
 
-Lo normal es que al crear la carpeta se instalen también las dependencias en una subcarpeta llamada **node_modules**. Si te falta esa carpeta (porque clonaste un repositorio o algo salió mal), el comando que la reconstruye es:
+Lo normal es que al crear la carpeta se instalen también las dependencias en una subcarpeta llamada **node_modules**. Si te falta esa carpeta (porque clonaste un [repositorio](../glosario.md#repositorio) o algo salió mal), el comando que la reconstruye es:
 
 ```bash
 npm install
 ```
 
-La plantilla viene con **ESLint**, un analizador que revisa tu código automáticamente y detecta errores y problemas de estilo antes de que corras el programa. Si más adelante quieres añadir Prettier u otra herramienta, hazlo con criterio: cada extensión es una pieza más que puede fallar o desactualizarse.
+La [plantilla](../glosario.md#plantilla) viene con **ESLint**, un analizador que revisa tu código automáticamente y detecta errores y problemas de estilo antes de que corras el programa. Si más adelante quieres añadir Prettier u otra herramienta, hazlo con criterio: cada extensión es una pieza más que puede fallar o desactualizarse.
 
 ### Encender el proyecto
 
@@ -244,7 +248,7 @@ El comando puede cambiar según la herramienta, pero no tienes que memorizar nad
 
 ### Lo esencial del módulo
 
-Con esto ya tienes lo que necesitas para la primera mitad del curso: **escribes archivos, los ejecutas con Node y guardas versiones con git**. El proyecto web que acabas de crear es tu portafolio; volveremos a él en la última parte del curso, cuando le agreguemos las aplicaciones de React.
+Con esto ya tienes lo que necesitas para la primera mitad del curso: **escribes archivos, los ejecutas con Node y guardas versiones con git**. El proyecto web que acabas de crear es tu [portafolio](../glosario.md#portafolio); volveremos a él en la última parte del curso, cuando le agreguemos las aplicaciones de React.
 
 ## Si algo falla
 
@@ -257,3 +261,7 @@ Antes de pedir ayuda o cambiar código, aplica siempre esta secuencia:
 5. **Divide el problema.** Prueba un ejemplo pequeño que sí funcione (como `console.log("Hola")`) y agrega código de a poco.
 
 Si aún no encuentras la causa, copia el mensaje de error completo y consulta esa información: un error bien descrito se soluciona mucho más rápido que una conjetura.
+
+---
+
+**Anterior:** [Orientacion del curso](../00-orientacion/README.md) · **Siguiente:** [Guia del editor VS Code](editor-vscode.md)

@@ -1,5 +1,9 @@
 # 3. De HTML a React con Vite
 
+**Estás aquí:** [Inicio](../README.md) › **3. De HTML a React con Vite**
+
+> **¿Te se frenó una palabra?** El [glosario del curso](../glosario.md#capitulo-4) explica componentes, props, estado y TypeScript, una por una y con ejemplos.
+
 En el [módulo 02](../02-programacion-base/README.md) aprendiste la lógica de programación y completaste la [guía obligatoria de POO](../02-programacion-base/guia-poo.md). También creaste una [primera página con HTML y CSS](../02-programacion-base/guia-html-css.md).
 
 Ahora vas a llevar una página estática a un proyecto con React. El recorrido será:
@@ -10,7 +14,7 @@ index.html abierto directamente → proyecto Vite → componente React con JSX y
 
 ## Antes de continuar: comprende HTML
 
-Lee primero la [guía independiente de HTML: de cero a una base sólida](guia-html.md). HTML sigue siendo importante aunque construyas interfaces con React: describe la estructura y el significado del contenido que el navegador representa. React usa JSX, una sintaxis parecida a HTML, y termina creando elementos HTML. Conocer HTML te permite elegir etiquetas semánticas, hacer interfaces más accesibles y entender qué escribes cuando pases a JSX.
+Lee primero la [guía independiente de HTML: de cero a una base sólida](guia-html.md). HTML sigue siendo importante aunque construyas interfaces con React: describe la estructura y el significado del contenido que el navegador representa. React usa JSX, una [sintaxis](../glosario.md#sintaxis) parecida a HTML, y termina creando elementos HTML. Conocer HTML te permite elegir etiquetas semánticas, hacer interfaces más accesibles y entender qué escribes cuando pases a JSX.
 
 Después de la guía, repasa la [práctica de HTML y CSS](../02-programacion-base/guia-html-css.md), y luego estudia [JavaScript con HTML](guia-javascript-html.md) para crear interacciones en el navegador antes de continuar con Vite y React.
 
@@ -22,11 +26,11 @@ Cuando ya puedas construir y hacer responder una página estática, es el moment
 
 - por qué la página estática se queda corta y qué cambia cuando la verdad de los datos pasa del DOM al estado;
 - las cuatro diferencias entre HTML y JSX, con la tabla de traducción;
-- por qué un componente empieza con mayúscula y qué error aparece si no;
-- por qué una variable `let` no redibuja la pantalla y `useState` sí;
-- la diferencia entre input controlado y no controlado;
-- por qué la `key` de una lista debe ser el `id` del dato y no el índice;
-- por qué en React se crea una versión nueva de un arreglo en vez de modificarlo;
+- por qué un [componente](../glosario.md#componente) empieza con mayúscula y qué [error](../glosario.md#error) aparece si no;
+- por qué una [variable](../glosario.md#variable) `let` no redibuja la pantalla y `useState` sí;
+- la diferencia entre [input controlado](../glosario.md#input-controlado) y no controlado;
+- por qué la `key` de una lista debe ser el `id` del dato y no el [índice](../glosario.md#indice);
+- por qué en React se crea una versión nueva de un [arreglo](../glosario.md#arreglo) en vez de modificarlo;
 - y las dos reglas de los Hooks, con el error que producen.
 
 ## 1. Antes de empezar
@@ -38,15 +42,15 @@ node --version
 npm --version
 ```
 
-Necesitas entender carpetas, guardar archivos y usar la terminal. Si todavía no tienes este entorno listo, consulta la [guía de herramientas](../01-herramientas/README.md). Según la [guía actual de Vite](https://vite.dev/guide/), se requiere Node 20.19+ o 22.12+; revisa esa página si aparece una advertencia de versión porque el requisito puede cambiar.
+Necesitas entender carpetas, guardar archivos y usar la [terminal](../glosario.md#terminal). Si todavía no tienes este entorno listo, consulta la [guía de herramientas](../01-herramientas/README.md). Según la [guía actual de Vite](https://vite.dev/guide/), se requiere Node 20.19+ o 22.12+; revisa esa página si aparece una advertencia de versión porque el [requisito](../glosario.md#requisito) puede cambiar.
 
-La página HTML y CSS anterior se puede abrir con doble clic porque es estática. En este recorrido, React se ejecutará dentro de un proyecto con dependencias y un servidor de desarrollo; Vite se encarga de iniciar ese entorno y preparar la aplicación.
+La página HTML y CSS anterior se puede abrir con doble clic porque es estática. En este recorrido, React se ejecutará dentro de un proyecto con dependencias y un [servidor de desarrollo](../glosario.md#servidor-de-desarrollo); Vite se encarga de iniciar ese entorno y preparar la aplicación.
 
-> React es la biblioteca para construir la interfaz; Vite es la herramienta de desarrollo y construcción del proyecto. No son dos nombres para lo mismo.
+> React es la [biblioteca](../glosario.md#biblioteca) para construir la interfaz; Vite es la herramienta de desarrollo y construcción del proyecto. No son dos nombres para lo mismo.
 
 ## 2. Crea un proyecto React con Vite
 
-Abre una terminal en la carpeta donde guardas tus prácticas y ejecuta:
+Abre una terminal en la [carpeta](../glosario.md#carpeta) donde guardas tus prácticas y ejecuta:
 
 ```bash
 npm create vite@latest mi-pagina-react -- --template react-ts
@@ -57,9 +61,9 @@ npm run dev
 
 Vite mostrará una dirección local, normalmente `http://localhost:5173/`. Ábrela en el navegador. Para detener el servidor de desarrollo, vuelve a la terminal y presiona `Ctrl + C`.
 
-Qué hace cada comando:
+Qué hace cada [comando](../glosario.md#comando):
 
-- `npm create vite@latest ...` crea un proyecto inicial usando la plantilla React con TypeScript.
+- `npm create vite@latest ...` crea un proyecto inicial usando la [plantilla](../glosario.md#plantilla) React con TypeScript.
 - `cd mi-pagina-react` entra a la carpeta creada.
 - `npm install` descarga las dependencias declaradas por el proyecto.
 - `npm run dev` inicia el servidor local para trabajar y ver cambios.
@@ -68,7 +72,7 @@ Si prefieres crear el proyecto con las preguntas interactivas de Vite, ejecuta `
 
 ## 3. Reconoce las piezas del proyecto
 
-La plantilla contiene más archivos que la página estática, pero cada uno tiene una función:
+La plantilla contiene más archivos que la página estática, pero cada uno tiene una [función](../glosario.md#funcion):
 
 ```text
 mi-pagina-react/
@@ -87,7 +91,7 @@ mi-pagina-react/
 - `src/App.css` y `src/index.css` contienen estilos CSS.
 - `package.json` registra dependencias y comandos del proyecto.
 
-En esta práctica cambia principalmente `App.tsx` y los archivos CSS. No borres el contenedor raíz de `index.html` ni el código de montaje de `main.tsx`.
+En esta práctica cambia principalmente `App.tsx` y los archivos CSS. No borres el contenedor raíz de `index.html` ni el [código](../glosario.md#codigo) de montaje de `main.tsx`.
 
 ## 4. Pasa tu HTML a JSX
 
@@ -119,10 +123,10 @@ export default App;
 
 JSX se parece a HTML, pero tiene algunas reglas propias:
 
-- Usa `className` en lugar de `class` para asignar una clase CSS.
+- Usa `className` en lugar de `class` para asignar una [clase](../glosario.md#clase) CSS.
 - Cierra las etiquetas, incluso las que no llevan contenido: `<img />`, `<input />`.
-- Devuelve un elemento raíz. Si necesitas varios elementos hermanos, envuélvelos en `<main>`, un `<div>` o un fragmento `<>...</>`.
-- Usa llaves `{}` para mostrar un valor o una expresión de JavaScript, por ejemplo `<h1>Hola, {nombre}</h1>`.
+- Devuelve un elemento raíz. Si necesitas varios elementos hermanos, envuélvelos en `<main>`, un `<div>` o un [fragmento](../glosario.md#fragmento) `<>...</>`.
+- Usa llaves `{}` para mostrar un [valor](../glosario.md#valor) o una [expresión](../glosario.md#expresion) de [JavaScript](../glosario.md#javascript), por ejemplo `<h1>Hola, {nombre}</h1>`.
 - Los atributos se escriben en camelCase en algunos casos: `onClick`, `htmlFor`.
 
 Las etiquetas semánticas que aprendiste (`main`, `article`, `section`, `h1`, `p`, `ul`) siguen siendo útiles en JSX. React las convierte en elementos que el navegador representa como HTML.
@@ -141,7 +145,7 @@ Y usa la clase en JSX:
 <article className="tarjeta">...</article>
 ```
 
-Una clase CSS escrita como `.tarjeta` se conserva igual. El atributo cambia de `class` a `className` porque `class` ya tiene otro significado en JavaScript.
+Una clase CSS escrita como `.tarjeta` se conserva igual. El [atributo](../glosario.md#atributo) cambia de `class` a `className` porque `class` ya tiene otro significado en JavaScript.
 
 ## 6. Convierte contenido repetido en datos
 
@@ -192,7 +196,7 @@ export default App;
 - `map` crea una tarjeta por cada dato.
 - `key` le da a React una identidad estable para cada elemento de la lista.
 
-Este ejemplo une lo que ya viste: HTML semántico, CSS, objetos, arreglos, funciones y tipos.
+Este ejemplo une lo que ya viste: [HTML semántico](../glosario.md#html-semantico), CSS, objetos, arreglos, funciones y tipos.
 
 ## 7. Cómo trabajar con Vite
 
@@ -204,19 +208,19 @@ Para generar una versión lista para publicar, más adelante usarás:
 npm run build
 ```
 
-La salida de producción queda en `dist/`. En este curso prepararás la publicación después de aprender el flujo de Git y GitHub.
+La salida de [producción](../glosario.md#produccion) queda en `dist/`. En este curso prepararás la publicación después de aprender el flujo de Git y [GitHub](../glosario.md#github).
 
 ## 8. Errores frecuentes
 
 - **`npm` o `node` no se reconoce:** confirma la instalación y abre una terminal nueva.
 - **`Missing script: dev`:** comprueba que la terminal está dentro de la carpeta que contiene `package.json`.
-- **No se ve un cambio:** revisa la terminal por errores y guarda el archivo correcto.
+- **No se ve un cambio:** revisa la terminal por errores y guarda el [archivo](../glosario.md#archivo) correcto.
 - **Aparece un error por `class`:** cambia el atributo JSX a `className`.
 - **Error de cierre o de elementos hermanos:** cierra todas las etiquetas y asegúrate de que el `return` tenga un solo elemento raíz.
 - **Error con el CSS:** confirma que `App.css` está en `src` y que la ruta de `import` coincide.
 - **No inicia por la versión de Node:** instala una versión compatible indicada por Vite y vuelve a abrir la terminal.
 
-Estos son los errores de entorno. Los errores de React tienen su propia lista, con diez casos explicados uno por uno, en la [sección 15 de la guía de React](guia-react.md#15-errores-frecuentes): `class` en vez de `className`, elementos hermanos sin contenedor, `key` con índice, estado mutado, estado leído después de cambiarlo, un `useState` dentro de una condición, un componente en minúscula, estado derivado guardado como estado, el componente que lo hace todo y `style` escrito como texto.
+Estos son los errores de entorno. Los errores de React tienen su propia lista, con diez casos explicados uno por uno, en la [sección 15 de la guía de React](guia-react.md#15-errores-frecuentes): `class` en vez de `className`, elementos hermanos sin contenedor, `key` con índice, estado mutado, estado leído después de cambiarlo, un `useState` dentro de una [condición](../glosario.md#condicion), un componente en minúscula, [estado derivado](../glosario.md#estado-derivado) guardado como estado, el componente que lo hace todo y `style` escrito como texto.
 
 ## 9. Orden recomendado para aprender este módulo
 
@@ -224,12 +228,12 @@ Estos son los errores de entorno. Los errores de React tienen su propia lista, c
 2. Lee la [Guía de React](guia-react.md) completa: es la que explica el porqué de los pasos siguientes.
 3. Crea el proyecto React con Vite y explora los archivos principales.
 4. Copia la estructura de la página estática a JSX y reutiliza el CSS.
-5. Define un modelo de datos con `type` o `interface`.
+5. Define un [modelo](../glosario.md#modelo) de datos con `type` o `interface`.
 6. Representa listas y estructuras de datos con componentes.
 7. Añade eventos y estado para permitir cambios en la interfaz.
 8. Completa el [Taller Fila creativa](taller-modelado-react.md).
 
-Los conceptos de abstracción, objetos, arreglos y estructuras que siguen en esta página te ayudarán a tomar decisiones antes de escribir componentes más grandes.
+Los conceptos de [abstracción](../glosario.md#abstraccion), objetos, arreglos y estructuras que siguen en esta página te ayudarán a tomar decisiones antes de escribir componentes más grandes.
 
 ## Abstracción: construir un modelo útil
 
@@ -264,7 +268,7 @@ Primero definimos los datos y las operaciones. Después React los representa vis
 
 ## Objetos: datos que pertenecen a la misma entidad
 
-Un objeto reúne características relacionadas de una misma cosa o concepto.
+Un [objeto](../glosario.md#objeto) reúne características relacionadas de una misma cosa o concepto.
 
 ```ts
 type Tarea = {
@@ -286,7 +290,7 @@ Usa un objeto cuando varios valores responden juntos a la pregunta “¿qué des
 
 ## Tipos, interfaces y objetos reales
 
-`type` e `interface` describen un contrato durante el desarrollo; el objeto es el valor real que existe mientras se ejecuta el programa.
+`type` e `interface` describen un contrato durante el desarrollo; el objeto es el valor real que existe mientras se ejecuta el [programa](../glosario.md#programa).
 
 ```ts
 interface CarritoItem {
@@ -412,9 +416,9 @@ const etiquetas = new Set<string>(["react", "typescript"]);
 etiquetas.add("algoritmos");
 ```
 
-- Una matriz expresa que importa la posición: fila y columna.
-- Un diccionario responde “dame el dato con esta clave”.
-- Un conjunto responde “¿este valor ya fue incluido?”.
+- Una [matriz](../glosario.md#matriz) expresa que importa la posición: fila y columna.
+- Un [diccionario](../glosario.md#diccionario) responde “dame el dato con esta clave”.
+- Un [conjunto](../glosario.md#conjunto) responde “¿este valor ya fue incluido?”.
 
 ## Elegir la estructura correcta
 
@@ -466,7 +470,7 @@ function agregarAlCarrito(producto: Producto) {
 }
 ```
 
-El estado `carrito` representa datos. `agregarAlCarrito` representa una operación del dominio. El componente muestra el resultado. Mantener estas capas separadas hace que la aplicación sea más fácil de probar y modificar.
+El estado `carrito` representa datos. `agregarAlCarrito` representa una operación del [dominio](../glosario.md#dominio). El componente muestra el resultado. Mantener estas capas separadas hace que la aplicación sea más fácil de probar y modificar.
 
 ### Renderizar listas
 
@@ -497,6 +501,10 @@ No son entregas adicionales del taller. Úsalas si terminas antes o quieres expl
 3. Implementa una cola FIFO para turnos de soporte.
 4. Construye una cola de prioridad y explica por qué no es una cola normal.
 5. Representa un tablero con una matriz y muéstralo en React.
-6. Construye una tiendita que filtre productos y agregue elementos al carrito sin mutar el estado. La [sección 13 de la guía de React](guia-react.md#13-ejemplo-completo-la-tiendita) resuelve exactamente esta: es el mismo recorrido, con el código completo y la explicación de por qué cada actualización crea una versión nueva.
+6. Construye una tiendita que filtre productos y agregue elementos al carrito sin [mutar](../glosario.md#mutacion) el estado. La [sección 13 de la guía de React](guia-react.md#13-ejemplo-completo-la-tiendita) resuelve exactamente esta: es el mismo recorrido, con el código completo y la explicación de por qué cada actualización crea una versión nueva.
 
 Continúa con el [Taller de modelado y React: Fila creativa](taller-modelado-react.md). Es un único proyecto visual de máximo cuatro horas: modela turnos como objetos, los organiza en una cola FIFO y los muestra con React.
+
+---
+
+**Anterior:** [Guia de React](guia-react.md) · **Siguiente:** [Taller de modelado](taller-modelado-react.md)

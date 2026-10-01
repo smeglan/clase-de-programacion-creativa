@@ -1,12 +1,14 @@
 # Tu primera página con HTML y CSS
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Tu primera página con HTML y CSS**
+
 ## Qué vas a construir
 
-Una página sencilla que puedes abrir en el navegador desde un archivo, sin instalar Vite, React ni extensiones. Usarás HTML para organizar el contenido y CSS para darle apariencia.
+Una página sencilla que puedes abrir en el navegador desde un [archivo](../glosario.md#archivo), sin instalar Vite, [React](../glosario.md#react) ni extensiones. Usarás HTML para organizar el contenido y CSS para darle apariencia.
 
 ## Prepara la carpeta
 
-Crea una carpeta llamada `mi-primera-pagina`. Dentro, crea dos archivos:
+Crea una [carpeta](../glosario.md#carpeta) llamada `mi-primera-pagina`. Dentro, crea dos archivos:
 
 ```text
 mi-primera-pagina/
@@ -63,7 +65,7 @@ Guarda el archivo. Abre la carpeta en el explorador de archivos y haz doble clic
 ## Cómo leer el HTML
 
 - Una **etiqueta** marca un elemento, como `<p>` para un párrafo.
-- El **contenido** aparece entre la etiqueta de apertura y la de cierre.
+- El **contenido** aparece entre la [etiqueta](../glosario.md#etiqueta) de apertura y la de cierre.
 - Los elementos se pueden **anidar**: por ejemplo, el título y la lista están dentro de `article`.
 - Un **atributo** aporta información adicional. `lang="es"` indica el idioma; `href="..."` indica el destino del enlace.
 - La **clase** `class="tarjeta"` da un nombre que CSS puede usar para encontrar ese elemento.
@@ -117,7 +119,7 @@ a:focus-visible {
 }
 ```
 
-Guarda los dos archivos y actualiza el navegador. Si los estilos no aparecen, revisa que `estilos.css` esté en la misma carpeta y que el nombre del archivo coincida con el valor de `href`.
+Guarda los dos archivos y actualiza el navegador. Si los estilos no aparecen, revisa que `estilos.css` esté en la misma carpeta y que el nombre del archivo coincida con el [valor](../glosario.md#valor) de `href`.
 
 ## Cómo leer el CSS
 
@@ -133,14 +135,14 @@ Guarda los dos archivos y actualiza el navegador. Si los estilos no aparecen, re
 - `padding` y `background-color` son **propiedades**.
 - `2rem` y `white` son sus **valores**.
 
-Prueba cambiar una propiedad por vez y observa el efecto.
+Prueba cambiar una [propiedad](../glosario.md#propiedad) por vez y observa el efecto.
 
 ## Reto: hazla tuya
 
 1. Cambia el título, la descripción y los elementos de la lista.
 2. Cambia los colores por una combinación que te guste, manteniendo texto legible.
 3. Añade una segunda sección con un subtítulo y un párrafo.
-4. Añade una imagen con un atributo `alt` que describa lo que aparece en ella.
+4. Añade una imagen con un [atributo](../glosario.md#atributo) `alt` que describa lo que aparece en ella.
 5. Reduce el ancho de la ventana y ajusta el diseño si algo queda apretado.
 
 ## Si algo no funciona
@@ -152,6 +154,10 @@ Prueba cambiar una propiedad por vez y observa el efecto.
 
 ## Qué tiene que ver esto con React
 
-React describe interfaces con componentes y JSX, una sintaxis que se parece a HTML. Lo que aprendiste sobre títulos, párrafos, listas, enlaces y organización del contenido sigue siendo útil. JSX tiene algunas diferencias —por ejemplo, escribe `className` en vez de `class`— que aprenderás cuando llegues a React.
+React describe interfaces con componentes y JSX, una [sintaxis](../glosario.md#sintaxis) que se parece a HTML. Lo que aprendiste sobre títulos, párrafos, listas, enlaces y organización del contenido sigue siendo útil. JSX tiene algunas diferencias —por ejemplo, escribe `className` en vez de `class`— que aprenderás cuando llegues a React.
 
-Por ahora, tu página funciona directamente desde el archivo. En la [guía de JavaScript con HTML](../03-react-typescript/guia-javascript-html.md) harás que responda a acciones con JavaScript plano. Más adelante, cuando uses React y módulos separados, ejecutarás el proyecto con una herramienta de desarrollo como Vite.
+Por ahora, tu página funciona directamente desde el archivo. En la [guía de JavaScript con HTML](../03-react-typescript/guia-javascript-html.md) harás que responda a acciones con [JavaScript](../glosario.md#javascript) plano. Más adelante, cuando uses React y módulos separados, ejecutarás el proyecto con una herramienta de desarrollo como Vite.
+
+---
+
+**Anterior:** [Guia de HTML](../03-react-typescript/guia-html.md) · **Siguiente:** [JavaScript con HTML](../03-react-typescript/guia-javascript-html.md)

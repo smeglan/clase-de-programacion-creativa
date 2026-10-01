@@ -1,5 +1,7 @@
 # Guía 5: Fibonacci: la secuencia que suma
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 5: Fibonacci: la secuencia que suma**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
@@ -7,14 +9,14 @@ Al terminar esta guía deberías poder:
 - Explicar la regla de Fibonacci con tus palabras: cada término suma los dos anteriores.
 - Contar la historia detrás de la secuencia (el problema de los conejos) y separar la leyenda del uso real.
 - Entender la definición matemática F(0)=0, F(1)=1, F(n)=F(n−1)+F(n−2) y aplicarla a cualquier posición.
-- Escribir tres versiones en TypeScript: iterativa, recursiva y con memoria.
+- Escribir tres versiones en [TypeScript](../glosario.md#typescript): iterativa, recursiva y con memoria.
 - Explicar por qué la versión recursiva ingenua se vuelve **exponencial** y la diferencia práctica entre ella y las demás.
-- Reconocer a la proporción áurea y a la fórmula de Binet, y saber cuándo (no) conviene usarlas.
+- Reconocer a la [proporción áurea](../glosario.md#proporcion-aurea) y a la [fórmula de Binet](../glosario.md#binet), y saber cuándo (no) conviene usarlas.
 - Conectar el tema con la naturaleza de forma honesta, sin exagerar "magia" donde no la hay.
 
 > **Cómo probar los ejemplos**
 >
-> Son funciones de TypeScript con tipos, como las del módulo `02`. Guarda el código en un archivo `.ts`, por ejemplo `fibonacci.ts`, y ejecútalo con:
+> Son funciones de TypeScript con tipos, como las del módulo `02`. Guarda el [código](../glosario.md#codigo) en un [archivo](../glosario.md#archivo) `.ts`, por ejemplo `fibonacci.ts`, y ejecútalo con:
 >
 > ```bash
 > npx tsx fibonacci.ts
@@ -50,7 +52,7 @@ La secuencia que aparece es la de Fibonacci. La forma moderna, empezando en 0, e
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
 ```
 
-Dato curioso: el modelo de conejos es una simplificación (los conejos no son eternos ni tan prolíficos), y la secuencia ya era conocida en la India siglos antes con otro nombre (relacionada con la métrica poética). La lección: los problemas simples de conteo pueden esconder patrones profundos, y nombrar un patrón no lo convierte en regla universal de la naturaleza.
+Dato curioso: el [modelo](../glosario.md#modelo) de conejos es una simplificación (los conejos no son eternos ni tan prolíficos), y la secuencia ya era conocida en la India siglos antes con otro nombre (relacionada con la métrica poética). La lección: los problemas simples de conteo pueden esconder patrones profundos, y nombrar un patrón no lo convierte en regla universal de la naturaleza.
 
 ## 2. El concepto: una regla de tres palabras
 
@@ -87,7 +89,7 @@ F(1) = 1
 F(n) = F(n − 1) + F(n − 2)   para n ≥ 2
 ```
 
-Fíjate en la estructura: hay **casos base** (los que no se calculan, se conocen) y un **paso** que reduce un problema a versiones más pequeñas de sí mismo. Cuando escribas una función recursiva, estarás usando exactamente esta idea.
+Fíjate en la estructura: hay **casos base** (los que no se calculan, se conocen) y un **paso** que reduce un problema a versiones más pequeñas de sí mismo. Cuando escribas una [función](../glosario.md#funcion) recursiva, estarás usando exactamente esta idea.
 
 ### Algunas propiedades elegantes
 
@@ -115,7 +117,7 @@ Estas identidades no hay que memorizarlas, pero probarlas por tu cuenta es un ex
 
 ### Conexión con el triángulo de Pascal
 
-Suma las diagonales "inclinadas" del triángulo de Pascal y aparece Fibonacci:
+Suma las diagonales "inclinadas" del [triángulo de Pascal](../glosario.md#triangulo-de-pascal) y aparece Fibonacci:
 
 ```text
 1
@@ -144,7 +146,7 @@ La razón se va acercando a un número fijo, la **proporción áurea**:
 φ = (1 + √5) / 2 ≈ 1.6180339887...
 ```
 
-Ojos: no es que los términos "tiendan" a redondearse; el límite matemático de F(n+1)/F(n) es exactamente φ. Y φ tiene la propiedad curiosa de que φ² = φ + 1 (la misma lógica de "sumar la versión anterior").
+Ojos: no es que los términos "tiendan" a redondearse; el límite matemático de F(n+1)/F(n) es exactamente φ. Y φ tiene la [propiedad](../glosario.md#propiedad) curiosa de que φ² = φ + 1 (la misma lógica de "sumar la versión anterior").
 
 ### La fórmula de Binet (fórmula cerrada)
 
@@ -156,7 +158,7 @@ F(n) = (φⁿ − ψⁿ) / √5
 donde φ = (1 + √5)/2   y   ψ = (1 − √5)/2 ≈ −0.618...
 ```
 
-Compruébalo con F(10) mentalmente si puedes, y en código más abajo. Atención a la trampa: ψⁿ se hace muy pequeño al crecer n, así que con decimales de coma flotante hay que redondear el resultado. En código real casi siempre conviene más la versión iterativa (sin redondeo de coma flotante mientras el resultado sea un entero seguro de JavaScript) que la fórmula "bonita".
+Compruébalo con F(10) mentalmente si puedes, y en código más abajo. Atención a la trampa: ψⁿ se hace muy pequeño al crecer n, así que con decimales de coma flotante hay que redondear el resultado. En código real casi siempre conviene más la versión iterativa (sin redondeo de coma flotante mientras el resultado sea un entero seguro de [JavaScript](../glosario.md#javascript)) que la fórmula "bonita".
 
 ## 4. En la naturaleza: qué hay y qué no hay de cierto
 
@@ -195,7 +197,7 @@ console.log(fibonacci(0)); // []
 
 Puntos por explicar en voz alta:
 
-- el ciclo empieza en `i = 2` porque las posiciones 0 y 1 ya están ocupadas por las semillas;
+- el [ciclo](../glosario.md#ciclo) empieza en `i = 2` porque las posiciones 0 y 1 ya están ocupadas por las semillas;
 - `slice(0, n)` protege los casos de borde: pedir `1` no debe entregar `[0, 1]`.
 
 ### Versión recursiva (la definición matemática, y la trampa)
@@ -214,7 +216,7 @@ console.log(fibo(1));  // 1
 console.log(fibo(0));  // 0
 ```
 
-Esta versión es idéntica a la definición matemática: casos base + paso recursivo. Pero tiene un costo oculto: `fibo(5)` llama a `fibo(4)` y `fibo(3)`, y cada uno vuelve a recalcular lo mismo muchas veces. El número de llamadas crece **exponencialmente** (parecido a 2ⁿ o, más precisamente, a φⁿ). Prueba `fibo(40)` o `fibo(45)` y observa cuánto tarda. En la [guía 6: Ordenamientos](guia-ordenamientos.md) aprenderás a hablar de esto como *complejidad exponencial*.
+Esta versión es idéntica a la definición matemática: casos base + paso recursivo. Pero tiene un costo oculto: `fibo(5)` llama a `fibo(4)` y `fibo(3)`, y cada uno vuelve a recalcular lo mismo muchas veces. El número de llamadas crece **exponencialmente** (parecido a 2ⁿ o, más precisamente, a φⁿ). Prueba `fibo(40)` o `fibo(45)` y observa cuánto tarda. En la [guía 6: Ordenamientos](guia-ordenamientos.md) aprenderás a hablar de esto como *[complejidad](../glosario.md#complejidad) exponencial*.
 
 ### Versión con memoria (programación dinámica en miniatura)
 
@@ -235,7 +237,7 @@ function fiboMemo(n: number, memo: Map<number, number> = new Map()): number {
 console.log(fiboMemo(50)); // 12586269025
 ```
 
-Con memoria, cada valor se calcula una sola vez: el trabajo pasa de exponencial a **lineal** (proporcional a n). Este "guardar para no repetir" se llama **memoización** y es la idea base de la programación dinámica que verás en [algoritmia aplicada](../07-algoritmia/README.md).
+Con memoria, cada [valor](../glosario.md#valor) se calcula una sola vez: el trabajo pasa de exponencial a **lineal** (proporcional a n). Este "guardar para no repetir" se llama **memoización** y es la idea base de la [programación dinámica](../glosario.md#programacion-dinamica) que verás en [algoritmia aplicada](../07-algoritmia/README.md).
 
 ### La fórmula de Binet en código (por curiosidad, no como primera opción)
 
@@ -263,7 +265,7 @@ Funciona hasta cierto punto; con n grandes, los errores de redondeo de coma flot
 
 ## 6. Resolver antes de seguir
 
-> Para cada ejercicio entrega: el código, una salida de ejemplo, y una explicación de la estrategia.
+> Para cada ejercicio [entrega](../glosario.md#entrega): el código, una salida de ejemplo, y una explicación de la estrategia.
 
 ### Nivel 0 - perderle el miedo
 
@@ -284,11 +286,13 @@ Funciona hasta cierto punto; con n grandes, los errores de redondeo de coma flot
 
 ### Nivel 3 - creatividad y profundización
 
-9. Dibuja la espiral de Fibonacci: sobre un lienzo o con caracteres en la terminal, traza cuadrados de lado F(1), F(2), F(3)... y el arco que los conecta.
-10. Cuenta las llamadas: agrega un contador a la versión recursiva y prueba cuántas llamadas hace `fibo(30)` (pista: el resultado te sorprenderá y es exponencial de verdad).
+9. Dibuja la espiral de Fibonacci: sobre un lienzo o con caracteres en la [terminal](../glosario.md#terminal), traza cuadrados de lado F(1), F(2), F(3)... y el arco que los conecta.
+10. Cuenta las llamadas: agrega un [contador](../glosario.md#contador) a la versión recursiva y prueba cuántas llamadas hace `fibo(30)` (pista: el resultado te sorprenderá y es exponencial de verdad).
 11. Investigando en la 07-algoritmia: explica con un ejemplo por qué "Fibonacci con y sin memoria" es un caso modelo de programación dinámica.
 
 ## 7. Vocabulario
+
+Estas son las palabras que usa esta guía. Si alguna no te queda clara, el [glosario del curso](../glosario.md#capitulo-3) la explica con calma: qué es, un ejemplo y dónde la verás.
 
 | Término | Definición corta |
 | --- | --- |
@@ -306,9 +310,13 @@ Funciona hasta cierto punto; con n grandes, los errores de redondeo de coma flot
 ## 8. Herramientas para verlo
 
 - **Numberphile** en YouTube (canal: `@Numberphile`): videos sobre Fibonacci, la proporción áurea y la espiral con explicaciones visuales.
-- Dibuja tu propia versión: genera los términos y conviértelos en cuadrados o barras en la consola. Comparar visualmente los tamaños de los cuadrados te da una intuición de "cómo explota" la secuencia.
-- Cuando llegues al gráfico de complejidad de la [guía 6](guia-ordenamientos.md), ubica la curva **exponencial (2ⁿ)**: ahí vive la recursión ingenua.
+- Dibuja tu propia versión: genera los términos y conviértelos en cuadrados o barras en la [consola](../glosario.md#consola). Comparar visualmente los tamaños de los cuadrados te da una intuición de "cómo explota" la secuencia.
+- Cuando llegues al gráfico de complejidad de la [guía 6](guia-ordenamientos.md), ubica la curva **exponencial (2ⁿ)**: ahí vive la [recursión](../glosario.md#recursion) ingenua.
 
 ## 9. Lo que viene después
 
 Fibonacci no es un tema aislado: te dio un modelo perfecto para ver las diferencias entre **lineal** (iterativa), **exponencial** (recursiva ingenua) y **con memoria** (no repites trabajo). Esas mismas palabras —lineal, exponencial, cuánto trabajo según el tamaño— son el corazón de la siguiente guía, donde las usarás para comparar formas de **ordenar** una lista. Continúa con la [Guía 6: Ordenamientos: bubble, merge y quicksort](guia-ordenamientos.md).
+
+---
+
+**Anterior:** [Guia 4: listas](guia-listas.md) · **Siguiente:** [Guia 6: ordenamientos](guia-ordenamientos.md)

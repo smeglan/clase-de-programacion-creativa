@@ -1,5 +1,7 @@
 # Guía 6: Ordenamientos — bubble, merge y quicksort (y cómo medir "cuánto trabajan")
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 6: Ordenamientos — bubble, merge y quicksort (y cómo medir "cuánto trabajan")**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
@@ -8,7 +10,7 @@ Al terminar esta guía deberías poder:
 - Escribir **bubble sort**, el ordenamiento más simple, y explicarlo vuelta por vuelta.
 - Escribir **merge sort** y **quicksort**, y contar la idea de cada uno con palabras.
 - Comparar los tres con una tabla de ventajas y desventajas, y saber cuál se usa más en la práctica (y por qué no hay "uno mejor siempre").
-- Explicar de forma **superficial** qué es la complejidad: cuánto trabajo hace un algoritmo cuando la entrada crece.
+- Explicar de forma **superficial** qué es la [complejidad](../glosario.md#complejidad): cuánto trabajo hace un [algoritmo](../glosario.md#algoritmo) cuando la entrada crece.
 - Distinguir, viendo un gráfico y un conteo real, entre crecimiento **logarítmico, lineal, n·log n, cuadrático y exponencial**.
 
 > **Cómo probar los ejemplos**
@@ -125,15 +127,15 @@ function mergeSort(numeros: number[]): number[] {
 console.log(mergeSort([5, 2, 9, 1, 7, 3])); // [1, 2, 3, 5, 7, 9]
 ```
 
-Caso base: lista de 0 o 1 elemento ya está ordenada; no hay que hacer nada. A partir de ahí, "fusionar en orden" resuelve todo.
+[Caso base](../glosario.md#caso-base): lista de 0 o 1 elemento ya está ordenada; no hay que hacer nada. A partir de ahí, "fusionar en orden" resuelve todo.
 
-Ventajas: siempre hace ~n·log n de trabajo (sin "casos malos"), es **estable** (conserva el orden relativo de valores iguales) y es pan comido para listas enlazadas y para ordenar datos que no caben en memoria. Desventaja: usa memoria extra para las listas intermedias.
+Ventajas: siempre hace ~n·log n de trabajo (sin "casos malos"), es **estable** (conserva el orden relativo de valores iguales) y es pan comido para listas enlazadas y para ordenar datos que no caben en memoria. Desventaja: usa [memoria extra](../glosario.md#memoria-extra) para las listas intermedias.
 
 ## 4. Quicksort: el que elige un pivote
 
 ### La idea
 
-También divide y vencerás, pero en vez de partir por la mitad, **elige un pivote** y coloca todo lo menor a la izquierda y lo mayor a la derecha. Cada lado se ordena con la misma idea (recursión). Al final, unes: izquierda ordenada, pivote, derecha ordenada.
+También [divide y vencerás](../glosario.md#divide-y-venceras), pero en vez de partir por la mitad, **elige un pivote** y coloca todo lo menor a la izquierda y lo mayor a la derecha. Cada lado se ordena con la misma idea ([recursión](../glosario.md#recursion)). Al final, unes: izquierda ordenada, [pivote](../glosario.md#pivote), derecha ordenada.
 
 Con `5 2 9 1 7 3` y pivote 5:
 
@@ -169,7 +171,7 @@ function quickSort(numeros: number[]): number[] {
 console.log(quickSort([5, 2, 9, 1, 7, 3])); // [1, 2, 3, 5, 7, 9]
 ```
 
-Un detalle importante: si el pivote siempre es el menor (por ejemplo, lista ya ordenada y pivote = primer elemento), quicksort degenera y trabaja como bubble (cuadrático). Por eso las versiones profesionales usan pivote aleatorio o la variante llamada **introsort**.
+Un detalle importante: si el pivote siempre es el menor (por ejemplo, lista ya ordenada y pivote = primer elemento), [quicksort](../glosario.md#quicksort) degenera y trabaja como bubble (cuadrático). Por eso las versiones profesionales usan pivote aleatorio o la variante llamada **introsort**.
 
 Ventajas: en promedio es rapidísimo y en versiones "en el lugar" (sin listas nuevas) casi no usa memoria extra. Desventaja: mal elegido el pivote, cae al peor caso; la versión simple no es estable.
 
@@ -183,11 +185,11 @@ Ventajas: en promedio es rapidísimo y en versiones "en el lugar" (sin listas nu
 
 Y la respuesta a "cuál se usa más" que probablemente buscas:
 
-- En JavaScript, `Array.prototype.sort()` ordena según un comparador y el algoritmo interno depende del motor; el estándar no exige TimSort. Para comparar números pasa `(a, b) => a - b`, porque sin comparador los valores se ordenan como texto.
-- **Quicksort y sus variantes aparecen en algunas bibliotecas por su velocidad promedio y su uso moderado de memoria. Cada lenguaje y biblioteca elige su propia implementación; no conviene asumir que todos usan el mismo algoritmo.
+- En [JavaScript](../glosario.md#javascript), `Array.prototype.sort()` ordena según un comparador y el algoritmo interno depende del motor; el estándar no exige TimSort. Para comparar números pasa `(a, b) => a - b`, porque sin comparador los valores se ordenan como texto.
+- **Quicksort y sus variantes aparecen en algunas bibliotecas por su velocidad promedio y su uso moderado de memoria. Cada lenguaje y [biblioteca](../glosario.md#biblioteca) elige su propia implementación; no conviene asumir que todos usan el mismo algoritmo.
 - **Merge sort** es la estrella cuando importa que el orden sea **estable** o cuando se ordenan datos enormes (que no caben en memoria) y datos en listas enlazadas.
 
-Conclusión honesta: no existe "el algoritmo perfecto". Se elige según el orden inicial de los datos, si necesitamos estabilidad, cuánta memoria hay disponible y qué tan simple queremos el código. Saber de su existencia —como en esta guía— es más útil que memorizar uno solo.
+Conclusión honesta: no existe "el algoritmo perfecto". Se elige según el orden inicial de los datos, si necesitamos estabilidad, cuánta memoria hay disponible y qué tan simple queremos el [código](../glosario.md#codigo). Saber de su existencia —como en esta guía— es más útil que memorizar uno solo.
 
 Trampa clásica de JavaScript que conviene conocer ya: `[10, 2, 1].sort()` devuelve `[1, 10, 2]`. ¿Por qué? Porque `sort()` sin funciones compara **texto**, no números. Para ordenar números hay que pasar el comparador: `[10, 2, 1].sort((a, b) => a - b)`. Recuerda comprobarlo siempre.
 
@@ -213,7 +215,7 @@ Medir *trabajo* de forma sencilla = **contar comparaciones** (o pasos). Lo inter
 
 Un criterio de bolsillo que te salvará en entrevistas y en decisiones de diseño:
 
-> Un ciclo sencillo sobre la lista → lineal. Dos ciclos anidados sobre la misma lista → cuadrático. Partir la lista a la mitad una y otra vez → logarítmico o n·log n.
+> Un [ciclo](../glosario.md#ciclo) sencillo sobre la lista → lineal. Dos ciclos anidados sobre la misma lista → cuadrático. Partir la lista a la mitad una y otra vez → logarítmico o n·log n.
 
 ### El gráfico
 
@@ -282,11 +284,11 @@ Una nota de honestidad: a esto, los cursos de algoritmos le pondrán el nombre *
 
 ## 7. Resolver antes de seguir
 
-> Para cada ejercicio entrega: código, ejemplo de salida y una explicación de la estrategia.
+> Para cada ejercicio [entrega](../glosario.md#entrega): código, ejemplo de salida y una explicación de la estrategia.
 
 ### Nivel 0 - perderle el miedo
 
-1. Traza a mano dos pasadas de bubble `6 1 8 3 2` y compara con la salida del programa.
+1. Traza a mano dos pasadas de bubble `6 1 8 3 2` y compara con la salida del [programa](../glosario.md#programa).
 2. Prueba `bubbleSort`, `mergeSort` y `quickSort` con: lista ya ordenada, lista invertida, duplicados, un solo elemento y lista vacía. ¿Todas funcionan igual para un solo elemento?
 
 ### Nivel 1 - dominar lo básico
@@ -303,11 +305,13 @@ Una nota de honestidad: a esto, los cursos de algoritmos le pondrán el nombre *
 
 ### Nivel 3 - profundización
 
-9. Investiga: ¿qué pasa con `quickSort` si la lista ya está ordenada y el pivote siempre es el primero? Mídelo con el contador. ¿Qué se te ocurre para arreglarlo?
+9. Investiga: ¿qué pasa con `quickSort` si la lista ya está ordenada y el pivote siempre es el primero? Mídelo con el [contador](../glosario.md#contador). ¿Qué se te ocurre para arreglarlo?
 10. Prepara un pivote aleatorio (`numeros[Math.floor(Math.random() * numeros.length)]`) y compara los conteos del ejercicio 8.
 11. Investiga qué garantiza el estándar de JavaScript sobre `Array.prototype.sort()` y qué algoritmo usa un motor concreto. Explica por qué no debemos asumir que todos los motores usan el mismo.
 
 ## 8. Vocabulario
+
+Estas son las palabras que usa esta guía. Si alguna no te queda clara, el [glosario del curso](../glosario.md#capitulo-3) la explica con calma: qué es, un ejemplo y dónde la verás.
 
 | Término | Definición corta |
 | --- | --- |
@@ -330,4 +334,8 @@ Una nota de honestidad: a esto, los cursos de algoritmos le pondrán el nombre *
 
 ## 10. Lo que viene después
 
-Ya sabes que hay muchas maneras de hacer lo mismo, que algunas crecen mejor que otras y que se elige según el contexto. Esas decisiones —entender el problema, comparar estrategias, medir el trabajo— son el corazón de [la algoritmia avanzada opcional](../07-algoritmia/README.md) y de cómo elegir estructuras de datos en el proyecto. Y hay una conexión directa con la [guía de Fibonacci](guia-fibonacci.md): la recursión ingenua de allí es tu ejemplo más claro de la curva exponencial, el monstruo que querrás evitar siempre. Sigue cuando quieras con el módulo de algoritmia; el resto del curso no lo exige.
+Ya sabes que hay muchas maneras de hacer lo mismo, que algunas crecen mejor que otras y que se elige según el [contexto](../glosario.md#contexto). Esas decisiones —entender el problema, comparar estrategias, medir el trabajo— son el corazón de [la algoritmia avanzada opcional](../07-algoritmia/README.md) y de cómo elegir estructuras de datos en el proyecto. Y hay una conexión directa con la [guía de Fibonacci](guia-fibonacci.md): la recursión ingenua de allí es tu ejemplo más claro de la curva exponencial, el monstruo que querrás evitar siempre. Sigue cuando quieras con el módulo de algoritmia; el resto del curso no lo exige.
+
+---
+
+**Anterior:** [Guia 5: Fibonacci](guia-fibonacci.md) · **Siguiente:** [Guia 7: POO](guia-poo.md)

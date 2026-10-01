@@ -1,11 +1,13 @@
 # Guía 3: Repetir con `while`
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 3: Repetir con `while`**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
 - Explicar qué problema resuelve `while` y en qué se diferencia de `for`.
-- Leer y escribir un `while` con su condición, acción y actualización.
+- Leer y escribir un `while` con su [condición](../glosario.md#condicion), acción y actualización.
 - Reconocer cuándo una repetición depende de una condición que cambia durante el proceso.
 - Evitar y corregir ciclos infinitos.
 - Usar `while` con contadores, acumuladores, `if`, `break` y `continue`.
@@ -13,9 +15,26 @@ Al terminar esta guía deberías poder:
 
 > **Cómo probar los ejemplos**
 >
-> Como en las guías anteriores: guarda el código en un archivo y ejecútalo con `node ejemplo.js`, o pégalo en la consola del navegador (F12 → *Console*). En esta guía hay un ejemplo que **nunca termina**: si lo ejecutas, aprende a detenerlo (más abajo te explico cómo).
+> Como en las guías anteriores: guarda el [código](../glosario.md#codigo) en un [archivo](../glosario.md#archivo) y ejecútalo con `node ejemplo.js`, o pégalo en la [consola del navegador](../glosario.md#consola-del-navegador) (F12 → *Console*). En esta guía hay un ejemplo que **nunca termina**: si lo ejecutas, aprende a detenerlo (más abajo te explico cómo).
 >
 > Todo se imprime con `console.log`: si esa llamada te resulta nueva, mira [Tu primer programa: hola mundo y qué es `console.log`](README.md#tu-primer-programa-hola-mundo-y-qu%C3%A9-es-consolelog).
+
+**En esta guía:**
+
+1. [El problema](#1-el-problema)
+2. [Concepto](#2-concepto)
+3. [Sintaxis](#3-sintaxis)
+4. [Advertencia: el ciclo infinito](#4-advertencia-el-ciclo-infinito)
+5. [Ejemplos progresivos](#5-ejemplos-progresivos)
+6. [For vs While](#6-for-vs-while)
+7. [¿Cómo pienso este problema?](#7-cómo-pienso-este-problema)
+8. [Errores frecuentes](#8-errores-frecuentes)
+9. [Tips](#9-tips)
+10. [Ejercicios](#10-ejercicios)
+11. [Chuleta rápida](#11-chuleta-rápida)
+12. [¿Qué puedo hacer ahora?](#12-qué-puedo-hacer-ahora)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema
 
@@ -25,7 +44,7 @@ En la guía anterior decíamos que `for` sirve cuando puedes expresar claramente
 - *"Sigue sumando mientras el total sea menor que 100."*
 - *"Busca mientras queden elementos por revisar."*
 
-En estos casos no sabes de antemano cuántas vueltas dará el ciclo: la cantidad depende de **una condición que puede cambiar dentro del propio ciclo**. Para eso existe `while`.
+En estos casos no sabes de antemano cuántas vueltas dará el [ciclo](../glosario.md#ciclo): la cantidad depende de **una condición que puede cambiar dentro del propio ciclo**. Para eso existe `while`.
 
 La diferencia conceptual:
 
@@ -70,9 +89,9 @@ while (i < 5) {
 }
 ```
 
-**¿Por qué es incorrecto?** Dentro del bloque no cambia nada. `i` vale `0` y seguirá valiendo `0` para siempre, así que la condición `i < 5` siempre es `true`. El programa imprime `0`, `0`, `0`, … sin parar.
+**¿Por qué es incorrecto?** Dentro del bloque no cambia nada. `i` vale `0` y seguirá valiendo `0` para siempre, así que la condición `i < 5` siempre es `true`. El [programa](../glosario.md#programa) imprime `0`, `0`, `0`, … sin parar.
 
-En la terminal de Node se detiene con `Ctrl + C`; en una pestaña del navegador, cierra o recarga la pestaña. Pero lo importante es entender que el programa **no tiene escape**: la pregunta siempre se responde igual.
+En la [terminal](../glosario.md#terminal) de Node se detiene con `Ctrl + C`; en una pestaña del navegador, cierra o recarga la pestaña. Pero lo importante es entender que el programa **no tiene escape**: la pregunta siempre se responde igual.
 
 La corrección:
 
@@ -85,7 +104,7 @@ while (i < 5) {
 }
 ```
 
-**¿Qué cambió?** Ahora `i++` modifica la variable de la condición. Después de `0, 1, 2, 3, 4`, la condición `i < 5` da `false` con `i = 5` y el ciclo termina. La regla de oro de `while` es: *la condición debe poder dejar de cumplirse, y algo en el bloque debe hacer que eso ocurra.*
+**¿Qué cambió?** Ahora `i++` modifica la [variable](../glosario.md#variable) de la condición. Después de `0, 1, 2, 3, 4`, la condición `i < 5` da `false` con `i = 5` y el ciclo termina. La regla de oro de `while` es: *la condición debe poder dejar de cumplirse, y algo en el bloque debe hacer que eso ocurra.*
 
 ## 5. Ejemplos progresivos
 
@@ -214,7 +233,7 @@ Suma total: 91
 
 ### Ejemplo 5: Repetir mientras una condición siga siendo cierta
 
-**Problema:** partir de 100 y dividir a la mitad hasta que el valor sea menor que 1.
+**Problema:** partir de 100 y dividir a la mitad hasta que el [valor](../glosario.md#valor) sea menor que 1.
 
 **Código:**
 
@@ -332,7 +351,7 @@ if (!permitido) {
 }
 ```
 
-**Explicación:** es un ejemplo muy realista: la cantidad de vueltas depende de cuándo (o si) se acierta. En una aplicación la lista `escritos` sería el texto que la persona escribe en un formulario; aquí la simulamos. Combinamos `while`, `if` y un límite de seguridad (`intentos < escritos.length`) para que el ciclo nunca quede atrapado.
+**Explicación:** es un ejemplo muy realista: la cantidad de vueltas depende de cuándo (o si) se acierta. En una aplicación la lista `escritos` sería el texto que la persona escribe en un [formulario](../glosario.md#formulario); aquí la simulamos. Combinamos `while`, `if` y un límite de seguridad (`intentos < escritos.length`) para que el ciclo nunca quede atrapado.
 
 **Resultado esperado:**
 
@@ -472,7 +491,7 @@ while (i < 5) {
 }
 ```
 
-**Error:** nadie cambia a `i`. La condición siempre es `true`. Este es el error más típico de `while`, y ya lo viste en la sección 4. La corrección pide `i++` dentro del bloque:
+**Error:** nadie cambia a `i`. La condición siempre es `true`. Este es el [error](../glosario.md#error) más típico de `while`, y ya lo viste en la sección 4. La corrección pide `i++` dentro del bloque:
 
 ```js
 let i = 0;
@@ -558,14 +577,14 @@ Resuelve por tu cuenta. Para cada uno, pregúntate primero: *"¿sé cuántas vue
 1. **Cuenta con `while`.** Imprime los números del 1 al 10 usando `while`.
 2. **Cuenta hacia atrás.** Imprime del 10 al 1.
 3. **Pares.** Imprime los números pares hasta el 20 (avanza de 2 en 2).
-4. **Primera suma.** Suma los números del 1 al 50 con un acumulador dentro de `while`.
+4. **Primera suma.** Suma los números del 1 al 50 con un [acumulador](../glosario.md#acumulador) dentro de `while`.
 
 ### 🟡 Básicos
 
 5. **Hasta superar 1000.** Suma de 1 en 1 hasta que el total supere 1000. ¿En qué número te detienes y cuál es el total?
 6. **Las mitades.** Parte de 128 y muestra cada mitad hasta que el número sea menor que 1.
-7. **Vocales con `while`.** Cuenta las vocales de una palabra recorriéndola con un índice y `while`.
-8. **Múltiplos.** Imprime los primeros 6 múltiplos de 7 (con `while` y un contador de cuántos llevas impresos).
+7. **Vocales con `while`.** Cuenta las vocales de una palabra recorriéndola con un [índice](../glosario.md#indice) y `while`.
+8. **Múltiplos.** Imprime los primeros 6 múltiplos de 7 (con `while` y un [contador](../glosario.md#contador) de cuántos llevas impresos).
 
 ### 🟠 Intermedios
 
@@ -577,7 +596,7 @@ Resuelve por tu cuenta. Para cada uno, pregúntate primero: *"¿sé cuántas vue
 ### 🔴 Desafío
 
 13. **División sin operador `/`.** Calcula cuántas veces cabe `b` dentro de `a` restando `b` de `a` repetidamente con `while`. Por ejemplo, con `a = 17` y `b = 5`, la respuesta es 3 (y sobran 2).
-14. **Adivina el número.** Un número secreto vale `56`. Simula una secuencia de intentos y dan pistas: si el intento es menor, imprime "muy bajo"; si es mayor, "muy alto"; si acierta, detén el ciclo y muestra en cuál intento acertó. Asegúrate de que el ciclo no pueda ser infinito.
+14. **Adivina el número.** Un número [secreto](../glosario.md#secreto) vale `56`. Simula una secuencia de intentos y dan pistas: si el intento es menor, imprime "muy bajo"; si es mayor, "muy alto"; si acierta, detén el ciclo y muestra en cuál intento acertó. Asegúrate de que el ciclo no pueda ser infinito.
 15. **Centinela.** Lee una lista mientras los números no sean `-1` y acumula su suma; al encontrar `-1`, detente y muestra el total. Prueba con una lista que contenga `-1` en posiciones distintas.
 
 ## 11. Chuleta rápida
@@ -645,3 +664,7 @@ while (contador < 10) {
 Con `if`, `for` y `while` ya puedes **decidir** y **repetir**. El ingrediente que falta es organizar los datos: hasta ahora nuestras listas de números han aparecido "de paso". Es hora de estudiarlas a fondo.
 
 En la siguiente guía aprenderás a **almacenar muchos valores relacionados** en una sola variable (una lista / array), a acceder a sus elementos, modificarlos, agregarlos y recorrerlos combinando todo lo visto: [Guía 4: Listas (arrays)](guia-listas.md).
+
+---
+
+**Anterior:** [Guia 2: for](guia-for.md) · **Siguiente:** [Guia 4: listas](guia-listas.md)

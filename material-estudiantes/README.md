@@ -1,6 +1,48 @@
 # Material para estudiantes
 
-Bienvenido. Este repositorio contiene todo lo necesario para trabajar en el curso: instalación, programación, React, Git, publicación, vibecoding y retos.
+Bienvenido. Este [repositorio](./glosario.md#repositorio) contiene todo lo necesario para trabajar en el curso: instalación, programación, [React](./glosario.md#react), Git, publicación, [vibecoding](./glosario.md#vibecoding) y retos.
+
+## Si una palabra te frena
+
+Todo el material del curso tiene un [glosario](glosario.md): cada palabra técnica explicada despacio, con un ejemplo y con el lugar exacto del curso donde aparece. Si lees algo y no sabes qué es, busca la palabra en el [índice alfabético](glosario.md#indice-alfabetico).
+
+La lista corta de palabras que se parecen y **no** son lo mismo está en [Palabras que se parecen](glosario.md#se-confunden).
+
+## Mapa del curso
+
+Si no sabes por dónde seguir, esta es la ruta. Cada módulo tiene su propio `README.md` con el temario, los objetivos y el orden de lectura.
+
+```
+  00  Orientación del curso      00-orientacion/README.md
+   |                             qué se construye y cómo se entrega
+   v
+  01  Herramientas               01-herramientas/README.md
+   |                             VS Code, Node, terminal
+   v
+  02  Fundamentos                02-programacion-base/README.md
+   |                             hola mundo → if / for / while → listas → POO
+   |                             \→ taller de retos
+   v
+  03  De HTML a React            03-react-typescript/README.md
+   |                             HTML → JavaScript con HTML → React → taller
+   v
+  04  Git y GitHub               04-git-github/README.md
+   |                             guardar versiones y compartir el código
+   v
+  05  Publicar en Vercel         05-publicacion/README.md
+   |                             una URL pública para compartir
+   v
+  06  Vibecoding responsable     06-vibecoding/README.md
+   |                             usar IA sin dejar de leer el código
+   v
+  08  Proyecto final             08-proyecto-final/README.md
+                                 una aplicación propia, probada y publicada
+
+  07  Algoritmia aplicada       07-algoritmia/README.md
+                                 opcional: entra cuando te sientas cómodo
+```
+
+Los módulos **00 a 06 y 08** son el recorrido obligatorio, en ese orden. El **07** es una profundización: entra cuando ya resuelvas los retos del 02 con confianza.
 
 ## Empieza aquí: recorrido único
 
@@ -13,7 +55,7 @@ Sigue este orden para el recorrido principal hasta publicar una aplicación. Pri
 5. [Fundamentos de TypeScript y lógica](02-programacion-base/README.md)
 6. [Taller de retos de fundamentos](02-programacion-base/taller-fundamentos.md)
 7. [Guía de POO: clases y abstracción](02-programacion-base/guia-poo.md)
-8. [HTML de cero a una base sólida](03-react-typescript/guia-html.md) — guía completa en archivo independiente
+8. [HTML de cero a una base sólida](03-react-typescript/guia-html.md) — guía completa en [archivo](./glosario.md#archivo) independiente
 9. [Tu primera página con HTML y CSS](02-programacion-base/guia-html-css.md) — práctica guiada
 10. [JavaScript con HTML: de una página estática a una interacción](03-react-typescript/guia-javascript-html.md)
 11. [Guía de React: de la página estática a una interfaz que responde](03-react-typescript/guia-react.md) — guía obligatoria, con el porqué de cada concepto
@@ -31,14 +73,14 @@ Sigue este orden para el recorrido principal hasta publicar una aplicación. Pri
 
 Todos terminaremos con:
 
-- un portafolio web;
+- un [portafolio](./glosario.md#portafolio) web;
 - una calculadora o conversor;
 - un catálogo o tarjeta;
 - una tiendita;
-- un proyecto integrador;
+- un [proyecto integrador](./glosario.md#proyecto-integrador);
 - una URL pública para compartir el trabajo.
 
-POO es parte del recorrido obligatorio. La guía independiente de HTML te lleva a construir una página estática; con JavaScript plano añades interacción; después, la [Guía de React](03-react-typescript/guia-react.md) explica por qué esa página se queda corta y cómo un componente resuelve el problema, y el [módulo 03](03-react-typescript/README.md) muestra cómo organizar la interfaz en un proyecto Vite. Las guías extensas de Fibonacci y ordenamientos, junto con la sección de algoritmia, sirven para profundizar.
+POO es parte del recorrido obligatorio. La guía independiente de HTML te lleva a construir una página estática; con [JavaScript](./glosario.md#javascript) plano añades interacción; después, la [Guía de React](03-react-typescript/guia-react.md) explica por qué esa página se queda corta y cómo un [componente](./glosario.md#componente) resuelve el problema, y el [módulo 03](03-react-typescript/README.md) muestra cómo organizar la interfaz en un proyecto Vite. Las guías extensas de Fibonacci y ordenamientos, junto con la sección de algoritmia, sirven para profundizar.
 
 ## Referencias rápidas
 

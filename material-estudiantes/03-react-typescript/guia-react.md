@@ -1,19 +1,21 @@
 # Guía de React: de la página estática a una interfaz que responde
 
-Esta guía toma la página que construiste en la [guía de HTML](guia-html.md) y la [práctica de HTML y CSS](../02-programacion-base/guia-html-css.md), le añade la interacción que aprendiste en [JavaScript con HTML](guia-javascript-html.md), y la convierte en un proyecto con componentes. No introduce una biblioteca nueva desde cero: **reordena el HTML que ya sabes escribir** para que el programa pueda volver a dibujarlo cuando los datos cambian.
+**Estás aquí:** [Inicio](../README.md) › [3. De HTML a React](README.md) › **Guía de React: de la página estática a una interfaz que responde**
+
+Esta guía toma la página que construiste en la [guía de HTML](guia-html.md) y la [práctica de HTML y CSS](../02-programacion-base/guia-html-css.md), le añade la interacción que aprendiste en [JavaScript con HTML](guia-javascript-html.md), y la convierte en un proyecto con componentes. No introduce una [biblioteca](../glosario.md#biblioteca) nueva desde cero: **reordena el HTML que ya sabes escribir** para que el [programa](../glosario.md#programa) pueda volver a dibujarlo cuando los datos cambian.
 
 El objetivo no es aprender la API entera de React. Es entender cuatro ideas y saber explicarlas:
 
-- una función que devuelve interfaz es un **componente**;
-- los datos que un componente recibe se llaman **props**;
+- una [función](../glosario.md#funcion) que devuelve interfaz es un **componente**;
+- los datos que un [componente](../glosario.md#componente) recibe se llaman **props**;
 - los datos que un componente cambia se llaman **estado**;
-- cambiar el estado produce una versión nueva de la interfaz, nunca una modificación de la anterior.
+- cambiar el [estado](../glosario.md#estado) produce una versión nueva de la interfaz, nunca una modificación de la anterior.
 
 Si puedes decir esas cuatro frases con tus propias palabras y entiendes por qué son cuatro frases y no una, la guía hizo su trabajo.
 
 > **Cómo probar los ejemplos**
 >
-> Los ejemplos viven en un proyecto Vite con la plantilla `react-ts`, como el que describe el [README del módulo](README.md#2-crea-un-proyecto-react-con-vite). Si todavía no lo tienes:
+> Los ejemplos viven en un proyecto Vite con la [plantilla](../glosario.md#plantilla) `react-ts`, como el que describe el [README del módulo](README.md#2-crea-un-proyecto-react-con-vite). Si todavía no lo tienes:
 >
 > ```bash
 > npm create vite@latest mi-pagina-react -- --template react-ts
@@ -22,29 +24,54 @@ Si puedes decir esas cuatro frases con tus propias palabras y entiendes por qué
 > npm run dev
 > ```
 >
-> El código de cada sección va en `src/App.tsx` (o en un archivo dentro de `src/`, y lo importas desde `App.tsx`). Cada bloque es un componente completo, así que puedes pegar uno, verlo en `http://localhost:5173/`, guardarlo y pegar el siguiente. No hace falta instalar nada más: React ya viene en las dependencias del proyecto.
+> El [código](../glosario.md#codigo) de cada sección va en `src/App.tsx` (o en un [archivo](../glosario.md#archivo) dentro de `src/`, y lo importas desde `App.tsx`). Cada bloque es un componente completo, así que puedes pegar uno, verlo en `http://localhost:5173/`, guardarlo y pegar el siguiente. No hace falta instalar nada más: React ya viene en las dependencias del proyecto.
 >
-> Un detalle que sorprende la primera vez: Vite activa **Strict Mode**, un modo de desarrollo que ejecuta dos veces algunas funciones para ayudarte a detectar impurezas. Si ves que una de tus funciones se registra dos veces en la consola, no es un bug tuyo: es el modo de desarrollo de Vite. La guía lo usa como ejemplo en la [sección 5](#5-estado-lo-que-cambia-y-hay-que-redibujar).
+> Un detalle que sorprende la primera vez: Vite activa **Strict Mode**, un modo de desarrollo que ejecuta dos veces algunas funciones para ayudarte a detectar impurezas. Si ves que una de tus funciones se registra dos veces en la [consola](../glosario.md#consola), no es un bug tuyo: es el modo de desarrollo de Vite. La guía lo usa como ejemplo en la [sección 5](#5-estado-lo-que-cambia-y-hay-que-redibujar).
 
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
 - Explicar por qué una página estática se queda corta y qué problema concreto resuelve React.
-- Traducir una etiqueta de HTML a JSX y decir en voz alta qué cambió: `className`, cierre de etiquetas vacías, un solo elemento raíz, llaves `{}` y atributos en `camelCase`.
+- Traducir una [etiqueta](../glosario.md#etiqueta) de HTML a JSX y decir en voz alta qué cambió: `className`, cierre de etiquetas vacías, un solo elemento raíz, llaves `{}` y atributos en `camelCase`.
 - Escribir un componente como una función que devuelve JSX, con nombre en mayúscula, y explicar por qué la mayúscula importa.
 - Pasar datos a un componente con `props`, declararlos con un `type` y leerlos por destructuración.
-- Crear estado con `useState`, actualizarlo y explicar por qué asignar a la variable del estado no redibuja nada.
+- Crear estado con `useState`, actualizarlo y explicar por qué asignar a la [variable](../glosario.md#variable) del estado no redibuja nada.
 - Actualizar el estado con la forma de función `(valorAnterior) => nuevoValor` y saber cuándo es la opción correcta.
-- Escribir un formulario controlado con `onChange` y `value`, y explicar qué pasa si falta uno de los dos.
+- Escribir un [formulario](../glosario.md#formulario) controlado con `onChange` y `value`, y explicar qué pasa si falta uno de los dos.
 - Convertir contenido repetido en datos y renderizarlo con `map` y una `key` estable.
-- Mostrar una cosa u otra según una condición con un operador ternario o `&&`, y evitar las trampas de cada uno.
-- Componer componentes unos dentro de otros, aplicando la misma preferencia por composición que aprendiste en la [Guía 7 de POO](../02-programacion-base/guia-poo.md#6-herencia-es-un).
+- Mostrar una cosa u otra según una [condición](../glosario.md#condicion) con un [operador ternario](../glosario.md#ternario) o `&&`, y evitar las trampas de cada uno.
+- Componer componentes unos dentro de otros, aplicando la misma preferencia por [composición](../glosario.md#composicion) que aprendiste en la [Guía 7 de POO](../02-programacion-base/guia-poo.md#6-herencia-es-un).
 - Decidir en qué componente vive un estado, siguiendo la regla del ancestro común más cercano.
-- Explicar por qué en React se crea una versión nueva de un arreglo o un objeto en vez de modificar el que ya existe.
-- Nombrar las dos reglas de los Hooks y reconocer el error que aparece al romperlas.
-- Refactorizar una página estática a React paso a paso, comprobando que cada versión funciona antes de pasar a la siguiente.
+- Explicar por qué en React se crea una versión nueva de un [arreglo](../glosario.md#arreglo) o un [objeto](../glosario.md#objeto) en vez de modificar el que ya existe.
+- Nombrar las dos reglas de los Hooks y reconocer el [error](../glosario.md#error) que aparece al romperlas.
+- [Refactorizar](../glosario.md#refactorizar) una página estática a React paso a paso, comprobando que cada versión funciona antes de pasar a la siguiente.
 - Leer un error de React y decir, en una frase, qué regla se rompió.
+
+**En esta guía:**
+
+1. [El problema: la página estática no alcanza](#1-el-problema-la-página-estática-no-alcanza)
+2. [JSX: el mismo HTML, con JavaScript adentro](#2-jsx-el-mismo-html-con-javascript-adentro)
+3. [Componentes: funciones que devuelven interfaz](#3-componentes-funciones-que-devuelven-interfaz)
+4. [Props: los datos que viajan hacia abajo](#4-props-los-datos-que-viajan-hacia-abajo)
+5. [Estado: lo que cambia y hay que redibujar](#5-estado-lo-que-cambia-y-hay-que-redibujar)
+6. [Eventos y formularios controlados](#6-eventos-y-formularios-controlados)
+7. [Listas: `map` y `key`](#7-listas-map-y-key)
+8. [Renderizado condicional](#8-renderizado-condicional)
+9. [Composición en vez de herencia](#9-composición-en-vez-de-herencia)
+10. [Dónde vive el estado](#10-dónde-vive-el-estado)
+11. [Inmutabilidad: crear una versión nueva](#11-inmutabilidad-crear-una-versión-nueva)
+12. [Reglas de los Hooks](#12-reglas-de-los-hooks)
+13. [Ejemplo completo: la tiendita](#13-ejemplo-completo-la-tiendita)
+14. [¿Cómo pienso este problema?](#14-cómo-pienso-este-problema)
+15. [Errores frecuentes](#15-errores-frecuentes)
+16. [Resolver antes de seguir](#16-resolver-antes-de-seguir)
+17. [Vocabulario](#17-vocabulario)
+18. [Chuleta rápida](#18-chuleta-rápida)
+19. [Herramientas para profundizar](#19-herramientas-para-profundizar)
+20. [Lo que viene después](#20-lo-que-viene-después)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema: la página estática no alcanza
 
@@ -81,7 +108,7 @@ Entonces el orden correcto de las cosas es este, y conviene tenerlo claro antes 
 primero el modelo de datos → después las operaciones → al final la pantalla
 ```
 
-React no invierte ese orden. React **representa** un modelo de datos. Si inviertes el orden y empiezas por la pantalla, terminas con la misma página estática de antes, solo que con `div` en lugar de `article`.
+React no invierte ese orden. React **representa** un [modelo](../glosario.md#modelo) de datos. Si inviertes el orden y empiezas por la pantalla, terminas con la misma página estática de antes, solo que con `div` en lugar de `article`.
 
 ### 1.2 La interacción manual se rompe
 
@@ -98,9 +125,9 @@ boton.addEventListener("click", () => {
 });
 ```
 
-Funciona, y es importante entender por qué funciona. JavaScript tiene un modelo mental simple: **el documento existe, yo lo busco y lo modifico**. `querySelector` devuelve el elemento, `appendChild` lo inserta, `textContent` le cambia el texto. La página es una estructura mutable y tú la estás editando pieza por pieza.
+Funciona, y es importante entender por qué funciona. [JavaScript](../glosario.md#javascript) tiene un modelo mental simple: **el documento existe, yo lo busco y lo modifico**. `querySelector` devuelve el elemento, `appendChild` lo inserta, `textContent` le cambia el texto. La página es una estructura mutable y tú la estás editando pieza por pieza.
 
-Ese modelo tiene un costo invisible mientras la página es pequeña. En cuanto aparecen dos listas, un contador y un botón que depende de cuántos elementos hay, el estado de la página está repartido: en el texto de un `<li>`, en el contenido de un `<p>`, en el `disabled` de un botón. Para saber si la lista está vacía tienes que **contar los elementos del DOM**. Para saber qué botón debería estar deshabilitado tienes que contarlos otra vez. Y si borras un elemento con `remove()`, el texto de la lista y el contador quedan desincronizados: nada te avisa.
+Ese modelo tiene un costo invisible mientras la página es pequeña. En cuanto aparecen dos listas, un [contador](../glosario.md#contador) y un botón que depende de cuántos elementos hay, el estado de la página está repartido: en el texto de un `<li>`, en el contenido de un `<p>`, en el `disabled` de un botón. Para saber si la lista está vacía tienes que **contar los elementos del DOM**. Para saber qué botón debería estar deshabilitado tienes que contarlos otra vez. Y si borras un elemento con `remove()`, el texto de la lista y el contador quedan desincronizados: nada te avisa.
 
 El problema se puede resumir en una frase:
 
@@ -119,7 +146,7 @@ Conviene ser exacto aquí, porque el malentendido más común es pensar que Reac
 | JavaScript | ¿Qué lógica se ejecuta? | Sí, pero se organiza en componentes |
 | React | ¿Cuándo hay que volver a dibujar y con qué datos? | Es lo nuevo |
 
-React **no** es un reemplazo de HTML ni de CSS ni de un lenguaje de programación. Es la manera de declarar: *"estos son mis datos, y quiero que esta pantalla se dibuje a partir de ellos"*. Vite, por su parte, es otra cosa: prepara el proyecto, instala dependencias y levanta el servidor de desarrollo. Se explica en el [README del módulo](README.md#2-crea-un-proyecto-react-con-vite).
+React **no** es un reemplazo de HTML ni de CSS ni de un lenguaje de programación. Es la manera de declarar: *"estos son mis datos, y quiero que esta pantalla se dibuje a partir de ellos"*. Vite, por su parte, es otra cosa: prepara el proyecto, instala dependencias y levanta el [servidor de desarrollo](../glosario.md#servidor-de-desarrollo). Se explica en el [README del módulo](README.md#2-crea-un-proyecto-react-con-vite).
 
 ### 1.4 El recorrido de esta guía
 
@@ -154,7 +181,7 @@ Se parece a HTML. Y debe parecerse: escribir JSX que se parece a HTML es una dec
 <div className="tarjeta">...</div>
 ```
 
-**Error:** `class` es una palabra reservada de JavaScript, así que no puede usarse como nombre de propiedad. React usa `className`, y el resultado en el navegador sigue siendo `class="tarjeta"` a secas. Tus reglas CSS `.tarjeta` no cambian en nada.
+**Error:** `class` es una palabra reservada de JavaScript, así que no puede usarse como nombre de [propiedad](../glosario.md#propiedad). React usa `className`, y el resultado en el navegador sigue siendo `class="tarjeta"` a secas. Tus reglas CSS `.tarjeta` no cambian en nada.
 
 El mismo problema aparece con `for` en las etiquetas de los formularios: se escribe `htmlFor`.
 
@@ -173,7 +200,7 @@ En HTML, `<img src="cuaderno.png">` y `<input type="text">` se pueden dejar abie
 <br />
 ```
 
-Fíjate también en que el valor de `alt` y de `href` va entre comillas, como en HTML. Los atributos de tipo texto van así; los que son expresiones o funciones van entre llaves.
+Fíjate también en que el [valor](../glosario.md#valor) de `alt` y de `href` va entre comillas, como en HTML. Los atributos de tipo texto van así; los que son expresiones o funciones van entre llaves.
 
 ### 2.3 Un componente devuelve un solo elemento
 
@@ -222,7 +249,7 @@ function Vacio() {
 
 ### 2.4 Las llaves abren la puerta a JavaScript
 
-Dentro de JSX, `{}` significa "aquí va una expresión de JavaScript". Es la diferencia más útil de las cuatro.
+Dentro de JSX, `{}` significa "aquí va una [expresión](../glosario.md#expresion) de JavaScript". Es la diferencia más útil de las cuatro.
 
 ```tsx
 type Producto = {
@@ -311,7 +338,7 @@ El mismo criterio aplica al archivo:
 | `Tarjeta.tsx` | un componente | correcto |
 | `tarjeta.tsx` | un módulo con valores | el componente no se reconoce |
 
-Si te sale el error *"Element type is invalid"*, *"tags are neither `<tag>` nor `<>...</>`"* o *"Unexpected token"*, revisa primero las mayúsculas de los nombres.
+Si te sale el error *"Element type is invalid"*, *"tags are neither `<tag>` nor `<>...</>`"* o *"Unexpected [token](../glosario.md#token)"*, revisa primero las mayúsculas de los nombres.
 
 ### 3.2 Un componente, una responsabilidad
 
@@ -465,7 +492,7 @@ Cuando leas código de otra persona y veas un componente que importa un dato y l
 
 ### 4.2 Pasar funciones también
 
-Las props no son solo datos: pueden ser funciones. Es la forma de que un hijo le avise a su padre que algo pasó, sin que el padre pierda el control de los datos.
+Las [props](../glosario.md#props) no son solo datos: pueden ser funciones. Es la forma de que un hijo le avise a su padre que algo pasó, sin que el padre pierda el control de los datos.
 
 ```tsx
 type ItemProps = {
@@ -515,7 +542,7 @@ function Contador({ inicial }: ContadorProps) {
 }
 ```
 
-`useState(inicial)` devuelve un par: el valor actual y la función que lo cambia. Se separan con la sintaxis de desestructuración de arreglos, y por convención el primero se llama con un sustantivo y el segundo con `set` más ese mismo nombre.
+`useState(inicial)` devuelve un par: el valor actual y la función que lo cambia. Se separan con la [sintaxis](../glosario.md#sintaxis) de desestructuración de arreglos, y por convención el primero se llama con un sustantivo y el segundo con `set` más ese mismo nombre.
 
 ### 5.1 Por qué no basta con una variable normal
 
@@ -642,7 +669,7 @@ Y un detalle que merece atención, porque no es evidente: **el estado sobrevive 
 
 ## 6. Eventos y formularios controlados
 
-Un evento es algo que hace la persona o el navegador: hacer clic, escribir, enviar. En JSX se escriben como props que empiezan por `on` y llevan una función.
+Un [evento](../glosario.md#evento) es algo que hace la persona o el navegador: hacer clic, escribir, enviar. En JSX se escriben como props que empiezan por `on` y llevan una función.
 
 ```tsx
 <button type="button" onClick={agregar}>Agregar</button>
@@ -705,7 +732,7 @@ Las dos salidas válidas son:
 
 ### 6.3 El formulario y `preventDefault`
 
-La [guía de JavaScript con HTML](guia-javascript-html.md#5-haz-una-versión-con-formulario) ya resolvió esto: si no llamas a `event.preventDefault()`, el navegador recarga la página y pierdes todo el estado. En React el mismo método sirve:
+La [guía de JavaScript con HTML](guia-javascript-html.md#5-haz-una-versión-con-formulario) ya resolvió esto: si no llamas a `event.preventDefault()`, el navegador recarga la página y pierdes todo el estado. En React el mismo [método](../glosario.md#metodo) sirve:
 
 ```tsx
 function Formulario() {
@@ -743,7 +770,7 @@ function Formulario() {
 }
 ```
 
-Tres cosas para copiar: la **cláusula de guarda** con `trim()` y `return` temprano (la regla que ya usabas en el módulo 02), el tipo del evento en TypeScript, y el **reseteo manual** de los campos. En un input controlado, vaciar el estado vacía el campo: no hace falta buscar el elemento en el DOM.
+Tres cosas para copiar: la **cláusula de guarda** con `trim()` y `return` temprano (la regla que ya usabas en el módulo 02), el tipo del evento en TypeScript, y el **reseteo manual** de los campos. En un [input controlado](../glosario.md#input-controlado), vaciar el estado vacía el campo: no hace falta buscar el elemento en el DOM.
 
 ### 6.4 El estado del formulario: un objeto o varios valores
 
@@ -777,7 +804,7 @@ function actualizar(campo: keyof FormularioTurno, valor: string) {
 
 La forma B tiene una ventaja que ya usaste en la [Guía 7 de POO](../02-programacion-base/guia-poo.md#paso-2-poner-las-reglas-dentro-del-modelo-comportamiento-y-encapsulamiento): **el formulario es una sola entidad con sus reglas**, y todas sus propiedades se actualizan juntas. Si aparece un campo nuevo, la forma A te obliga a añadir un `useState` y acordarte de vaciarlo también; la forma B solo necesita tocar el `type`.
 
-Usa la forma B cuando los campos viajan juntos (un formulario, una entidad), y la forma A cuando son contadores independientes. El criterio es el mismo de siempre: **cohesión**.
+Usa la forma B cuando los campos viajan juntos (un formulario, una [entidad](../glosario.md#entidad)), y la forma A cuando son contadores independientes. El criterio es el mismo de siempre: **cohesión**.
 
 ## 7. Listas: `map` y `key`
 
@@ -835,13 +862,13 @@ La `key` correcta es el identificador del dato:
 ))}
 ```
 
-Con la `key` correcta, React sabe que la tarea "t-02" se movió y reutiliza ese mismo elemento. Es el mismo `id` que usaste como clave en el diccionario de la sección de estructuras del [README del módulo](README.md#matriz-diccionario-y-conjunto), y cumple el mismo papel: **identidad estable, no posición**.
+Con la `key` correcta, React sabe que la tarea "t-02" se movió y reutiliza ese mismo elemento. Es el mismo `id` que usaste como clave en el [diccionario](../glosario.md#diccionario) de la sección de estructuras del [README del módulo](README.md#matriz-diccionario-y-conjunto), y cumple el mismo papel: **identidad estable, no posición**.
 
 La regla práctica, y la causa de la mayoría de los errores:
 
 > **La `key` viene del dato (`id`), nunca de la posición (`index`).**
 
-Solo el índice es aceptable cuando la lista nunca se reordena, no agrega ni quita elementos, y no tiene ningún estado propio. Ese "nunca" aparece en casi todos los proyectos reales, así que por defecto usa el `id`.
+Solo el [índice](../glosario.md#indice) es aceptable cuando la lista nunca se reordena, no agrega ni quita elementos, y no tiene ningún estado propio. Ese "nunca" aparece en casi todos los proyectos reales, así que por defecto usa el `id`.
 
 ### 7.2 Filtrar y mostrar con el mismo `map`
 
@@ -913,7 +940,7 @@ function Contador({ total }: { total: number }) {
 
 Si `total` es `0`, JavaScript devuelve **el segundo operando**, es decir `0`. Y `0` es un número, y React dibuja los números. El resultado en pantalla es un `0` suelto donde no debía haber nada.
 
-La causa es que `&&` en JavaScript no devuelve un booleano, sino el primer operando falsy. La solución es forzar la condición a booleano:
+La causa es que `&&` en JavaScript no devuelve un [booleano](../glosario.md#booleano), sino el primer operando falsy. La solución es forzar la condición a booleano:
 
 ```tsx
 <p>{total > 0 && "Hay productos"}</p>            {/* mal: muestra un 0 */}
@@ -932,7 +959,7 @@ Vale la pena saber **por qué** pasa, porque la corrección no es obvia si no en
 
 Dos comillas dobles por fuera y un objeto por dentro. El error habitual es escribir `style="color: red"` (texto), que React rechaza. Las propiedades usan el mismo nombre de CSS pero en `camelCase`: `background-color` se escribe `backgroundColor`.
 
-Para algo que cambia según el estado, dos condiciones y un objeto suelen quedar mejor que una clase:
+Para algo que cambia según el estado, dos condiciones y un objeto suelen quedar mejor que una [clase](../glosario.md#clase):
 
 ```tsx
 <span className="etiqueta">{producto.disponible ? "Disponible" : "Agotado"}</span>
@@ -1002,7 +1029,7 @@ function Panel({ titulo, children }: PanelProps) {
 }
 ```
 
-`Panel` no sabe qué hay dentro. Puede contener texto, un formulario, una lista o los tres. Su trabajo es dar la estructura y dejar el hueco. Es la misma abstracción de interfaz de la [sección 2.3 de la guía de POO](../02-programacion-base/guia-poo.md#23-tres-niveles-de-abstracción): el código que usa el panel no necesita saber qué contiene, y el panel no necesita saber qué usará.
+`Panel` no sabe qué hay dentro. Puede contener texto, un formulario, una lista o los tres. Su trabajo es dar la estructura y dejar el hueco. Es la misma [abstracción](../glosario.md#abstraccion) de interfaz de la [sección 2.3 de la guía de POO](../02-programacion-base/guia-poo.md#23-tres-niveles-de-abstracción): el código que usa el panel no necesita saber qué contiene, y el panel no necesita saber qué usará.
 
 Y si la composición se repite, un componente con varias "ranuras" explícitas se lee incluso mejor:
 
@@ -1137,7 +1164,7 @@ En `quitar` se crea un arreglo nuevo con `filter`, la referencia es distinta y R
 
 El `...` es el operador de propagación: copia los elementos existentes. La segunda forma tiene un detalle que conviene no pasar por alto: `lista.sort()` **ordena el arreglo original y devuelve el mismo objeto**, así que sin el `[...]` tendrías el problema de siempre.
 
-El `slice(1)` de la tercera fila es exactamente el que usa el [taller Fila creativa](taller-modelado-react.md#paso-4-atiende-al-siguiente-turno) para atender al primero de la fila: crea una lista nueva desde el segundo elemento. Cumplir FIFO sin mutar el estado es posible, y es la demostración más limpia de por qué la regla existe.
+El `slice(1)` de la tercera fila es exactamente el que usa el [taller Fila creativa](taller-modelado-react.md#paso-4-atiende-al-siguiente-turno) para atender al primero de la fila: crea una lista nueva desde el segundo elemento. Cumplir FIFO sin [mutar](../glosario.md#mutacion) el estado es posible, y es la demostración más limpia de por qué la regla existe.
 
 ### 11.3 Por qué React funciona así
 
@@ -1169,7 +1196,7 @@ Para no perderte, la versión completa de la regla, que vale para todo el códig
 
 1. Nunca asignar al estado directamente.
 2. Nunca llamar a `push`, `splice`, `shift`, `pop`, `sort`, `reverse` sobre algo que esté en el estado.
-3. Crear la versión nueva con `...`, `map`, `filter`, `slice` o un objeto literal con `...`.
+3. Crear la versión nueva con `...`, `map`, `filter`, `slice` o un objeto [literal](../glosario.md#literal) con `...`.
 4. Pasar esa versión nueva a la función que cambia el estado.
 5. Si es posible, usar la forma de función `(actual) => nuevo` para no depender del valor viejo.
 
@@ -1179,8 +1206,8 @@ Un Hook es una función que empieza por `use` y que le permite a un componente u
 
 Las reglas son dos, y se pueden decir completas:
 
-1. **Llama a los Hooks solo en el nivel más alto** de un componente funcional o de un hook personalizado. Nunca dentro de una condición, un ciclo, una función anidada o un bloque `try`.
-2. **Llama a los Hooks solo mientras React está ejecutando un componente** o un hook personalizado. Nunca desde una función normal, un manejador de evento o un `setTimeout`.
+1. **Llama a los Hooks solo en el nivel más alto** de un componente funcional o de un hook personalizado. Nunca dentro de una condición, un [ciclo](../glosario.md#ciclo), una función anidada o un bloque `try`.
+2. **Llama a los Hooks solo mientras React está ejecutando un componente** o un hook personalizado. Nunca desde una función normal, un [manejador de evento](../glosario.md#manejador-de-evento) o un `setTimeout`.
 
 ```tsx
 // Correcto: en el nivel más alto, siempre y en el mismo orden
@@ -1225,7 +1252,7 @@ React guarda los Hooks de un componente **en una lista, en orden de llamada**. C
 
 Si en la tercera ejecución la primera llamada a `useState` desaparece porque una condición cambió, todo se desplaza: lo que React cree que era "el segundo estado" ahora es el primero, y el estado de tu contador se pega al valor de otro Hook. El síntoma clásico es un componente con un estado que cambia de valor solo, o un error que dice algo como *"Rendered fewer hooks than expected"*.
 
-Por eso el orden tiene que ser estable, y por eso no se pueden meter Hooks en condiciones. No es una convención de estilo: es un requisito de cómo funciona el almacenamiento.
+Por eso el orden tiene que ser estable, y por eso no se pueden meter Hooks en condiciones. No es una convención de estilo: es un [requisito](../glosario.md#requisito) de cómo funciona el almacenamiento.
 
 ### 12.2 Dónde va un `return` temprano
 
@@ -1333,7 +1360,7 @@ const PRODUCTOS_INICIALES: Producto[] = [
 ];
 ```
 
-Una función pura para el total, sin componente ni estado:
+Una [función pura](../glosario.md#funcion-pura) para el total, sin componente ni estado:
 
 ```tsx
 function total(carrito: ItemCarrito[]): number {
@@ -1503,7 +1530,7 @@ Si respondes esas ocho preguntas, el componente casi se escribe solo. Y si al ha
 <div class="tarjeta">...</div>
 ```
 
-**Error:** `class` es una palabra reservada de JavaScript. React rechaza el atributo y suele mostrar algo como *"Invalid DOM property `class`. Did you mean `className`?"*. El mismo problema, con el mismo nombre, en `for` → `htmlFor`. Recuerda que la columna de la [sección 2.6](#26-la-tabla-de-traducción) es tu referencia rápida.
+**Error:** `class` es una palabra reservada de JavaScript. React rechaza el [atributo](../glosario.md#atributo) y suele mostrar algo como *"Invalid DOM property `class`. Did you mean `className`?"*. El mismo problema, con el mismo nombre, en `for` → `htmlFor`. Recuerda que la columna de la [sección 2.6](#26-la-tabla-de-traducción) es tu referencia rápida.
 
 ### Error 2: varios elementos hermanos
 
@@ -1516,7 +1543,7 @@ function Lista() {
 }
 ```
 
-**Error:** *"JSX expressions must have one parent element"* o *"Adjacent JSX elements must be wrapped in an enclosing tag"*. Un componente devuelve un solo elemento. La corrección no es envolver en `<div>` por costumbre: elige la etiqueta que signifique algo (`<ul>`, `<section>`) o usa un fragmento `<>...</>` si el padre ya agrupa todo. Es el error que más sentido tiene revisar, porque cada vez que aparece es una decisión de estructura.
+**Error:** *"JSX expressions must have one parent element"* o *"Adjacent JSX elements must be wrapped in an enclosing tag"*. Un componente devuelve un solo elemento. La corrección no es envolver en `<div>` por costumbre: elige la etiqueta que signifique algo (`<ul>`, `<section>`) o usa un [fragmento](../glosario.md#fragmento) `<>...</>` si el padre ya agrupa todo. Es el error que más sentido tiene revisar, porque cada vez que aparece es una decisión de estructura.
 
 ### Error 3: olvidar la `key` o usar el índice
 
@@ -1614,7 +1641,7 @@ function App() {
 
 ## 16. Resolver antes de seguir
 
-> Para cada ejercicio entrega: el código, una descripción de cómo se ve funcionando y una explicación de la estrategia. Si usas estado, la explicación debe incluir qué dato es estado, qué dato es derivado y por qué no mutaste nada.
+> Para cada ejercicio [entrega](../glosario.md#entrega): el código, una descripción de cómo se ve funcionando y una explicación de la estrategia. Si usas estado, la explicación debe incluir qué dato es estado, qué dato es derivado y por qué no mutaste nada.
 
 ### Nivel 0 - perderle el miedo
 
@@ -1643,9 +1670,11 @@ function App() {
 14. Escribe un hook personalizado `useContador(inicial)` que devuelva el valor, una función para incrementar y una para reiniciar. Úsalo en tres componentes distintos y comprueba que cada uno tiene su propio estado. Explica qué parte de las reglas de los Hooks cumple y por qué.
 15. Extrae un componente `Panel` con props `titulo` y `children`, y úsalo para envolver tres partes distintas de tu interfaz: una con texto, una con una lista y una con un formulario. Explica qué ventaja tiene sobre tres `<div>`.
 16. Refactoriza tu proyecto del [taller de fundamentos](../02-programacion-base/taller-fundamentos.md): toma tres retos que tengas resueltos y conviértelos en componentes con estado. En cada uno, escribe primero las funciones puras en un archivo aparte y úsalas desde los componentes. Compara el número de líneas y qué parte se puede probar sin navegador.
-17. Toma un proyecto tuyo de HTML plano y llévalo a React siguiendo los pasos de la sección 13. Escribe en la bitácora, paso a paso, qué cambió y qué se quedó igual. La respuesta esperada es: **la estructura y el significado se quedan igual; lo que cambia es de dónde vienen los datos y quién decide cuándo redibujar.**
+17. Toma un proyecto tuyo de HTML plano y llévalo a React siguiendo los pasos de la sección 13. Escribe en la [bitácora](../glosario.md#bitacora), paso a paso, qué cambió y qué se quedó igual. La respuesta esperada es: **la estructura y el significado se quedan igual; lo que cambia es de dónde vienen los datos y quién decide cuándo redibujar.**
 
 ## 17. Vocabulario
+
+Estas son las palabras que usa esta guía. Si alguna no te queda clara, el [glosario del curso](../glosario.md#capitulo-4) la explica con calma: qué es, un ejemplo y dónde la verás.
 
 | Término | Definición corta |
 | --- | --- |
@@ -1780,9 +1809,9 @@ function App() {
 
 ## 19. Herramientas para profundizar
 
-- **Documentación oficial de React, en español** (`es.react.dev`): la fuente más confiable. Para esta guía son especialmente útiles las páginas *Describir la interfaz* (`es.react.dev/learn/describing-the-ui`), *Renderizado y confirmación* (`es.react.dev/learn/render-and-commit`) y *Compartir el estado entre componentes* (`es.react.dev/learn/sharing-state-between-components`), que es exactamente la sección 10 de esta guía. La referencia de *Reglas de los Hooks* (`es.react.dev/reference/rules/rules-of-hooks`) incluye los casos válidos e inválidos.
+- **Documentación oficial de React, en español** (`es.react.dev`): la fuente más confiable. Para esta guía son especialmente útiles las páginas *Describir la interfaz* (`es.react.dev/learn/describing-the-ui`), *[Renderizado](../glosario.md#renderizado) y confirmación* (`es.react.dev/learn/render-and-commit`) y *Compartir el estado entre componentes* (`es.react.dev/learn/sharing-state-between-components`), que es exactamente la sección 10 de esta guía. La referencia de *Reglas de los Hooks* (`es.react.dev/reference/rules/rules-of-hooks`) incluye los casos válidos e inválidos.
 - **Referencia de `useState`** (`es.react.dev/reference/react/useState`): explica la forma de función para actualizar, la inicialización perezosa con `useState(() => valor)` y qué pasa cuando el nuevo estado es igual al anterior.
-- **Vite, guía oficial** (`vite.dev/guide`): los scripts disponibles en `package.json` (`dev`, `build`, `preview`), la carpeta `public`, y los requisitos de versión de Node. Útil para el [módulo 04 de Git y GitHub](../04-git-github/README.md) y para la [publicación en Vercel](../05-publicacion/README.md).
+- **Vite, guía oficial** (`vite.dev/guide`): los scripts disponibles en `package.json` (`dev`, `build`, `preview`), la [carpeta](../glosario.md#carpeta) `public`, y los requisitos de versión de Node. Útil para el [módulo 04 de Git y GitHub](../04-git-github/README.md) y para la [publicación en Vercel](../05-publicacion/README.md).
 - **MDN Web Docs, "React" en la guía de JavaScript** (`developer.mozilla.org`): el apartado de React dentro del recorrido de JavaScript conecta React con lo que ya sabes del lenguaje y es una buena revisión después de la guía de HTML.
 - **El código del curso**: la calculadora, el catálogo y la tiendita son el laboratorio real. Cada componente que escribas es una oportunidad de aplicar la regla de la sección 11 y ver, en el navegador, por qué importa.
 
@@ -1790,7 +1819,7 @@ function App() {
 
 Esta guía te dio el vocabulario de React (componente, `props`, estado, JSX, Hook, renderizado) y, sobre todo, cuatro reglas que explican casi todos los errores del módulo: **el estado vive en React, no en una variable local; se cambia con la función que lo creó; se reemplaza por una versión nueva; y no se muta**.
 
-Lo que sigue, en el [README del módulo](README.md), es la parte de modelado: elegir la estructura de datos correcta (pila, cola, matriz, diccionario) según el comportamiento que necesites, y ver las estructuras de la [sección de estructuras](README.md#arreglo-estructura-abstracta-y-comportamiento) aplicadas a la interfaz. Después viene el [taller de modelado y React: Fila creativa](taller-modelado-react.md), donde modelas turnos como objetos, los organizas en una **cola FIFO**, los agregas con un formulario controlado y los atiendes **sin mutar el estado** con `slice(1)`. Todo lo de esta guía aparece ahí, y ese es el mejor examen.
+Lo que sigue, en el [README del módulo](README.md), es la parte de modelado: elegir la estructura de datos correcta (pila, cola, [matriz](../glosario.md#matriz), diccionario) según el comportamiento que necesites, y ver las estructuras de la [sección de estructuras](README.md#arreglo-estructura-abstracta-y-comportamiento) aplicadas a la interfaz. Después viene el [taller de modelado y React: Fila creativa](taller-modelado-react.md), donde modelas turnos como objetos, los organizas en una **cola FIFO**, los agregas con un formulario controlado y los atiendes **sin mutar el estado** con `slice(1)`. Todo lo de esta guía aparece ahí, y ese es el mejor examen.
 
 También quedan dos temas que **no** estudiaste aquí a propósito, y conviene que sepas que existen: `useEffect`, para trabajo que ocurre fuera de la pantalla (peticiones de red, guardar en `localStorage`), y los componentes con clase, que son la forma antigua y que no se usa en este curso. Cuando el taller funcione, ambos tienen su momento.
 
@@ -1801,4 +1830,8 @@ Antes de seguir, comprueba que puedes responder estas cuatro preguntas sin mirar
 3. ¿Por qué la `key` de una lista debería ser el `id` del dato y no el índice?
 4. ¿Qué componente debería tener el estado de un campo de búsqueda que usan un filtro y un catálogo, y por qué?
 
-Si las cuatro salen con tus propias palabras, la guía hizo su trabajo. Si alguna no, vuelve a la [sección 5](#5-estado-lo-que-cambia-y-hay-que-redibujar) (estado), a la [sección 11](#11-inmutabilidad-crear-una-versión-nueva) (inmutabilidad) o a la [sección 7](#7-listas-map-y-key) (listas) y vuelve a intentarlo.
+Si las cuatro salen con tus propias palabras, la guía hizo su trabajo. Si alguna no, vuelve a la [sección 5](#5-estado-lo-que-cambia-y-hay-que-redibujar) (estado), a la [sección 11](#11-inmutabilidad-crear-una-versión-nueva) ([inmutabilidad](../glosario.md#inmutabilidad)) o a la [sección 7](#7-listas-map-y-key) (listas) y vuelve a intentarlo.
+
+---
+
+**Anterior:** [JavaScript con HTML](guia-javascript-html.md) · **Siguiente:** [De HTML a React con Vite](README.md)

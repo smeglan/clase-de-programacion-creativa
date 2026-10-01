@@ -1,8 +1,10 @@
 # Editor: VS Code (recomendado)
 
+**Estás aquí:** [Inicio](../README.md) › [1. Herramientas](README.md) › **Editor: VS Code (recomendado)**
+
 Referencia oficial: [Visual Studio Code](https://code.visualstudio.com/).
 
-Esta guía explica el editor de texto del curso. No es una lección de atajos ni de personalización: es lo mínimo para crear, guardar y editar los archivos de tus programas sin que el editor sea una "caja negra".
+Esta guía explica el [editor de texto](../glosario.md#editor) del curso. No es una lección de atajos ni de personalización: es lo mínimo para crear, guardar y editar los archivos de tus programas sin que el editor sea una "caja negra".
 
 ## ¿Por qué un editor de texto?
 
@@ -14,8 +16,8 @@ Si programas es porque **escribes archivos**: los creas, los lees, los modificas
 
 Dos aclaraciones para que no haya sorpresas:
 
-- Un editor de texto trabaja con **texto plano**: solo letras, números y símbolos, sin decorado ni formato. Cuando ves colores en VS Code son solo ayuda visual; el archivo sigue siendo texto. No uses un procesador de texto como Word o Google Docs para programar: agregan formato invisible que confunde al ejecutor.
-- Cualquier editor de texto sirve para programar. **VS Code es el recomendado del curso** porque es gratuito, ligero, funciona igual en Windows y macOS, tiene terminal integrada y una tienda de extensiones, pero la habilidad que practicas aquí (crear y guardar un archivo) es la misma en todos.
+- Un editor de texto trabaja con **texto plano**: solo letras, números y símbolos, sin decorado ni formato. Cuando ves colores en VS Code son solo ayuda visual; el [archivo](../glosario.md#archivo) sigue siendo texto. No uses un procesador de texto como Word o Google Docs para programar: agregan formato invisible que confunde al ejecutor.
+- Cualquier editor de texto sirve para programar. **VS Code es el recomendado del curso** porque es gratuito, ligero, funciona igual en Windows y macOS, tiene [terminal](../glosario.md#terminal) integrada y una tienda de extensiones, pero la habilidad que practicas aquí (crear y guardar un archivo) es la misma en todos.
 
 ## Instalar VS Code
 
@@ -40,12 +42,12 @@ Esto conecta con la tabla de roles de la [guía principal](README.md): el editor
 
 ## Abrir una carpeta y crear archivos
 
-La forma de trabajar en VS Code es con **carpetas**, no con archivos sueltos. Cuando abres una carpeta, el explorador te muestra su contenido y tus archivos nuevos aparecen ahí.
+La forma de trabajar en VS Code es con **carpetas**, no con archivos sueltos. Cuando abres una [carpeta](../glosario.md#carpeta), el explorador te muestra su contenido y tus archivos nuevos aparecen ahí.
 
 1. Menú **File → Open Folder...** (o **Archivo → Abrir carpeta...**) y elige la carpeta de práctica, por ejemplo `practica-node`.
 2. Con el explorador visible a la izquierda, crea un archivo nuevo con el ícono de "nuevo archivo" o arrastrando un archivo existente.
-3. Nómbralo `hola.js`. La extensión `.js` le dice al editor (y a Node) qué tipo de archivo es: al escribir verás el resaltado de color de JavaScript.
-4. Escribe dentro el código del [primer programa](README.md#tu-primer-programa-con-node) y guárdalo con `Ctrl + S`.
+3. Nómbralo `hola.js`. La extensión `.js` le dice al editor (y a Node) qué tipo de archivo es: al escribir verás el resaltado de color de [JavaScript](../glosario.md#javascript).
+4. Escribe dentro el [código](../glosario.md#codigo) del [primer programa](README.md#tu-primer-programa-con-node) y guárdalo con `Ctrl + S`.
 
 Esto es todo lo que necesitas para la parte de "escribir archivos". Si los archivos no te aparecen en el explorador, casi siempre es porque no abriste la carpeta correcta: el editor no "adivina" dónde está tu código, tú le dices con Open Folder.
 
@@ -63,7 +65,7 @@ Puedes abrir una terminal sin entrar a VS Code:
 - **Alternativa Windows:** presiona `Win + R`, escribe `cmd` o `powershell` y presiona Enter.
 - **macOS:** presiona `Cmd + Espacio`, escribe `Terminal` y presiona Enter.
 
-Sirve cuando solo necesitas instalar algo, probar un comando suelto o comprobar que Node y npm quedaron bien instalados, sin abrir un proyecto completo.
+Sirve cuando solo necesitas instalar algo, probar un [comando](../glosario.md#comando) suelto o comprobar que Node y npm quedaron bien instalados, sin abrir un proyecto completo.
 
 ### La terminal integrada en VS Code
 
@@ -91,7 +93,7 @@ Aunque estén en la misma ventana, cumplen roles distintos.
 
 ### PowerShell o Command Prompt
 
-En Windows, la terminal trabaja con un **intérprete**: el programa que lee y ejecuta los comandos que escribes. Los dos más usados son:
+En Windows, la terminal trabaja con un **intérprete**: el [programa](../glosario.md#programa) que lee y ejecuta los comandos que escribes. Los dos más usados son:
 
 | Intérprete | Cuándo | Lo que ves al inicio |
 |---|---|---|
@@ -102,19 +104,19 @@ Ambos ejecutan los comandos del curso (`node`, `npm`, `git`). PowerShell es el r
 
 Para cambiar de uno al otro:
 
-- **En la terminal de VS Code:** presiona la flecha ▾ junto al ícono **+** del panel de terminal y elige *Command Prompt* o *PowerShell*.
+- **En la terminal de VS Code:** presiona la flecha ▾ junto al ícono **+** del panel de terminal y elige *Command [Prompt](../glosario.md#prompt)* o *PowerShell*.
 - **En la Terminal de Windows:** presiona la flecha ▾ junto al ícono **+** y elige la opción.
 - **Desde cualquier terminal:** escribe `cmd` y Enter para entrar a Command Prompt, o `powershell` y Enter para entrar a PowerShell. Para volver al anterior, escribe `exit` y Enter.
 
 ### Habilitar la ejecución de scripts en PowerShell
 
-Si al correr algún comando aparece un error como *"La ejecución de scripts está deshabilitada en este sistema"*, PowerShell está bloqueando un archivo `.ps1`. Se puede ajustar la política para el usuario actual, permitiendo scripts locales y de fuentes de confianza:
+Si al correr algún comando aparece un [error](../glosario.md#error) como *"La ejecución de scripts está deshabilitada en este sistema"*, PowerShell está bloqueando un archivo `.ps1`. Se puede ajustar la política para el usuario actual, permitiendo scripts locales y de fuentes de confianza:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-Confirma cuando pregunte (escribe `S` o `Y` según el idioma). Esto no desactiva la seguridad por completo: solo permite scripts firmados remotamente y los que creas tú mismo. Y ojo: muchos comandos del curso (`node`, `npm`, `git`) son programas que funcionan igual aunque no cambies esta política; este arreglo es solo para el mensaje de bloqueo que aparece en algunos scripts auxiliares.
+Confirma cuando pregunte (escribe `S` o `Y` según el idioma). Esto no desactiva la seguridad por completo: solo permite scripts firmados remotamente y los que creas tú mismo. Y ojo: muchos comandos del curso (`node`, `npm`, `git`) son programas que funcionan igual aunque no cambies esta política; este [arreglo](../glosario.md#arreglo) es solo para el mensaje de bloqueo que aparece en algunos scripts auxiliares.
 
 ## Extensiones: pocas y con propósito
 
@@ -122,7 +124,7 @@ Las extensiones son paquetes que añaden funciones al editor. Son útiles, pero 
 
 En este curso, la recomendada es **ESLint**: analiza tu código automáticamente y detecta errores o problemas de estilo antes de ejecutarlo. La verás aparecer sola cuando, más adelante, crees el proyecto web (la [guía principal](README.md#para-m%C3%A1s-adelante-el-proyecto-web) lo explica). Un formato de código opcional y cómodo es **Prettier**.
 
-Para ejecutar archivos `.js` basta con el editor, la terminal y Node. Para las guías escritas en TypeScript también necesitarás npm y `npx tsx archivo.ts`; `npx` puede descargar `tsx` la primera vez que lo uses.
+Para ejecutar archivos `.js` basta con el editor, la terminal y Node. Para las guías escritas en [TypeScript](../glosario.md#typescript) también necesitarás npm y `npx tsx archivo.ts`; `npx` puede descargar `tsx` la primera vez que lo uses.
 
 Para instalarla: abre el panel de Extensiones, busca el nombre y presiona **Install**. Cuando necesites verificar una extensión, revisa en el panel su nombre exacto y cuántas personas la usan antes de instalarla a ciegas.
 
@@ -142,6 +144,10 @@ Con el editor claro, la frase del módulo cobra todo su sentido:
 
 > **El editor escribe, la terminal ordena, Node ejecuta y npm consigue piezas.**
 
-El editor es la primera pieza del ciclo: ahí se escribe el archivo, la terminal integrada lo ejecuta y el resultado aparece abajo. Una herramienta menos misteriosa, un paso más del recorrido.
+El editor es la primera pieza del [ciclo](../glosario.md#ciclo): ahí se escribe el archivo, la terminal integrada lo ejecuta y el resultado aparece abajo. Una herramienta menos misteriosa, un paso más del recorrido.
 
 Continúa con el [primer programa en Node](README.md#tu-primer-programa-con-node) donde vas a usar esto de inmediato. Y recuerda: hasta la parte final del curso, estas cuatro piezas son todas las que necesitas.
+
+---
+
+**Anterior:** [Herramientas](README.md) · **Siguiente:** [Tu primer programa: hola mundo](../02-programacion-base/README.md)

@@ -1,27 +1,50 @@
 # Guía 7: Programación orientada a objetos: clases y abstracción
 
+**Estás aquí:** [Inicio](../README.md) › [2. Fundamentos de TypeScript](README.md) › **Guía 7: Programación orientada a objetos: clases y abstracción**
+
 ## Objetivos
 
 Al terminar esta guía deberías poder:
 
 - Explicar con tus palabras qué es la **abstracción** y por qué es la idea central de la programación orientada a objetos.
 - Decidir qué datos de un problema vale la pena modelar y cuáles conviene dejar fuera, en lugar de copiarlo todo.
-- Escribir una clase en TypeScript con propiedades, constructor, métodos y `this`, e instanciarla con `new`.
+- Escribir una [clase](../glosario.md#clase) en [TypeScript](../glosario.md#typescript) con propiedades, [constructor](../glosario.md#constructor), métodos y `this`, e instanciarla con `new`.
 - Aplicar **encapsulamiento** con `private`, getters y setters que validan las reglas del problema.
 - Distinguir **composición** ("tiene un") de **herencia** ("es un") y elegir la correcta en un caso concreto.
-- Usar una `interface` como contrato para escribir código polimórfico y explicar qué cambia para quien llama.
-- Decidir si un problema se resuelve mejor con una clase o con `type` y funciones puras, que es lo habitual en React.
-- Refactorizar un programa real: pasar de variables sueltas a un modelo compuesto, paso a paso.
+- Usar una `interface` como contrato para escribir [código](../glosario.md#codigo) polimórfico y explicar qué cambia para quien llama.
+- Decidir si un problema se resuelve mejor con una clase o con `type` y funciones puras, que es lo habitual en [React](../glosario.md#react).
+- [Refactorizar](../glosario.md#refactorizar) un [programa](../glosario.md#programa) real: pasar de variables sueltas a un [modelo](../glosario.md#modelo) compuesto, paso a paso.
 
 > **Cómo probar los ejemplos**
 >
-> Son clases de **TypeScript**, como las de las guías 5 y 6. Guarda el código en un archivo `.ts`, por ejemplo `poo.ts`, y ejecútalo con:
+> Son clases de **TypeScript**, como las de las guías 5 y 6. Guarda el código en un [archivo](../glosario.md#archivo) `.ts`, por ejemplo `poo.ts`, y ejecútalo con:
 >
 > ```bash
 > npx tsx poo.ts
 > ```
 >
-> Si el entorno no permite `tsx`, quita las anotaciones de tipo y ejecuta con `node poo.js`. La lógica es la misma: las clases existen también en JavaScript; lo único que TypeScript agrega es la ayuda de los tipos.
+> Si el entorno no permite `tsx`, quita las anotaciones de tipo y ejecuta con `node poo.js`. La lógica es la misma: las clases existen también en [JavaScript](../glosario.md#javascript); lo único que TypeScript agrega es la ayuda de los tipos.
+
+**En esta guía:**
+
+1. [El problema: "tengo datos que siempre viajan juntos"](#1-el-problema-tengo-datos-que-siempre-viajan-juntos)
+2. [Abstracción: el eje de esta guía](#2-abstracción-el-eje-de-esta-guía)
+3. [De objeto a clase: la receta repetida](#3-de-objeto-a-clase-la-receta-repetida)
+4. [Encapsulamiento: los datos se protegen, no se tocan](#4-encapsulamiento-los-datos-se-protegen-no-se-tocan)
+5. [Composición: "tiene un" (la relación que más se usa)](#5-composición-tiene-un-la-relación-que-más-se-usa)
+6. [Herencia: "¿es un?"](#6-herencia-es-un)
+7. [Polimorfismo: mismo nombre, distinto comportamiento](#7-polimorfismo-mismo-nombre-distinto-comportamiento)
+8. [¿Clase o funciones y tipos?](#8-clase-o-funciones-y-tipos)
+9. [Ejemplo completo: de variables sueltas a un carrito compuesto](#9-ejemplo-completo-de-variables-sueltas-a-un-carrito-compuesto)
+10. [¿Cómo pienso este problema?](#10-cómo-pienso-este-problema)
+11. [Errores frecuentes](#11-errores-frecuentes)
+12. [Resolver antes de seguir](#12-resolver-antes-de-seguir)
+13. [Vocabulario](#13-vocabulario)
+14. [Chuleta rápida](#14-chuleta-rápida)
+15. [Herramientas para profundizar](#15-herramientas-para-profundizar)
+16. [Lo que viene después](#16-lo-que-viene-después)
+
+- [Objetivos](#objetivos)
 
 ## 1. El problema: "tengo datos que siempre viajan juntos"
 
@@ -41,13 +64,13 @@ let cantidadProducto = 4;
 
 Funciona... hasta que llega el segundo producto. Ahora tienes `nombreProducto2`, `precioProducto2`, `categoriaProducto2`, y con veinte productos tienes cien variables. La pregunta se vuelve incómoda:
 
-> *¿Qué variable era la del marcador? ¿Y la cantidad de cuál producto era 4?*
+> *¿Qué [variable](../glosario.md#variable) era la del marcador? ¿Y la cantidad de cuál producto era 4?*
 
 El problema real no es la cantidad de variables: es que **los datos que describen a un producto quedaron sueltos y el programa ya no sabe qué datos van juntos**.
 
 ## 2. Abstracción: el eje de esta guía
 
-Si el problema es "los datos no están juntos", la respuesta suena obvia: "los junto en un objeto". Pero la palabra que describe lo que acabas de hacer no es "juntarlos", es **abstraer**. Vale la pena entenderla bien, porque es la idea más útil de toda la programación orientada a objetos, mucho más que las palabras `class` o `extends`.
+Si el problema es "los datos no están juntos", la respuesta suena obvia: "los junto en un [objeto](../glosario.md#objeto)". Pero la palabra que describe lo que acabas de hacer no es "juntarlos", es **abstraer**. Vale la pena entenderla bien, porque es la idea más útil de toda la programación orientada a objetos, mucho más que las palabras `class` o `extends`.
 
 ### 2.1 Qué significa abstraer
 
@@ -84,7 +107,7 @@ type Producto = {
 
 Fuera quedaron el código de barras, el peso y la garantía. No es que sean inútiles: es que **esta aplicación no los necesita todavía**. Y esa es la diferencia entre abstraer y adivinar:
 
-> La abstracción no pregunta "¿cómo es un producto real?", pregunta **"¿qué necesita saber esta aplicación para cumplir su propósito?"**.
+> La [abstracción](../glosario.md#abstraccion) no pregunta "¿cómo es un producto real?", pregunta **"¿qué necesita saber esta aplicación para cumplir su propósito?"**.
 
 Si el propósito cambia, el modelo cambia. Una app de inventario sí necesitaría `stock`; una app de ventas, nada de eso. Este mismo `Producto` es el punto de partida del [módulo 03](../03-react-typescript/README.md).
 
@@ -126,11 +149,11 @@ console.log(costoConIVA(cuaderno));                              // 14280
 console.log(aplicarCupon(cuaderno, 10).precio);                  // 10800
 ```
 
-Fíjate en dos cosas: el valor `IVA` tiene nombre (nada de números mágicos, como pide el módulo 02) y `aplicarCupon` **devuelve un producto nuevo** en vez de modificar el que recibió. Esa es la misma idea que verás en React más adelante: crear una versión nueva en lugar de mutar la anterior.
+Fíjate en dos cosas: el [valor](../glosario.md#valor) `IVA` tiene nombre (nada de números mágicos, como pide el módulo 02) y `aplicarCupon` **devuelve un producto nuevo** en vez de modificar el que recibió. Esa es la misma idea que verás en React más adelante: crear una versión nueva en lugar de [mutar](../glosario.md#mutacion) la anterior.
 
 **Nivel 3. Abstracción de interfaz: qué NO dejas ver**
 
-Esta es la que casi todo el mundo pasa por alto, y es la más valiosa. La interfaz de un objeto es el conjunto de preguntas que se le puede hacer. Un `Carrito` debería exponer `agregar`, `quitar` y `total`; no debería exponer cómo guarda por dentro los artículos.
+Esta es la que casi todo el mundo pasa por alto, y es la más valiosa. La interfaz de un objeto es el [conjunto](../glosario.md#conjunto) de preguntas que se le puede hacer. Un `Carrito` debería exponer `agregar`, `quitar` y `total`; no debería exponer cómo guarda por dentro los artículos.
 
 La regla práctica, y la que resume toda esta sección:
 
@@ -157,7 +180,7 @@ La estrategia que funciona: **primero escribir el programa de forma simple, y ab
 
 ## 3. De objeto a clase: la receta repetida
 
-Hasta ahora agrupamos datos con un `type` y un objeto literal. Eso es un objeto. Pero cuando varios objetos de la misma clase comparten exactamente la misma forma **y las mismas operaciones**, ya no estás escribiendo una receta nueva cada vez: estás describiendo una plantilla. Esa plantilla es una **clase**.
+Hasta ahora agrupamos datos con un `type` y un objeto [literal](../glosario.md#literal). Eso es un objeto. Pero cuando varios objetos de la misma clase comparten exactamente la misma forma **y las mismas operaciones**, ya no estás escribiendo una receta nueva cada vez: estás describiendo una [plantilla](../glosario.md#plantilla). Esa plantilla es una **clase**.
 
 ```ts
 type Producto = {
@@ -231,7 +254,7 @@ console.log(marcador.costoConIVA(0.19));   // 7140
 
 Tres detalles de `this` que conviene entender de una:
 
-1. `this` es lo que permite que el mismo método sirva para muchos objetos. `descripcion()` no sabe si la llamaste sobre el cuaderno o sobre el marcador: usa `this.nombre` y listo.
+1. `this` es lo que permite que el mismo [método](../glosario.md#metodo) sirva para muchos objetos. `descripcion()` no sabe si la llamaste sobre el cuaderno o sobre el marcador: usa `this.nombre` y listo.
 
 2. `this` **pierde su referencia** si guardas el método suelto en una variable:
 
@@ -242,7 +265,7 @@ Tres detalles de `this` que conviene entender de una:
 
    Se arregla pasando el objeto explícitamente con `cuaderno.descripcion.call(cuaderno)`, o más simple: no separar el método de su objeto.
 
-3. Los métodos se llaman **con paréntesis**. `cuaderno.descripcion` es la función; `cuaderno.descripcion()` es la llamada. Es el mismo error que en la [Guía 4](guia-listas.md) con `compra.push` sin `()`.
+3. Los métodos se llaman **con paréntesis**. `cuaderno.descripcion` es la [función](../glosario.md#funcion); `cuaderno.descripcion()` es la llamada. Es el mismo [error](../glosario.md#error) que en la [Guía 4](guia-listas.md) con `compra.push` sin `()`.
 
 Y un recordatorio de la [Guía 4](guia-listas.md) que aquí cobra más sentido: dos instancias nunca son iguales, aunque tengan los mismos datos, porque `===` compara **referencias** (¿es *el mismo* objeto?), no contenido.
 
@@ -255,7 +278,7 @@ console.log(a === b); // false: son dos objetos distintos
 
 ## 4. Encapsulamiento: los datos se protegen, no se tocan
 
-Hasta ahora las propiedades son públicas: cualquiera podría escribir `producto.precio = -500` y crear un producto con precio negativo. Eso no es un error de sintaxis, es un error de **diseño**: dejamos la puerta abierta para que alguien rompa una regla del negocio.
+Hasta ahora las propiedades son públicas: cualquiera podría escribir `producto.precio = -500` y crear un producto con precio negativo. Eso no es un error de [sintaxis](../glosario.md#sintaxis), es un error de **diseño**: dejamos la puerta abierta para que alguien rompa una regla del negocio.
 
 El **encapsulamiento** consiste en exponer la forma de leer y modificar un dato de manera controlada, en lugar de dejar la puerta abierta.
 
@@ -316,7 +339,7 @@ Tres ideas detrás de ese código:
 
 1. **`private`** esconde el dato. Desde fuera no existe `cuaderno.precio`: existen las preguntas que tú decidiste exponer. Si mañana renombras el dato interno a `precioEnCentavos`, nadie más se rompe. Eso es exactamente la abstracción de interfaz de la sección 2.3.
 2. **Un setter sin validar no encapsula nada.** `set nuevoPrecio(valor) { this.precio = valor; }` es un `public` disfrazado. La validación es lo que convierte un dato cualquiera en un dato confiable.
-3. **`readonly`** marca lo que no cambia después de crear el objeto: el `id` de un producto, el código de un turno, la fecha de un movimiento. Es documentación que además te revisa el editor.
+3. **`readonly`** marca lo que no cambia después de crear el objeto: el `id` de un producto, el código de un turno, la fecha de un movimiento. Es [documentación](../glosario.md#documentacion) que además te revisa el editor.
 
 Un detalle de diseño que verás seguido en código real: los getters también pueden **calcular**. `valor` podría devolver `this.precio * (1 + 0.19)` y quien llama ni se entera: esa decisión queda dentro del modelo.
 
@@ -400,7 +423,7 @@ console.log(carrito.cantidadDeArticulos()); // 2
 Tres cosas que mirar aquí:
 
 - `agregar` recibe un `Producto` **ya hecho** (lo crea quien llama) y lo guarda. Al que usa el carrito no le importa cómo se construyó el producto: por eso `total()` solo necesita `valor`.
-- `total()` es una pregunta clara sobre el carrito, y su respuesta **no depende de la representación interna**. Mañana guardas los artículos en un `Map` en vez de en un arreglo y `total()` sigue igual: eso es la abstracción funcionando.
+- `total()` es una pregunta clara sobre el carrito, y su respuesta **no depende de la representación interna**. Mañana guardas los artículos en un `Map` en vez de en un [arreglo](../glosario.md#arreglo) y `total()` sigue igual: eso es la abstracción funcionando.
 - `agregar(cuaderno, 1)` no crea un artículo nuevo: busca si ya existe y acumula. Esa decisión (qué pasa con los repetidos) está **dentro del carrito**, no en el código que llama. Esa es la diferencia entre un modelo útil y una lista de variables sueltas con más pasos.
 
 ## 6. Herencia: "¿es un?"
@@ -518,9 +541,9 @@ class Factura {
 
 ## 7. Polimorfismo: mismo nombre, distinto comportamiento
 
-El polimorfismo responde a una pregunta muy concreta: ¿qué pasa cuando dos cosas distintas responden a la **misma pregunta** de manera distinta?
+El [polimorfismo](../glosario.md#polimorfismo) responde a una pregunta muy concreta: ¿qué pasa cuando dos cosas distintas responden a la **misma pregunta** de manera distinta?
 
-En la tiendita, dos módulos de venta pueden pedir el pago de formas diferentes: un producto digital se manda por correo, uno físico se entrega en mano. Si el código que procesa la venta debe conocer los detalles de cada caso, se vuelve un `if` interminable. El polimorfismo deja que cada objeto responda por sí mismo.
+En la tiendita, dos módulos de venta pueden pedir el pago de formas diferentes: un producto digital se manda por correo, uno físico se [entrega](../glosario.md#entrega) en mano. Si el código que procesa la venta debe conocer los detalles de cada caso, se vuelve un `if` interminable. El polimorfismo deja que cada objeto responda por sí mismo.
 
 ```ts
 interface MetodoDePago {
@@ -677,7 +700,7 @@ Fíjate en las diferencias y en lo que se mantiene:
 | Un objeto que React va a guardar en `useState` | Modelo de datos (`type`) + funciones. React prefiere datos inmutables |
 | Librerías y frameworks que ya te dan clases | Aprende a leerlas, aunque no escribas las tuyas |
 
-Un detalle técnico que merece la pena: cuando TypeScript compila una clase con `private`, en el JavaScript final esas propiedades no son privadas de verdad; el `private` se revisa al compilar. Para encapsulamiento real en JavaScript existen los campos privados nativos, los que empiezan con `#`:
+Un detalle técnico que merece la pena: cuando TypeScript compila una clase con `private`, en el JavaScript final esas propiedades no son privadas de verdad; el `private` se revisa al compilar. Para [encapsulamiento](../glosario.md#encapsulamiento) real en JavaScript existen los campos privados nativos, los que empiezan con `#`:
 
 ```ts
 class Contador {
@@ -879,7 +902,7 @@ console.log(carrito.total());                // 30000
 
 Cuando te pidan "hazlo con objetos" o "modela esto", el camino es siempre el mismo. Son las preguntas que hacen buena abstracción, en orden:
 
-1. **¿De qué entidades habla el problema?** No de qué variables escribí, sino de qué cosas existen: un producto, un carrito, un turno, una persona. Cada entidad es un candidato a objeto.
+1. **¿De qué entidades habla el problema?** No de qué variables escribí, sino de qué cosas existen: un producto, un carrito, un turno, una persona. Cada [entidad](../glosario.md#entidad) es un candidato a objeto.
 2. **¿Qué necesita saber el programa de cada entidad?** Solo lo que usarás. Ese es el filtro de la sección 2.2: lo que no está en la lista, no va en el modelo.
 3. **¿Qué reglas no puede romper?** Las que lanzarían un error: precios negativos, cantidades en cero, nombres vacíos. Esas reglas van dentro del modelo, en el constructor o en el setter.
 4. **¿Quién necesita cada dato?** Si solo lo usa el propio objeto, es `private`. Si lo necesita el que llama, necesita un getter. Si lo necesitan todos, es público.
@@ -932,7 +955,7 @@ set nuevoPrecio(valor: number) {
 class Factura extends Producto {} // "una factura es un producto" → absurdo
 ```
 
-**Error:** se hereda para no repetir código, no porque la relación tenga sentido. Cuando aparecen preguntas absurdas ("¿de qué categoría es una factura?"), la relación correcta es composición. Componer cuesta unas líneas más y evita acoplar la subclase a la clase base.
+**Error:** se hereda para no repetir código, no porque la relación tenga sentido. Cuando aparecen preguntas absurdas ("¿de qué categoría es una factura?"), la relación correcta es [composición](../glosario.md#composicion). Componer cuesta unas líneas más y evita acoplar la subclase a la clase base.
 
 ### Error 6: la clase que lo hace todo
 
@@ -958,7 +981,7 @@ carrito.productos.push(nuevoProducto);
 setCarrito({ productos: [...carrito.productos, nuevoProducto] });
 ```
 
-**Error:** aunque un objeto tenga métodos, si lo guardas en el estado de React y lo mutas por dentro, React no se entera del cambio. La encapsulación ayuda (por eso los métodos de clase que mutan se usan con cuidado en React), pero la regla del curso sigue siendo: **crea una versión nueva, no mutes la anterior**. Volveremos a esto en la [Guía de React](../03-react-typescript/guia-react.md#11-inmutabilidad-crear-una-versión-nueva), donde está la sección completa, con la tabla de operaciones mutadas y sus equivalentes.
+**Error:** aunque un objeto tenga métodos, si lo guardas en el [estado](../glosario.md#estado) de React y lo mutas por dentro, React no se entera del cambio. La encapsulación ayuda (por eso los métodos de clase que mutan se usan con cuidado en React), pero la regla del curso sigue siendo: **crea una versión nueva, no mutes la anterior**. Volveremos a esto en la [Guía de React](../03-react-typescript/guia-react.md#11-inmutabilidad-crear-una-versión-nueva), donde está la sección completa, con la tabla de operaciones mutadas y sus equivalentes.
 
 ## 12. Resolver antes de seguir
 
@@ -966,7 +989,7 @@ setCarrito({ productos: [...carrito.productos, nuevoProducto] });
 
 ### Nivel 0 - perderle el miedo
 
-1. Escribe una clase `Tarea` con `titulo` y `completada`, y un método `completar()` que marque la tarea como completada. Instancia dos tareas y llama al método en una sola.
+1. Escribe una clase `Tarea` con `titulo` y `completada`, y un método `completar()` que marque la tarea como completada. [Instancia](../glosario.md#instancia) dos tareas y llama al método en una sola.
 2. Escribe una clase `Contador` con un número privado, un getter `valor` y un método `incrementar()`. Muestra que desde fuera no puedes escribir `contador.numero`.
 
 ### Nivel 1 - aplicar lo esencial
@@ -985,9 +1008,11 @@ setCarrito({ productos: [...carrito.productos, nuevoProducto] });
 
 9. Escribe una versión con clases y otra con `type` y funciones puras del mismo carrito de la sección 8. Compara: cuántas líneas, cuál es más fácil de probar, cuál se parece más a lo que hace falta en React.
 10. Investiga qué es el patrón **Strategy** (un objeto que sabe hacer una cosa, como un método de pago) y reescribe el ejemplo de `MetodoDePago` sin herencia y sin `implements`, solo con funciones. ¿Cuál de los tres te parece más claro para explicar en voz alta?
-11. Escribe tu propia abstracción para algo real: una biblioteca, un curso, un juego. Escribe primero la lista de "lo que un X real tiene" y luego "lo que **esta** aplicación necesita", y justifica cada campo que decidiste dejar fuera.
+11. Escribe tu propia abstracción para algo real: una [biblioteca](../glosario.md#biblioteca), un curso, un juego. Escribe primero la lista de "lo que un X real tiene" y luego "lo que **esta** aplicación necesita", y justifica cada campo que decidiste dejar fuera.
 
 ## 13. Vocabulario
+
+Estas son las palabras que usa esta guía. Si alguna no te queda clara, el [glosario del curso](../glosario.md#capitulo-3) la explica con calma: qué es, un ejemplo y dónde la verás.
 
 | Término | Definición corta |
 | --- | --- |
@@ -1108,7 +1133,10 @@ Antes de seguir, comprueba que puedes responder estas cuatro preguntas sin mirar
 1. ¿Qué es abstraer y por qué no es lo mismo que "copiarlo todo"?
 2. ¿Qué diferencia hay entre `private precio` y `#precio`?
 3. ¿Por qué se dice que la composición es la relación que más se usa?
-4. ¿Cuándo conviene un tipo unión en vez de una clase?
+4. ¿Cuándo conviene un [tipo unión](../glosario.md#tipo-union) en vez de una clase?
 
 Si las cuatro salen con tus propias palabras, la guía hizo su trabajo. Si alguna no, vuelve a la sección 2 (abstracción) o a la 6 (herencia vs. composición) y vuelve a intentarlo.
 
+---
+
+**Anterior:** [Guia 6: ordenamientos](guia-ordenamientos.md) · **Siguiente:** [Taller de fundamentos](taller-fundamentos.md)

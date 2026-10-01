@@ -1,10 +1,14 @@
 # 6. Vibecoding responsable
 
-Vibecoding es una forma de desarrollar apoyándose en una conversación con una herramienta de IA. En este curso no significa aceptar código sin leerlo: significa describir una intención, generar una posibilidad, revisarla, probarla y aprender de ella.
+**Estás aquí:** [Inicio](../README.md) › **6. Vibecoding responsable**
+
+> **¿Te se frenó una palabra?** El [glosario del curso](../glosario.md#capitulo-7) explica prompt, modelo de lenguaje y alucinación, una por una y con ejemplos.
+
+Vibecoding es una forma de desarrollar apoyándose en una conversación con una herramienta de IA. En este curso no significa aceptar [código](../glosario.md#codigo) sin leerlo: significa describir una intención, generar una posibilidad, revisarla, probarla y aprender de ella.
 
 ## Ciclo de trabajo
 
-1. **Define:** explica el problema, el contexto y las restricciones.
+1. **Define:** explica el problema, el [contexto](../glosario.md#contexto) y las restricciones.
 2. **Pide:** solicita una solución pequeña, no una aplicación completa.
 3. **Inspecciona:** lee el código y señala las partes que no entiendes.
 4. **Prueba:** ejecuta casos normales y casos límite.
@@ -28,7 +32,7 @@ Incluye dos casos de prueba y posibles errores.
 - respuesta o idea aprovechada;
 - cambios realizados;
 - pruebas ejecutadas;
-- error encontrado;
+- [error](../glosario.md#error) encontrado;
 - qué aprendiste.
 
 ## No está permitido
@@ -37,3 +41,7 @@ Incluye dos casos de prueba y posibles errores.
 - ocultar el uso de IA;
 - copiar secretos o datos privados en un chat;
 - pedir que la IA haga todo el proyecto sin comprender sus partes.
+
+---
+
+**Anterior:** [Publicar en Vercel](../05-publicacion/README.md) · **Siguiente:** [Algoritmia aplicada](../07-algoritmia/README.md) _(opcional)_

@@ -1,5 +1,9 @@
 # 7. Algoritmia aplicada (profundización opcional)
 
+**Estás aquí:** [Inicio](../README.md) › **7. Algoritmia aplicada (profundización opcional)**
+
+> **¿Te se frenó una palabra?** El [glosario del curso](../glosario.md#capitulo-8) explica complejidad, divide y vencerás, greedy y backtracking, una por una y con ejemplos.
+
 Esta sección es una profundización opcional para cuando ya te sientas cómodo resolviendo los retos de fundamentos. Sus ideas pueden enriquecer cualquier proyecto.
 
 ## Preguntas antes del algoritmo
@@ -13,7 +17,7 @@ Esta sección es una profundización opcional para cuando ya te sientas cómodo 
 
 ## Divide y vencerás
 
-Divide un problema en partes más pequeñas, resuelve cada parte y combina los resultados. Ejemplos: búsqueda binaria, merge sort y dividir una interfaz en componentes independientes.
+Divide un problema en partes más pequeñas, resuelve cada parte y combina los resultados. Ejemplos: [búsqueda binaria](../glosario.md#busqueda-binaria), [merge sort](../glosario.md#merge-sort) y dividir una interfaz en componentes independientes.
 
 ## Programación dinámica
 
@@ -34,3 +38,7 @@ Toma la mejor decisión local disponible. Es rápido y elegante en algunos probl
 ## Backtracking
 
 Explora posibilidades y retrocede cuando una decisión lleva a un callejón sin salida. Es útil para laberintos, combinaciones, sudoku y configuraciones.
+
+---
+
+**Anterior:** [Vibecoding responsable](../06-vibecoding/README.md) · **Siguiente:** [Proyecto final](../08-proyecto-final/README.md)

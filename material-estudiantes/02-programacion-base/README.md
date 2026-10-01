@@ -1,12 +1,16 @@
 # 2. Fundamentos de TypeScript y lógica de programación
 
-Este módulo enseña las herramientas mínimas para leer, escribir y explicar programas pequeños. La meta no es repetir sintaxis: es poder transformar un problema sencillo en pasos claros, código verificable y pruebas propias.
+**Estás aquí:** [Inicio](../README.md) › **2. Fundamentos de TypeScript y lógica de programación**
 
-Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexión con React se trabajan en el [módulo 03](../03-react-typescript/README.md). Aquí construimos las bases que los hacen comprensibles, y en la [Guía 7](#guía-7-poo-clases-y-abstracción) podrás ver el camino intermedio: pasar de variables sueltas a un modelo con clases y abstracción.
+> **¿Te se frenó una palabra?** El [glosario del curso](../glosario.md#capitulo-3) explica variables, funciones, ciclos y errores, una por una y con ejemplos.
+
+Este módulo enseña las herramientas mínimas para leer, escribir y explicar programas pequeños. La meta no es repetir [sintaxis](../glosario.md#sintaxis): es poder transformar un problema sencillo en pasos claros, [código](../glosario.md#codigo) verificable y pruebas propias.
+
+Los objetos, el modelado de datos, las estructuras como pila o cola, y su conexión con [React](../glosario.md#react) se trabajan en el [módulo 03](../03-react-typescript/README.md). Aquí construimos las bases que los hacen comprensibles, y en la [Guía 7](#guía-7-poo-clases-y-abstracción) podrás ver el camino intermedio: pasar de variables sueltas a un [modelo](../glosario.md#modelo) con clases y [abstracción](../glosario.md#abstraccion).
 
 ## Tu primer programa: hola mundo y qué es `console.log`
 
-Todo curso de programación empieza con un "hola mundo", y no es superstición: es la forma más barata de comprobar que tu editor, tu terminal y tu entorno se están hablando. Si lograste ver esas palabras, ya hay un programa corriendo en tu máquina.
+Todo curso de programación empieza con un "[hola mundo](../glosario.md#hola-mundo)", y no es superstición: es la forma más barata de comprobar que tu editor, tu [terminal](../glosario.md#terminal) y tu entorno se están hablando. Si lograste ver esas palabras, ya hay un [programa](../glosario.md#programa) corriendo en tu máquina.
 
 En el [módulo 01](../01-herramientas/README.md#tu-primer-programa-con-node) lo escribiste y lo ejecutaste. Aquí lo desarmamos, porque esa línea contiene casi todos los conceptos que vas a ver en el módulo.
 
@@ -22,7 +26,7 @@ Y en la terminal:
 Hola, mundo
 ```
 
-Eso es un programa completo. No necesita estructura de control, no necesita variables, no necesita imports. Un archivo, una instrucción, un resultado.
+Eso es un programa completo. No necesita estructura de control, no necesita variables, no necesita imports. Un [archivo](../glosario.md#archivo), una [instrucción](../glosario.md#instruccion), un resultado.
 
 ### Las tres piezas de `console.log`
 
@@ -32,9 +36,9 @@ console.log("Hola, mundo");
 
 En una sola línea hay tres cosas escondidas:
 
-- **`console`** es un objeto que ya existe: no lo creaste tú, te lo dio el entorno donde corre el programa (Node o el navegador). Cuando en la [Guía 7](#guía-7-poo-clases-y-abstracción) modelemos nuestros propios objetos, esta estructura te va a sonar familiar.
-- **`log`** es un método de ese objeto. El punto significa *"llama a este método de este objeto"*, y por eso existen `console.log`, `console.error` y `console.warn`: el mismo objeto, distintas acciones.
-- **`(...)`** lleva lo que quieres mostrar. Puede ser un valor o varios separados por comas.
+- **`console`** es un [objeto](../glosario.md#objeto) que ya existe: no lo creaste tú, te lo dio el entorno donde corre el programa (Node o el navegador). Cuando en la [Guía 7](#guía-7-poo-clases-y-abstracción) modelemos nuestros propios objetos, esta estructura te va a sonar familiar.
+- **`log`** es un [método](../glosario.md#metodo) de ese objeto. El punto significa *"llama a este método de este objeto"*, y por eso existen `console.log`, `console.error` y `console.warn`: el mismo objeto, distintas acciones.
+- **`(...)`** lleva lo que quieres mostrar. Puede ser un [valor](../glosario.md#valor) o varios separados por comas.
 
 El orden importa cuando el mismo nombre cumple dos papeles: `console.log` empieza por un objeto, y `log(...)` es una llamada a un método. Por eso más adelante, cuando tengas tus propios objetos, `producto.descripcion()` se leerá igual: objeto, punto, método.
 
@@ -52,7 +56,7 @@ console.log("2 + 3");         // el texto literal 2 + 3
 
 `console.log("2 + 3")` y `console.log(2 + 3)` se parecen en la pantalla, pero no son lo mismo: el primero muestra cinco caracteres escritos a mano; el segundo calcula una suma y muestra el número. La sección [Tipos básicos](#tipos-básicos) de este módulo (números, textos y booleanos) le da nombre formal a esta diferencia.
 
-También puedes imprimir el valor de una variable. Y aquí está la trampa clásica:
+También puedes imprimir el valor de una [variable](../glosario.md#variable). Y aquí está la trampa clásica:
 
 ```js
 const edad = 20;
@@ -67,9 +71,9 @@ console.log("edad");      // edad      (el texto "edad")
 console.log(Hola);   // ReferenceError: Hola is not defined
 ```
 
-Sin comillas, `Hola` no es un texto: JavaScript lo interpreta como el **nombre de una variable**, busca esa variable, no la encuentra y te dice que no está definida. La solución casi siempre es la misma: ¿querías mostrar un texto? Entonces, comillas.
+Sin comillas, `Hola` no es un texto: [JavaScript](../glosario.md#javascript) lo interpreta como el **nombre de una variable**, busca esa variable, no la encuentra y te dice que no está definida. La solución casi siempre es la misma: ¿querías mostrar un texto? Entonces, comillas.
 
-En la terminal verás el error completo, con la línea donde ocurrió. No es un castigo: es el programa diciéndote exactamente qué no encontró. Por eso leer errores es parte del trabajo, y no un extra.
+En la terminal verás el [error](../glosario.md#error) completo, con la línea donde ocurrió. No es un castigo: es el programa diciéndote exactamente qué no encontró. Por eso leer errores es parte del trabajo, y no un extra.
 
 ### Cómo se ejecuta lo que escribes
 
@@ -82,7 +86,7 @@ node                  # 2. En la terminal directa, sin guardar nada
 # > "Hola, mundo"  y presionas Enter
 ```
 
-Para tus prácticas de este módulo, guarda siempre el archivo: los programas de la [Guía 1](guia-if.md) y siguientes se ejecutan así, y sus comentarios `// salida esperada: ...` se comparan con lo que imprime tu consola.
+Para tus prácticas de este módulo, guarda siempre el archivo: los programas de la [Guía 1](guia-if.md) y siguientes se ejecutan así, y sus comentarios `// salida esperada: ...` se comparan con lo que imprime tu [consola](../glosario.md#consola).
 
 ### Ejercicio
 
@@ -105,14 +109,14 @@ Si puedes escribir "hola mundo" y explicar qué hace cada símbolo, ya tienes lo
 
 ## Guías de JavaScript: lógica antes de los tipos
 
-Estas guías complementan el módulo con la lógica de programación en **JavaScript puro** (condiciones, ciclos y listas), sin funciones ni tipos todavía. Funcionan como base: el estudiante lee, copia, modifica y ejecuta ejemplos, y resuelve ejercicios por dificultad. Se ejecutan con Node (`node archivo.js`) o en la consola del navegador. Para crear y guardar esos archivos de práctica se usa el editor de texto; si todavía no conoces VS Code, repasa la [guía del editor](../01-herramientas/editor-vscode.md) del módulo 01.
+Estas guías complementan el módulo con la lógica de programación en **JavaScript puro** (condiciones, ciclos y listas), sin funciones ni tipos todavía. Funcionan como base: el estudiante lee, copia, modifica y ejecuta ejemplos, y resuelve ejercicios por dificultad. Se ejecutan con Node (`node archivo.js`) o en la [consola del navegador](../glosario.md#consola-del-navegador). Para crear y guardar esos archivos de práctica se usa el [editor de texto](../glosario.md#editor); si todavía no conoces VS Code, repasa la [guía del editor](../01-herramientas/editor-vscode.md) del módulo 01.
 
 - [Guía 1: Tomar decisiones con `if`](guia-if.md)
 - [Guía 2: Repetir con `for`](guia-for.md)
 - [Guía 3: Repetir con `while`](guia-while.md)
 - [Guía 4: Listas (arrays)](guia-listas.md)
 
-Después de las guías, este README presenta la misma lógica con tipos de TypeScript, y el [Taller de fundamentos](taller-fundamentos.md) la lleva a retos prácticos.
+Después de las guías, este README presenta la misma lógica con tipos de [TypeScript](../glosario.md#typescript), y el [Taller de fundamentos](taller-fundamentos.md) la lleva a retos prácticos.
 
 ## TypeScript: JavaScript con contratos
 
@@ -137,7 +141,7 @@ let puntos = 0;
 
 - Usa `const` cuando no vas a reasignar la variable.
 - Usa `let` cuando el valor debe cambiar.
-- Evita `var`; pertenece a una forma antigua de declarar variables y puede causar confusiones de alcance.
+- Evita `var`; pertenece a una forma antigua de declarar variables y puede causar confusiones de [alcance](../glosario.md#alcance-del-proyecto).
 
 El nombre debe expresar la intención. `totalCarrito` comunica más que `x`.
 
@@ -182,7 +186,7 @@ Usa `===` y `!==` para comparar valores. Evita `==`, porque convierte tipos de f
 
 ## Condiciones: elegir entre caminos
 
-Una condición sirve cuando el programa debe responder de manera distinta según un estado.
+Una [condición](../glosario.md#condicion) sirve cuando el programa debe responder de manera distinta según un [estado](../glosario.md#estado).
 
 ```ts
 function mensajeDeAcceso(edad: number): string {
@@ -208,7 +212,7 @@ Una buena condición es corta, expresa una regla y puede probarse con casos norm
 
 ## Ciclos: repetir con una razón
 
-Un ciclo visita o repite algo. Antes de usarlo, define:
+Un [ciclo](../glosario.md#ciclo) visita o repite algo. Antes de usarlo, define:
 
 1. qué se repite;
 2. cuándo termina;
@@ -239,11 +243,11 @@ for (const palabra of ["react", "typescript", "vite"]) {
 }
 ```
 
-`for...of` es útil cuando importa el valor. El `for` con índice es útil cuando también importa la posición. `while` se reserva para situaciones donde no conocemos de antemano cuántas repeticiones habrá; hay que cuidar que su condición cambie para no crear un ciclo infinito.
+`for...of` es útil cuando importa el valor. El `for` con [índice](../glosario.md#indice) es útil cuando también importa la posición. `while` se reserva para situaciones donde no conocemos de antemano cuántas repeticiones habrá; hay que cuidar que su condición cambie para no crear un ciclo infinito.
 
 ## Funciones: nombrar una solución reutilizable
 
-Una función recibe datos, realiza una tarea concreta y devuelve un resultado. Es una forma de explicar el programa en piezas.
+Una [función](../glosario.md#funcion) recibe datos, realiza una tarea concreta y devuelve un resultado. Es una forma de explicar el programa en piezas.
 
 ```ts
 function convertirCelsiusAFahrenheit(celsius: number): number {
@@ -256,7 +260,7 @@ En este ejemplo:
 - `convertirCelsiusAFahrenheit` dice qué hace;
 - `celsius: number` describe la entrada;
 - `: number` describe la salida;
-- `return` entrega el resultado.
+- `return` [entrega](../glosario.md#entrega) el resultado.
 
 ### Una función, una responsabilidad
 
@@ -276,7 +280,7 @@ Evita una función llamada `hacerTodo`, que lee datos, calcula valores, modifica
 
 ## Arreglos básicos: repetir valores del mismo tipo
 
-Un arreglo permite guardar una secuencia de valores. Por ahora lo usaremos para practicar recorridos, acumulación y transformación simple. El modelado profundo de arreglos de objetos y las estructuras de datos aparece en el módulo 03.
+Un [arreglo](../glosario.md#arreglo) permite guardar una secuencia de valores. Por ahora lo usaremos para practicar recorridos, acumulación y transformación simple. El modelado profundo de arreglos de objetos y las estructuras de datos aparece en el módulo 03.
 
 ```ts
 const precios: number[] = [10, 20, 30];
@@ -305,8 +309,8 @@ console.log(convertirCelsiusAFahrenheit(100)); // 212
 console.log(convertirCelsiusAFahrenheit(-40)); // -40
 ```
 
-- Caso normal: lo que esperamos que ocurra normalmente.
-- Caso límite: valor mínimo, máximo o borde de una regla.
+- [Caso normal](../glosario.md#caso-normal): lo que esperamos que ocurra normalmente.
+- [Caso límite](../glosario.md#caso-limite): valor mínimo, máximo o borde de una regla.
 - Caso inválido: dato que no debería aceptarse o que requiere un mensaje claro.
 
 ## Trucos y buenas prácticas de supervivencia
@@ -315,7 +319,7 @@ Estas reglas no reemplazan pensar, pero evitan muchos errores antes de que apare
 
 ### 1. Usa cláusulas de guarda para evitar el infierno de `if`
 
-Una cláusula de guarda resuelve primero los casos que no pueden continuar. Así el caso principal queda al final, con menos sangría y más claridad.
+Una [cláusula de guarda](../glosario.md#clausula-de-guarda) resuelve primero los casos que no pueden continuar. Así el caso principal queda al final, con menos sangría y más claridad.
 
 ```ts
 function calcularPrecioFinal(precio: number, descuento: number): number {
@@ -445,7 +449,7 @@ Así puedes cambiar una regla en un solo lugar y el código explica por qué exi
 
 ### 9. Una función pequeña se prueba mejor
 
-Si una función calcula, muestra alertas, modifica datos y además hace peticiones, divídela. Las funciones con una responsabilidad son más fáciles de entender, reutilizar y depurar.
+Si una función calcula, muestra alertas, modifica datos y además hace peticiones, divídela. Las funciones con una responsabilidad son más fáciles de entender, reutilizar y [depurar](../glosario.md#depurar).
 
 ### 10. Lee el error completo antes de cambiar código
 
@@ -455,7 +459,7 @@ Cuando aparezca un error:
 2. identifica qué valor esperaba el programa y qué recibió;
 3. reduce el problema a un ejemplo pequeño;
 4. prueba una corrección;
-5. escribe qué aprendiste en la bitácora.
+5. escribe qué aprendiste en la [bitácora](../glosario.md#bitacora).
 
 No arregles un error pegando una respuesta de IA sin verificarla. Comprueba siempre que la solución cambie la causa y no solo esconda el síntoma.
 
@@ -485,10 +489,10 @@ El [Taller de fundamentos](taller-fundamentos.md) sigue este orden:
 
 Cuando domines ciclos, funciones y listas con tipos, estas dos guías te llevan un paso más allá y se pueden trabajar después del taller de fundamentos:
 
-- [Guía 5: Fibonacci: la secuencia que suma](guia-fibonacci.md) — la matemática de la serie (recursión, proporción áurea y fórmula de Binet incluida) y el paso de "lineal contra exponencial" con código.
+- [Guía 5: Fibonacci: la secuencia que suma](guia-fibonacci.md) — la matemática de la serie ([recursión](../glosario.md#recursion), [proporción áurea](../glosario.md#proporcion-aurea) y [fórmula de Binet](../glosario.md#binet) incluida) y el paso de "lineal contra exponencial" con código.
 - [Guía 6: Ordenamientos: bubble, merge y quicksort](guia-ordenamientos.md) — tres formas de ordenar, sus ventajas y cuál se usa más, y cómo medir cuánto trabajo hace cada una (logarítmica, lineal, cuadrática y exponencial) con el [gráfico de complejidad](grafico-complejidad.svg).
 
-No son un requisito del recorrido principal, pero conectan con la [profundización de algoritmia](../07-algoritmia/README.md) y con las preguntas de "¿qué tan eficiente es mi solución?" que aparecen en entrevistas y proyectos reales.
+No son un [requisito](../glosario.md#requisito) del recorrido principal, pero conectan con la [profundización de algoritmia](../07-algoritmia/README.md) y con las preguntas de "¿qué tan eficiente es mi solución?" que aparecen en entrevistas y proyectos reales.
 
 ## Guía 7: POO, clases y abstracción
 
@@ -496,12 +500,16 @@ Esta guía es un paso obligatorio entre los fundamentos y el módulo 03. Parte d
 
 > **¿qué necesita saber esta aplicación para cumplir su propósito, y qué puede quedarse afuera?**
 
-- [Guía 7: Programación orientada a objetos: clases y abstracción](guia-poo.md) — la abstracción explicada a fondo (datos, comportamiento e interfaz), clases con `constructor`, `this` y `new`, encapsulamiento con `private` y getters, composición frente a herencia ("¿es un?"), polimorfismo con `interface`, y una sección honesta sobre cuándo conviene un `type` con funciones puras en vez de una clase.
+- [Guía 7: Programación orientada a objetos: clases y abstracción](guia-poo.md) — la abstracción explicada a fondo (datos, comportamiento e interfaz), clases con `constructor`, `this` y `new`, [encapsulamiento](../glosario.md#encapsulamiento) con `private` y getters, [composición](../glosario.md#composicion) frente a herencia ("¿es un?"), [polimorfismo](../glosario.md#polimorfismo) con `interface`, y una sección honesta sobre cuándo conviene un `type` con funciones puras en vez de una [clase](../glosario.md#clase).
 
-Los ejemplos usan TypeScript y salen del mismo dominio del curso (la tiendita), así que conectan directo con la [Guía de React](../03-react-typescript/guia-react.md), el [módulo 03](../03-react-typescript/README.md) y el proyecto integrador.
+Los ejemplos usan TypeScript y salen del mismo [dominio](../glosario.md#dominio) del curso (la tiendita), así que conectan directo con la [Guía de React](../03-react-typescript/guia-react.md), el [módulo 03](../03-react-typescript/README.md) y el [proyecto integrador](../glosario.md#proyecto-integrador).
 
 ## Siguiente paso
 
-Cuando puedas explicar y resolver los retos 0-13, completa la [guía obligatoria de POO](guia-poo.md) y estudia HTML en la [guía independiente](../03-react-typescript/guia-html.md). Después, la [Guía de React](../03-react-typescript/guia-react.md) te muestra por qué una página estática se queda corta y cómo un componente con estado resuelve el problema, y luego continúa con el [recorrido de React con Vite](../03-react-typescript/README.md).
+Cuando puedas explicar y resolver los retos 0-13, completa la [guía obligatoria de POO](guia-poo.md) y estudia HTML en la [guía independiente](../03-react-typescript/guia-html.md). Después, la [Guía de React](../03-react-typescript/guia-react.md) te muestra por qué una página estática se queda corta y cómo un [componente](../glosario.md#componente) con estado resuelve el problema, y luego continúa con el [recorrido de React con Vite](../03-react-typescript/README.md).
 
 Si te queda la duda de por qué un producto necesita tantos datos, o de cuándo conviene una clase y cuándo no, la [Guía 7: POO](#guía-7-poo-clases-y-abstracción) responde exactamente eso y sirve de puente entre los dos módulos.
+
+---
+
+**Anterior:** [Guia del editor VS Code](../01-herramientas/editor-vscode.md) · **Siguiente:** [Guia 1: if](guia-if.md)

@@ -1,8 +1,10 @@
 # JavaScript con HTML: de una página estática a una interacción
 
-Esta guía enseña a conectar JavaScript con una página HTML sin React ni otros frameworks. Vas a empezar con un botón que responde a un clic y terminarás con una lista interactiva de ideas. Solo necesitas un editor de texto y un navegador.
+**Estás aquí:** [Inicio](../README.md) › [3. De HTML a React](README.md) › **JavaScript con HTML: de una página estática a una interacción**
 
-Es el paso intermedio entre la [guía de HTML](guia-html.md) y la [Guía de React](guia-react.md): aquí ves el problema de mantener el estado a mano en el DOM, y allí ves la solución en componentes.
+Esta guía enseña a conectar JavaScript con una página HTML sin React ni otros frameworks. Vas a empezar con un botón que responde a un clic y terminarás con una lista interactiva de ideas. Solo necesitas un [editor de texto](../glosario.md#editor) y un navegador.
+
+Es el paso intermedio entre la [guía de HTML](guia-html.md) y la [Guía de React](guia-react.md): aquí ves el problema de mantener el [estado](../glosario.md#estado) a mano en el DOM, y allí ves la solución en componentes.
 
 > HTML organiza el contenido, CSS presenta la página y JavaScript responde a acciones y cambios. Esta guía se enfoca en cómo JavaScript encuentra y actualiza elementos HTML.
 
@@ -17,7 +19,7 @@ Es el paso intermedio entre la [guía de HTML](guia-html.md) y la [Guía de Reac
 
 ## 1. Prepara los archivos
 
-Crea una carpeta `pagina-interactiva` con estos archivos:
+Crea una [carpeta](../glosario.md#carpeta) `pagina-interactiva` con estos archivos:
 
 ```text
 pagina-interactiva/
@@ -53,7 +55,7 @@ Escribe este contenido en `index.html`:
 </html>
 ```
 
-`defer` le dice al navegador que descargue `app.js` y lo ejecute cuando haya terminado de leer el HTML. Así, el código podrá encontrar los elementos de la página. Como el script no usa módulos ni importa paquetes, esta demostración funciona al abrir el archivo localmente.
+`defer` le dice al navegador que descargue `app.js` y lo ejecute cuando haya terminado de leer el HTML. Así, el [código](../glosario.md#codigo) podrá encontrar los elementos de la página. Como el script no usa módulos ni importa paquetes, esta demostración funciona al abrir el [archivo](../glosario.md#archivo) localmente.
 
 ## 3. Añade apariencia
 
@@ -128,13 +130,13 @@ Guarda los tres archivos y abre `index.html`. Haz clic varias veces y observa c�
 
 ### Lee el programa de arriba abajo
 
-- `const` guarda una referencia que no vas a reasignar; `let` se usa para `nextIdea`, porque su valor cambia.
+- `const` guarda una referencia que no vas a reasignar; `let` se usa para `nextIdea`, porque su [valor](../glosario.md#valor) cambia.
 - `document.querySelector(...)` busca en el documento el primer elemento que coincide con un selector CSS.
-- `addEventListener("click", ...)` registra qué función ejecutar cuando ocurre un clic.
+- `addEventListener("click", ...)` registra qué [función](../glosario.md#funcion) ejecutar cuando ocurre un clic.
 - `() => { ... }` es una función flecha: una forma concisa de escribir una función.
 - `textContent` cambia texto; `createElement` crea un elemento; `append` lo inserta en la lista.
-- `ideas.length` indica cuántos elementos hay en el arreglo. La condición evita intentar leer una idea inexistente.
-- `` `Ideas propuestas: ${nextIdea}` `` es una plantilla de texto que inserta el valor de una expresión.
+- `ideas.length` indica cuántos elementos hay en el [arreglo](../glosario.md#arreglo). La [condición](../glosario.md#condicion) evita intentar leer una idea inexistente.
+- `` `Ideas propuestas: ${nextIdea}` `` es una [plantilla](../glosario.md#plantilla) de texto que inserta el valor de una [expresión](../glosario.md#expresion).
 
 JavaScript puede cambiar el documento que el navegador ya mostró. No necesitas escribir etiquetas HTML dentro de una cadena para añadir texto: crear el elemento y asignarle `textContent` es más claro y seguro.
 
@@ -183,7 +185,7 @@ form.addEventListener("submit", (event) => {
 });
 ```
 
-El evento `submit` ocurre al pulsar el botón o enviar el formulario desde el teclado. `preventDefault()` evita que el navegador recargue la página. `trim()` elimina espacios sobrantes al inicio y al final. El atributo `required` añade una validación básica del navegador, y el código vuelve a comprobar el valor para dar un mensaje útil.
+El [evento](../glosario.md#evento) `submit` ocurre al pulsar el botón o enviar el [formulario](../glosario.md#formulario) desde el teclado. `preventDefault()` evita que el navegador recargue la página. `trim()` elimina espacios sobrantes al inicio y al final. El [atributo](../glosario.md#atributo) `required` añade una validación básica del navegador, y el código vuelve a comprobar el valor para dar un mensaje útil.
 
 ## 6. Sintaxis moderna que ya estás usando
 
@@ -192,13 +194,13 @@ El evento `submit` ocurre al pulsar el botón o enviar el formulario desde el te
 - **Plantillas de texto:** usa acentos graves y `${expresion}` para combinar texto y valores.
 - **Arreglos:** `[]` guarda una colección ordenada; `push` agrega un elemento y `length` cuenta sus elementos.
 - **`querySelector`:** reutiliza selectores conocidos de CSS para encontrar elementos.
-- **DOM:** el Modelo de Objetos del Documento es la representación de la página que JavaScript puede consultar y modificar.
+- **DOM:** el [Modelo](../glosario.md#modelo) de Objetos del Documento es la representación de la página que JavaScript puede consultar y modificar.
 
-Estas son herramientas fundamentales del JavaScript actual, pero no hace falta aprender toda la sintaxis moderna en una sola sesión. Comprende cada línea y pruébala.
+Estas son herramientas fundamentales del JavaScript actual, pero no hace falta aprender toda la [sintaxis](../glosario.md#sintaxis) moderna en una sola sesión. Comprende cada línea y pruébala.
 
 ## 7. Reto: convierte la lista en tu proyecto
 
-Elige una idea apropiada para tu portafolio: tareas, libros por leer, planes para el fin de semana o propuestas para un proyecto.
+Elige una idea apropiada para tu [portafolio](../glosario.md#portafolio): tareas, libros por leer, planes para el fin de semana o propuestas para un proyecto.
 
 1. Cambia el título, las etiquetas y el texto de ayuda.
 2. Añade un elemento al enviar el formulario.
@@ -207,7 +209,7 @@ Elige una idea apropiada para tu portafolio: tareas, libros por leer, planes par
 5. Ajusta el CSS para que el formulario y la lista sean legibles en móvil.
 6. Prueba enviar con el teclado, no solo con el ratón.
 
-**Extensión:** agrega un botón para marcar cada elemento como completado. Usa una clase CSS, `classList.toggle("completada")` y un estilo de foco visible.
+**Extensión:** agrega un botón para marcar cada elemento como completado. Usa una [clase](../glosario.md#clase) CSS, `classList.toggle("completada")` y un estilo de foco visible.
 
 ## 8. Cómo revisar errores
 
@@ -229,3 +231,7 @@ En la [Guía de React: de la página estática a una interfaz que responde](guia
 - [Introducción a los eventos - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - [Manipular documentos - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
 - [JavaScript Guide - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+
+---
+
+**Anterior:** [Practica: HTML y CSS](../02-programacion-base/guia-html-css.md) · **Siguiente:** [Guia de React](guia-react.md)
