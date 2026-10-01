@@ -37,6 +37,34 @@ Si buscas una palabra que no está, probablemente sea una de esas cuatro. En ese
 
 ---
 
+<a id="despejarse"></a>
+
+## Las cinco frases para despejarte
+
+Cuando un texto técnico se pone pesado, casi siempre es una de estas cinco situaciones. Reconocer cuál es ya es la mitad del arreglo.
+
+### 1. "No sé qué significa esta palabra"
+
+No es un problema del texto: es que falta una definición. Busca la palabra en el [índice alfabético](#indice-alfabetico) de este archivo. Si no está, probablemente no sea una palabra del curso, y entonces el texto está hablando de algo que todavía no toca.
+
+### 2. "Sé qué significa cada palabra pero no entiendo el conjunto"
+
+Eso es comprensión, no vocabulario. Vuelve a leer el párrafo anterior al que te trabaste: los textos técnicos casi siempre explican la idea en el ejemplo y en los comentarios, no en la frase introductoria. Busca un bloque de código y líelo de a poco, de arriba para abajo, como si fuera una receta.
+
+### 3. "Entiendo el código pero no sé por qué no funciona"
+
+Eso es un error, no un problema de lectura. Y los errores dicen dónde fallaron. Busca en tu terminal el mensaje que aparece después de la palabra `Error`, y copia **la primera línea**: casi siempre tiene el nombre del archivo y el número de línea. Abre esa línea. Ese es el problema, no otro.
+
+### 4. "El ejercicio pide algo que no sé cómo hacer"
+
+Los retos de cada guía tienen títulos pensados para eso: en el [taller de fundamentos](02-programacion-base/taller-fundamentos.md) hay retos de "Nivel 0", "Nivel 1" y "Nivel 2". Empieza **siempre por el nivel más bajo del tema**, aunque parezca obvio. El orden de los retos está pensado para que cada uno use solo lo del anterior.
+
+### 5. "No entiendo nada y no sé por dónde seguir"
+
+Pasa por el [README del material para estudiantes](README.md), que tiene un recorrido de 17 pasos numerados en orden. Haz **solo el paso 3** de ese recorrido, sin leer el resto. Es el que te hace escribir un archivo y ver texto aparecer en la terminal. Después sigue desde ahí.
+
+---
+
 ## Índice por capítulos
 
 Los capítulos siguen el orden del curso, del 0 al 9.
@@ -6899,30 +6927,3 @@ Cada fila dice cuál es la diferencia y dónde está la entrada completa.
 
 **La pregunta que resuelve casi todas las confusiones:** si las dos palabras se usan en la misma frase, provavelmente no sean la misma cosa. escribe la frase completa con las dos y leela en voz alta: si suena raro, son distintas.
 
----
-
-<a id="despejarse"></a>
-
-## Las cinco frases para despejarte
-
-Cuando un texto técnico se pone pesado, casi siempre es una de estas cinco situaciones. Reconocer cuál es ya es la mitad del arreglo.
-
-### 1. "No sé qué significa esta palabra"
-
-No es un problema del texto: es que falta una definición. Busca la palabra en el [índice alfabético](#indice-alfabetico) de este archivo. Si no está, probablemente no sea una palabra del curso, y entonces el texto está hablando de algo que todavía no toca.
-
-### 2. "Sé qué significa cada palabra pero no entiendo el conjunto"
-
-Eso es comprensión, no vocabulario. Vuelve a leer el párrafo anterior al que te trabaste: los textos técnicos casi siempre explican la idea en el ejemplo y en los comentarios, no en la frase introductoria. Busca un bloque de código y líelo de a poco, de arriba para abajo, como si fuera una receta.
-
-### 3. "Entiendo el código pero no sé por qué no funciona"
-
-Eso es un error, no un problema de lectura. Y los errores dicen dónde fallaron. Busca en tu terminal el mensaje que aparece después de la palabra `Error`, y copia **la primera línea**: casi siempre tiene el nombre del archivo y el número de línea. Abre esa línea. Ese es el problema, no otro.
-
-### 4. "El ejercicio pide algo que no sé cómo hacer"
-
-Los retos de cada guía tienen títulos pensados para eso: en el [taller de fundamentos](02-programacion-base/taller-fundamentos.md) hay retos de "Nivel 0", "Nivel 1" y "Nivel 2". Empieza **siempre por el nivel más bajo del tema**, aunque parezca obvio. El orden de los retos está pensado para que cada uno use solo lo del anterior.
-
-### 5. "No entiendo nada y no sé por dónde seguir"
-
-Pasa por el [README del material para estudiantes](README.md), que tiene un recorrido de 17 pasos numerados en orden. Haz **solo el paso 3** de ese recorrido, sin leer el resto. Es el que te hace escribir un archivo y ver texto aparecer en la terminal. Después sigue desde ahí.
