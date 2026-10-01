@@ -31,15 +31,32 @@ git push
 
 ## Primer repositorio
 
-Desde la [carpeta](../glosario.md#carpeta) del proyecto:
+Este es el flujo que usaremos para subir un proyecto nuevo: primero creas el repositorio en GitHub, lo clonas en tu computadora y luego copias dentro los archivos del proyecto. Al crear el repositorio en GitHub, déjalo vacío (sin README, licencia ni `.gitignore`) para evitar conflictos al combinar historiales.
+
+En GitHub, copia la dirección HTTPS del repositorio y úsala aquí:
 
 ```bash
-git init
-git add .
-git commit -m "Crea el proyecto inicial"
+git clone https://github.com/tu-usuario/nombre-del-repositorio.git
 ```
 
-Después crea un repositorio vacío en GitHub y sigue las instrucciones que GitHub muestra para conectarlo.
+El comando crea una carpeta llamada `nombre-del-repositorio`. Copia o mueve los archivos y carpetas de tu proyecto dentro de ella. Luego abre la terminal en esa carpeta:
+
+```bash
+cd nombre-del-repositorio
+git status
+```
+
+`git status` permite revisar que estás en el repositorio correcto y ver los archivos nuevos. Prepara los archivos, crea el primer commit y súbelo:
+
+```bash
+git add .
+git commit -m "Agrega el proyecto inicial"
+git push
+```
+
+`git add .` prepara los archivos de la carpeta actual y sus subcarpetas. Antes de ejecutarlo, revisa que no estés incluyendo contraseñas, claves, tokens ni archivos `.env` privados. Como clonaste el repositorio, Git ya conoce el destino de `git push`.
+
+Si ya empezaste el proyecto en una carpeta que no está dentro de un repositorio clonado, puedes usar `git init` y conectar un remoto siguiendo las instrucciones de GitHub.
 
 ## Comandos de consulta
 

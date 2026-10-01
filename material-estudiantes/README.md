@@ -64,7 +64,8 @@ Sigue este orden para el recorrido principal hasta publicar una aplicación. Pri
 14. [Git y GitHub](04-git-github/README.md)
 15. [Publicación en Vercel](05-publicacion/README.md)
 16. [Vibecoding responsable](06-vibecoding/README.md)
-17. [Proyecto final: una herramienta interactiva para tu mundo](08-proyecto-final/README.md)
+17. [Planeación del proyecto final](08-proyecto-final/planeacion-y-arquitectura.md)
+18. [Proyecto final: una herramienta interactiva conectada a una API](08-proyecto-final/proyecto.md)
 
 ## Profundiza cuando quieras
 
@@ -104,4 +105,5 @@ Si necesitas volver a un tema concreto:
 - [Publicación en Vercel](05-publicacion/README.md)
 - [Vibecoding responsable](06-vibecoding/README.md)
 - [Algoritmia aplicada](07-algoritmia/README.md)
-- [Proyecto final](08-proyecto-final/README.md)
+- [Planeación y arquitectura del proyecto final](08-proyecto-final/planeacion-y-arquitectura.md)
+- [Proyecto final conectado a una API](08-proyecto-final/proyecto.md)
