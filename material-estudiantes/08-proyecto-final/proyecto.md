@@ -33,6 +33,8 @@ El docente proporcionará una URL de API y explicará el formato de respuesta. L
 - mostrar un estado vacío si la respuesta contiene cero elementos;
 - convertir la respuesta recibida al tipo que usa la aplicación y explicar esa forma de datos.
 
+Si todavía no tienes claro qué es una API o cómo se hace una consulta HTTP, lee primero la [guía: leer una API REST](guia-rest.md): explica solicitud y respuesta, JSON, REST y cada uno de estos puntos con código.
+
 La primera versión requiere **una consulta de lectura** (por ejemplo `GET /api/recursos`). El servidor no necesita cuentas, autenticación ni base de datos avanzada. La creación y los cambios pueden guardarse localmente en el navegador. Si el docente también habilita escritura, puedes añadir `POST` como extensión, acordando antes el contrato de datos.
 
 Si la API no está disponible durante el trabajo, desarrolla contra una respuesta de ejemplo documentada y deja clara la URL que se conectará. Antes de entregar, la integración debe probarse con la API del docente o con una alternativa que este apruebe.

@@ -80,7 +80,7 @@ Los capítulos siguen el orden del curso, del 0 al 9.
 | [Capítulo 6 — Publicar en internet](#capitulo-6) | 05 Publicación | Deploy, build, `dist`, dominio, hosting |
 | [Capítulo 7 — Vibecoding responsable](#capitulo-7) | 06 Vibecoding | Prompt, modelo de lenguaje, alucinación, refactorizar |
 | [Capítulo 8 — Algoritmos](#capitulo-8) | 07 Algoritmia | Complejidad, divide y vencerás, greedy, backtracking |
-| [Capítulo 9 — El proyecto final](#capitulo-9) | 08 Proyecto final | Requisito, MVP, criterio de aceptación, iteración |
+| [Capítulo 9 — El proyecto final](#capitulo-9) | 08 Proyecto final | Requisito, MVP, criterio de aceptación, iteración, API, REST, HTTP, JSON, endpoint, recurso, método HTTP |
 
 Y al final están los dos capítulos que probablemente te van a servir más que todos los otros juntos:
 
@@ -95,7 +95,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### A
 
-[abstracción](#abstraccion) · [accesibilidad](#accesibilidad) · [acoplamiento](#acoplamiento) · [Acumulador](#acumulador) · [Alcance](#alcance) · [alcance](#alcance-del-proyecto) · [algoritmo](#algoritmo) · [algoritmo estable](#estable) · [alucinación](#alucinacion) · [anotación de tipo](#anotacion-de-tipo) · [`any`](#any) · [archivo](#archivo) · [archivo `.env`](#archivo-env) · [Argumento](#argumento) · [Arreglo](#arreglo) · [atajo de teclado](#atajo) · [atributo](#atributo)
+[abstracción](#abstraccion) · [accesibilidad](#accesibilidad) · [acoplamiento](#acoplamiento) · [Acumulador](#acumulador) · [Alcance](#alcance) · [alcance](#alcance-del-proyecto) · [algoritmo](#algoritmo) · [algoritmo estable](#estable) · [alucinación](#alucinacion) · [anotación de tipo](#anotacion-de-tipo) · [`any`](#any) · [API](#api) · [archivo](#archivo) · [archivo `.env`](#archivo-env) · [Argumento](#argumento) · [Arreglo](#arreglo) · [atajo de teclado](#atajo) · [atributo](#atributo)
 
 ### Á
 
@@ -115,7 +115,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### E
 
-[editor de texto](#editor) · [Efecto secundario](#efecto-secundario) · [elemento vacío](#elemento-vacio) · [`else`](#else) · [encapsulamiento](#encapsulamiento) · [entidad](#entidad) · [entorno de trabajo](#entorno) · [entrega](#entrega) · [entregable](#entregable) · [error](#error) · [estado](#estado) · [estado derivado](#estado-derivado) · [etiqueta](#etiqueta) · [evaluación](#evaluacion) · [evento](#evento) · [`every`](#every) · [export](#export) · [Expresión](#expresion) · [extensión de archivo](#extension)
+[editor de texto](#editor) · [Efecto secundario](#efecto-secundario) · [elemento vacío](#elemento-vacio) · [`else`](#else) · [encapsulamiento](#encapsulamiento) · [endpoint](#endpoint) · [entidad](#entidad) · [entorno de trabajo](#entorno) · [entrega](#entrega) · [entregable](#entregable) · [error](#error) · [estado](#estado) · [estado derivado](#estado-derivado) · [etiqueta](#etiqueta) · [evaluación](#evaluacion) · [evento](#evento) · [`every`](#every) · [export](#export) · [Expresión](#expresion) · [extensión de archivo](#extension)
 
 ### F
 
@@ -127,7 +127,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### H
 
-[herencia (`extends`)](#herencia) · [historia de usuario](#historia-de-usuario) · [Hola mundo](#hola-mundo) · [hook](#hook) · [hosting (alojamiento)](#hosting) · [hot reload](#hot-reload) · [HTML](#html) · [HTML semántico](#html-semantico) · [HTTPS (el candado del navegador)](#https)
+[herencia (`extends`)](#herencia) · [historia de usuario](#historia-de-usuario) · [Hola mundo](#hola-mundo) · [hook](#hook) · [hosting (alojamiento)](#hosting) · [hot reload](#hot-reload) · [HTML](#html) · [HTML semántico](#html-semantico) · [HTTP](#http) · [HTTPS (el candado del navegador)](#https)
 
 ### I
 
@@ -135,7 +135,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### J
 
-[JavaScript](#javascript) · [JSX](#jsx)
+[JavaScript](#javascript) · [JSON](#json) · [JSX](#jsx)
 
 ### K
 
@@ -147,7 +147,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### M
 
-[manejador de evento](#manejador-de-evento) · [`map`](#map) · [Markdown (`.md`)](#markdown) · [matriz](#matriz) · [memoización](#memoizacion) · [memoria extra](#memoria-extra) · [merge sort](#merge-sort) · [Método](#metodo) · [modelo](#modelo) · [modelo de lenguaje](#modelo-de-lenguaje) · [Mutar](#mutacion) · [MVP (producto mínimo viable)](#mvp)
+[manejador de evento](#manejador-de-evento) · [`map`](#map) · [Markdown (`.md`)](#markdown) · [matriz](#matriz) · [memoización](#memoizacion) · [memoria extra](#memoria-extra) · [merge sort](#merge-sort) · [Método](#metodo) · [método HTTP](#metodo-http) · [modelo](#modelo) · [modelo de lenguaje](#modelo-de-lenguaje) · [Mutar](#mutacion) · [MVP (producto mínimo viable)](#mvp)
 
 ### N
 
@@ -167,7 +167,7 @@ Y al final están los dos capítulos que probablemente te van a servir más que 
 
 ### R
 
-[rama](#rama) · [rama principal (`main`)](#rama-principal) · [React](#react) · [`README.md`](#readme) · [`readonly`](#readonly) · [Reasignación](#reasignacion) · [recursión](#recursion) · [`reduce`](#reduce) · [refactorizar](#refactorizar) · [`ReferenceError`](#referenciaerror) · [registro (log)](#registro) · [reglas de los hooks](#reglas-de-los-hooks) · [remoto](#remoto) · [renderizado](#renderizado) · [renderizado condicional](#render-condicional) · [repositorio](#repositorio) · [requisito](#requisito) · [reto](#reto) · [retrospectiva](#retrospectiva) · [rollback (volver atrás)](#rollback) · [rúbrica](#rubrica) · [ruta](#ruta) · [ruta relativa](#ruta-relativa)
+[rama](#rama) · [rama principal (`main`)](#rama-principal) · [React](#react) · [`README.md`](#readme) · [`readonly`](#readonly) · [Reasignación](#reasignacion) · [recursión](#recursion) · [recurso](#recurso) · [`reduce`](#reduce) · [refactorizar](#refactorizar) · [`ReferenceError`](#referenciaerror) · [registro (log)](#registro) · [reglas de los hooks](#reglas-de-los-hooks) · [remoto](#remoto) · [renderizado](#renderizado) · [renderizado condicional](#render-condicional) · [repositorio](#repositorio) · [requisito](#requisito) · [REST](#rest) · [reto](#reto) · [retrospectiva](#retrospectiva) · [rollback (volver atrás)](#rollback) · [rúbrica](#rubrica) · [ruta](#ruta) · [ruta relativa](#ruta-relativa)
 
 ### S
 
@@ -6415,7 +6415,7 @@ console.log(`Ordenar ${catalogo.length} productos: ${fin - inicio} ms`);
 
 ## Capítulo 9 — El proyecto final
 
-Este es el último capítulo del glosario y el que tiene más palabras nuevas. Los dieciséis términos de abajo son los que aparecen cuando el proyecto deja de ser un ejercicio y pasa a ser una herramienta que vas a mostrar. Están ordenados alfabéticamente, así que también funcionan como índice del módulo. Si alguna palabra sigue sin quedar clara, el [README del proyecto final](08-proyecto-final/README.md) tiene el detalle de cada etapa.
+Este es el último capítulo del glosario y el que tiene más palabras nuevas. Los veintitrés términos de abajo son los que aparecen cuando el proyecto deja de ser un ejercicio y pasa a ser una herramienta que vas a mostrar. Están ordenados alfabéticamente, así que también funcionan como índice del módulo. Si alguna palabra sigue sin quedar clara, el [README del proyecto final](08-proyecto-final/README.md) tiene el detalle de cada etapa.
 
 <a id="alcance-del-proyecto"></a>
 ### alcance
@@ -6448,6 +6448,28 @@ en esta entrega. Es la lista que evita el alcance infinito.
 **No es.** No es una meta ni una promesa de hacer todo: el alcance se escribe justamente para poder excluir. No es tampoco "lo que sé hacer": si algo queda afuera porque todavía no lo sabes, eso también es un alcance, y se anota como extensión. No es fijo: se puede revisar, pero cambiarlo a mitad de camino tiene un costo que conviene asumir a tiempo.
 
 **Dónde lo veo.** [Antes de programar](08-proyecto-final/README.md#antes-de-programar) · [El reto](08-proyecto-final/README.md#el-reto)
+
+<a id="api"></a>
+### API
+
+**Qué es.** Interfaz de programación de aplicaciones: el conjunto de direcciones y reglas con las que un programa le pide datos o acciones a otro programa que corre en otro lado. En este curso la API es el servicio que prepara el docente y que tu página consulta con `fetch` para conseguir la colección inicial. Hay APIs de JavaScript que viven en el navegador, como la de `localStorage`, y APIs que se piden por HTTP; las del proyecto son de este segundo tipo.
+
+**En una frase.** Es la ventanilla de un local al que no entrás: hay un cartel con lo que se puede pedir, la forma de pedirlo y lo que te van a devolver.
+
+**Ejemplo.**
+
+```text
+La API del proyecto del club de lectura:
+
+  consulta:   GET /api/libros
+  devuelve:   un arreglo con los libros del club, en JSON
+  errores:    404 si la dirección está mal
+              500 si el servidor falla al responder
+```
+
+**No es.** No es la página que ves: una API no tiene botones ni estilos, solo devuelve datos. No es una base de datos: la base guarda, la API expone. Y no es un archivo de tu proyecto: tiene dirección propia y puede cambiar sin que toques tu código.
+
+**Dónde lo veo.** [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api) · [Guía: leer una API REST](08-proyecto-final/guia-rest.md)
 
 <a id="bug"></a>
 ### bug (error de programa)
@@ -6569,6 +6591,25 @@ Vibecoding: usé una herramienta de IA para discutir el modelo
 
 **Dónde lo veo.** [Definición de terminado](08-proyecto-final/README.md#definición-de-terminado) · [Módulo 04 — Git y GitHub](04-git-github/README.md)
 
+<a id="endpoint"></a>
+### endpoint
+
+**Qué es.** Una dirección concreta de la API a la que se le puede hacer una consulta: la URL base más el nombre del recurso. `/api/libros` es un endpoint; `/api/libros/1` es otro. Es la palabra que vas a repetir cada vez que revises la pestaña *Network* del navegador buscando por qué no llegaron los datos.
+
+**En una frase.** Es el número de ventanilla del mostrador: hay varias, cada una atiende una cosa distinta, y el cartel dice cuál te toca.
+
+**Ejemplo.**
+
+```text
+URL base:   https://ejemplo.com
+Endpoint:   https://ejemplo.com/api/libros
+Otro:       https://ejemplo.com/api/libros/1
+```
+
+**No es.** No es el servidor entero: un servidor atiende muchos endpoints. No es un archivo de tu proyecto: es una dirección que publicó otra persona. Y no es la misma cosa que la [ruta](#ruta) de una página: la ruta de la página decide qué se dibuja en el navegador, el endpoint decide qué datos devuelve la API.
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
+
 <a id="entregable"></a>
 ### entregable
 
@@ -6654,6 +6695,31 @@ buscador deja 1 producto visible".
 
 **Dónde lo veo.** [El reto](08-proyecto-final/README.md#el-reto) · [Módulo 03 — React y TypeScript](03-react-typescript/README.md)
 
+<a id="http"></a>
+### HTTP
+
+**Qué es.** El protocolo con el que una página y una computadora ajena se piden cosas, siempre en el mismo formato: primero una **solicitud**, que lleva el [método HTTP](#metodo-http) y la dirección, y después una **respuesta**, que lleva un código de estado y, si lo hay, un cuerpo con datos. HTTP no guarda memoria entre una solicitud y la siguiente: cada una llega como si fuera la primera.
+
+**En una frase.** Es un diálogo de dos frases en el mostrador: vos decís "traeme los libros" y del otro lado contestan "acá están" o "no los tengo".
+
+**Ejemplo.**
+
+```text
+Solicitud:
+  GET /api/libros HTTP/1.1
+  Host: ejemplo.com
+
+Respuesta:
+  HTTP/1.1 200 OK
+  Content-Type: application/json
+
+  [ { "id": "1", "titulo": "El Aleph" } ]
+```
+
+**No es.** No es internet: internet es la carretera y HTTP es la regla con la que se piden las cosas en ella. No es un lenguaje de programación: lo escribe el navegador por vos cuando ejecutás un `fetch`. Y no es lo mismo que HTTPS: HTTPS es HTTP cifrado, el candado del [navegador](#https).
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
+
 <a id="iteracion"></a>
 ### iteración
 
@@ -6685,6 +6751,52 @@ Cada vuelta parte de algo que anda.
 **No es.** No es "darle una vuelta al código": una iteración termina y se comprueba. No es escribir el proyecto entero de una sentada: en este curso el orden de las iteraciones es el orden de aprendizaje. No es lo mismo que un commit de Git: una iteración puede tener varios commits, y un commit no implica una iteración.
 
 **Dónde lo veo.** [Definición de terminado](08-proyecto-final/README.md#definición-de-terminado) · [Ciclo de trabajo](06-vibecoding/README.md#ciclo-de-trabajo)
+
+<a id="json"></a>
+### JSON
+
+**Qué es.** El formato de texto en el que viajan los datos por HTTP: objetos entre llaves con los nombres de propiedad entre comillas dobles, arreglos entre corchetes, y adentro solo números, textos, `true`, `false` y `null`. Es el cuerpo de la respuesta de casi cualquier API moderna, y `respuesta.json()` lo convierte en un objeto de JavaScript.
+
+**En una frase.** Es la factura en papel del mostrador: el local no te manda el producto dentro de la respuesta, te manda una hoja que lo describe, y vos la convertís en lo que esperabas.
+
+**Ejemplo.**
+
+```json
+{
+  "libros": [
+    { "id": "1", "titulo": "El Aleph", "leido": false }
+  ]
+}
+```
+
+```ts
+const datos = await respuesta.json();  // texto  →  objeto
+const lista = datos.libros;            // ya se puede dibujar en React
+```
+
+**No es.** No es un [tipo](#tipo) de TypeScript: JSON no sabe que tus datos son un `Libro`; esa garantía la agregás vos al convertir. No es [JavaScript](#javascript), aunque se le parezca: no admite comillas simples, comentarios ni funciones. Y no es lo mismo que un objeto de JavaScript: el JSON es texto que viaja, el objeto vive en memoria.
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
+
+<a id="metodo-http"></a>
+### método HTTP (GET, POST, PUT, DELETE)
+
+**Qué es.** La palabra que abre cada solicitud y dice qué querés hacer con el recurso: `GET` para leer, `POST` para crear, `PUT` para reemplazar, `DELETE` para borrar. Va en la solicitud, no en la dirección: con la misma dirección `/api/libros`, un `GET` pide la lista y un `POST` pide crear un libro nuevo.
+
+**En una frase.** Es el verbo del pedido: la dirección dice a quién le hablás, el método dice qué querés que haga.
+
+**Ejemplo.**
+
+```text
+GET    /api/libros      leer la colección   → 200 OK
+GET    /api/libros/1    leer uno solo       → 200 OK | 404
+POST   /api/libros      crear uno           → 201 Created
+DELETE /api/libros/1    borrar uno          → 200 OK | 404
+```
+
+**No es.** No es un parámetro que se le pega a la dirección: se declara aparte, dentro de la solicitud. No es lo mismo que el código de estado: el método es lo que pediste, el código es lo que te contestaron. Y en este proyecto solo necesitás `GET`: la creación y los cambios van a `localStorage`, salvo que el docente habilite `POST`.
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
 
 <a id="mvp"></a>
 ### MVP (producto mínimo viable)
@@ -6771,6 +6883,29 @@ produce en el código.
 
 **Dónde lo veo.** [Definición de terminado](08-proyecto-final/README.md#definición-de-terminado) · [Ciclo de trabajo](06-vibecoding/README.md#ciclo-de-trabajo)
 
+<a id="recurso"></a>
+### recurso
+
+**Qué es.** La cosa con nombre propio que la API expone y sobre la que se puede leer, crear o borrar: un libro, la colección de libros, un autor. En una API con estilo REST todo se organiza como recursos, y cada uno tiene su dirección. El recurso es el "qué": el [método HTTP](#metodo-http) es el "qué le hago".
+
+**En una frase.** Es el producto del catálogo del mostrador: tiene nombre, un lugar en la góndola y una forma de pedirlo.
+
+**Ejemplo.**
+
+```text
+Recurso:       la colección de libros
+Dirección:     GET /api/libros
+Respuesta:     200 OK + JSON con los libros
+
+Recurso:       un libro
+Dirección:     GET /api/libros/1
+Respuesta:     200 OK + JSON con ese libro | 404
+```
+
+**No es.** No es un archivo de tu proyecto: el recurso vive en el servidor y se pide por dirección. No es un campo del formulario: el formulario describe un recurso que todavía no existe. Y no es lo mismo que la [entidad](#entidad) de tu modelo: la entidad es tu idea en el código, el recurso es esa idea publicada con dirección.
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
+
 <a id="requisito"></a>
 ### requisito
 
@@ -6800,6 +6935,30 @@ siendo la misma.
 **No es.** No es una función: es la necesidad que la función atiende. No es el tema elegido: el tema es libre y los requisitos los escribes tú. No es lo mismo que el criterio de aceptación: el requisito pide, el criterio dice cómo se comprueba que llegó.
 
 **Dónde lo veo.** [Definición de terminado](08-proyecto-final/README.md#definición-de-terminado) · [El reto](08-proyecto-final/README.md#el-reto)
+
+<a id="rest"></a>
+### REST
+
+**Qué es.** El conjunto de acuerdos con el que se diseña una API para que sea predecible: todo se organiza como [recurso](#recurso), la dirección nombra al recurso con sustantivos en plural, el [método HTTP](#metodo-http) dice la intención y el código de estado cuenta cómo fue. REST no es un programa que se instala ni un protocolo aparte: es una forma de nombrar y ordenar las cosas sobre HTTP.
+
+**En una frase.** Es la señalética del mercado: si cada puesto tiene el cartel del producto y la misma forma de pedirlo, no hace falta preguntar a nadie.
+
+**Ejemplo.**
+
+```text
+API con estilo REST:
+  GET    /api/libros       leer la colección
+  GET    /api/libros/1     leer un libro
+  POST   /api/libros       crear un libro
+
+API sin estilo REST:
+  GET    /api/obtenerLibrosDeLaLista
+  GET    /api/crearLibro?titulo=...
+```
+
+**No es.** No es un protocolo distinto de HTTP: REST es la forma de ordenar la conversación, HTTP es el canal por el que viaja. No es un producto ni un servicio de pago: muchas APIs gratuitas son REST y muchas APIs famosas no lo son del todo. Y no es lo mismo que una [API](#api): una API es cualquier interfaz entre dos programas, REST es una de las formas de diseñarla.
+
+**Dónde lo veo.** [Guía: leer una API REST](08-proyecto-final/guia-rest.md) · [Consumo de API](08-proyecto-final/proyecto.md#3-consumo-de-api)
 
 <a id="reto"></a>
 ### reto
